@@ -1,0 +1,7 @@
+# Sprint Dashboard
+
+- [x] Scrape legacy site (bamelectricid.com) and populate JSON data files
+- [ ] Build core pages (Home, About, Contact)
+- [ ] Generate Service Pages based on `services.json`
+- [ ] Generate City Pages based on `cities.json`
+- [ ] Integrate Client Onboarding Form (via Forms/Odoo once ready)

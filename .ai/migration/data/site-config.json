@@ -1,0 +1,51 @@
+{
+  "client": {
+    "name": "3 Gen Pressure Washing, LLC",
+    "shortName": "3 Gen Pressure Washing",
+    "phone": "509-939-8757",
+    "phoneFormatted": "(509) 939-8757",
+    "email": "t.alcala@3genpw.com",
+    "address": {
+      "street": "",
+      "city": "Spokane",
+      "state": "WA",
+      "zip": ""
+    },
+    "owner": "T. Alcala",
+    "yearEstablished": 2020,
+    "licenseNumber": "3GENPGP773M4",
+    "businessLicense": "604 912 358"
+  },
+  "brand": {
+    "colors": {
+      "primary": "#0056b3",
+      "secondary": "#ff9900",
+      "accent": "#00c853",
+      "dark": "#1a1a1a",
+      "light": "#f4f7f6"
+    },
+    "logo": "/images/logo.png",
+    "tagline": "Make your business shine with our expert pressure washing services",
+    "differentiators": [
+      "Women and minority-owned business",
+      "Family-owned and operated",
+      "Trusted by the State of Washington for Graffiti Removal Service",
+      "Washington State certified contractor"
+    ]
+  },
+  "seo": {
+    "defaultTitle": "Professional Pressure Washing Services in Spokane | 3 Gen Pressure Washing, LLC",
+    "defaultDescription": "3 Gen Pressure Washing, LLC offers full-service hot and cold pressure washing, soft washing, and graffiti removal in Spokane and surrounding areas.",
+    "ogImage": "/images/og-image.jpg"
+  },
+  "social": {
+    "facebook": "",
+    "instagram": "",
+    "google": ""
+  },
+  "features": {
+    "hasPricing": false,
+    "hasBooking": true,
+    "hasReviews": true
+  }
+}

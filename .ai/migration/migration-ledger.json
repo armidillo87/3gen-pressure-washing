@@ -1,0 +1,185 @@
+{
+  "project": "3gen-pressure-washing",
+  "legacy_domain": "https://3genpressurewashing.com",
+  "migration_strategy": "rewrite_and_redirect",
+  "voice_context": {
+    "differentiators": [
+      "Women and minority-owned business",
+      "Family-owned and operated",
+      "Trusted by the State of Washington for Graffiti Removal Service",
+      "Washington State certified contractor (Registration # 3GENPGP773M4)"
+    ],
+    "tone": "Professional, reliable, community-focused, expert",
+    "primary_offer": "Full-service hot and cold pressure washing, soft washing, and graffiti removal for commercial and industrial properties"
+  },
+  "urls": [
+    {
+      "legacy_url": "/",
+      "legacy_title": "Professional Pressure Washing Services in Spokane | 3 Gen Pressure Washing, LLC",
+      "legacy_description": "3 Gen Pressure Washing, LLC offers full-service hot and cold pressure washing, soft washing, and graffiti removal in Spokane and surrounding areas. Contact us for all your pressure washing needs.",
+      "new_slug": "/",
+      "intent": "rewrite",
+      "notes": "Homepage needs full Pandaface 14-section conversion structure."
+    },
+    {
+      "legacy_url": "/services",
+      "legacy_title": "Services | 3 Gen Pressure Washing, LLC",
+      "legacy_description": "Explore our comprehensive pressure washing services.",
+      "new_slug": "/services",
+      "intent": "rewrite",
+      "notes": "Main services hub."
+    },
+    {
+      "legacy_url": "/hotcold-pressure-washing-and-soft-washing",
+      "legacy_title": "Top-Quality Pressure Washing and Soft Washing Services in Spokane, WA",
+      "legacy_description": "Experience the best hot/cold pressure washing and soft washing services in Spokane, WA. Contact us today for a free quote and see the difference top-notch products and thorough cleaning can make!",
+      "new_slug": "/services/hot-cold-pressure-washing",
+      "intent": "rewrite",
+      "notes": "Core service page. Needs to be split or focused. Soft washing is usually a separate service."
+    },
+    {
+      "legacy_url": "/headstone-cleaning",
+      "legacy_title": "Professional Pressure Washing Services in Spokane, WA | 3 Gen Pressure Washing, LLC",
+      "legacy_description": "Our headstone cleaning service offers a respectful and thorough restoration, ensuring that the final resting places of loved one are preserved with care a dignity.",
+      "new_slug": "/services/headstone-cleaning",
+      "intent": "rewrite",
+      "notes": "Niche service."
+    },
+    {
+      "legacy_url": "/driveways-and-walkways",
+      "legacy_title": "Professional Pressure Washing Services in Spokane, WA | 3 Gen Pressure Washing, LLC",
+      "legacy_description": "Enhance the appearance and safety of your property with our driveway and walkway cleaning services. We remove oil stains, tire marks, dirt, mold, and mildew to keep these areas pristine and safe.",
+      "new_slug": "/services/driveway-cleaning",
+      "intent": "rewrite",
+      "notes": "Standard flatwork service."
+    },
+    {
+      "legacy_url": "/building-exteriors-and-storefronts",
+      "legacy_title": "Professional Pressure Washing and Soft Washing Services in Spokane, WA",
+      "legacy_description": "Make a lasting impression with sparkling clean building exteriors and storefronts. Our pressure washing services remove dirt, algae, and pollutants to restore the look of your property.",
+      "new_slug": "/services/commercial-building-washing",
+      "intent": "rewrite",
+      "notes": "B2B commercial service."
+    },
+    {
+      "legacy_url": "/graffiti-removal",
+      "legacy_title": "Top-Quality Pressure Washing Services in Spokane, WA",
+      "legacy_description": "Restore the appearance of your property with our efficient graffiti removal services. We use specialized techniques to remove graffiti without damaging underlying surfaces.",
+      "new_slug": "/services/graffiti-removal",
+      "intent": "rewrite",
+      "notes": "B2B / Government contract service. High value."
+    },
+    {
+      "legacy_url": "/fuel-station-cleaning",
+      "legacy_title": "High Quality Pressure Washing and Soft Washing Services in Spokane, WA",
+      "legacy_description": "Maintain a clean and safe environment at your fuel station with our comprehensive cleaning services. We target fuel spills, oil stains, and other contaminants for a high quality result.",
+      "new_slug": "/services/fuel-station-cleaning",
+      "intent": "rewrite",
+      "notes": "B2B niche service."
+    },
+    {
+      "legacy_url": "/drive-through-cleaning",
+      "legacy_title": "Top-Quality Pressure Washing and Soft Washing Services in Spokane, WA",
+      "legacy_description": "Experience top-notch hot/cold pressure washing and soft washing services in Spokane, WA. Our team guarantees thorough cleaning using high-quality products.",
+      "new_slug": "/services/drive-thru-cleaning",
+      "intent": "rewrite",
+      "notes": "B2B niche service."
+    },
+    {
+      "legacy_url": "/roof-treatments",
+      "legacy_title": "High Quality Pressure Washing Services in Spokane, WA",
+      "legacy_description": "Looking for professional hot/cold pressure washing and soft washing services in Spokane, WA? Contact us today for a free quote.",
+      "new_slug": "/services/roof-cleaning",
+      "intent": "rewrite",
+      "notes": "Standard residential/commercial roof service."
+    },
+    {
+      "legacy_url": "/outdoor-courts-and-patios",
+      "legacy_title": "High Quality Pressure Washing Services in Spokane, WA",
+      "legacy_description": "Looking for professional hot/cold pressure washing and soft washing services in Spokane, WA? Our team guarantees thorough cleaning using top-notch products.",
+      "new_slug": "/services/patio-cleaning",
+      "intent": "rewrite",
+      "notes": "Standard flatwork/residential service."
+    },
+    {
+      "legacy_url": "/service-areas",
+      "legacy_title": "Service Areas",
+      "legacy_description": "We serve Spokane, Adams, Ferry, Stevens, Lincoln, Pend Oreille, and Whitman counties.",
+      "new_slug": "/service-areas",
+      "intent": "rewrite",
+      "notes": "Main geo hub."
+    },
+    {
+      "legacy_url": "/spokane-county-pressure-washing-services",
+      "legacy_title": "Spokane County Pressure Washing Services",
+      "legacy_description": "",
+      "new_slug": "/service-areas/spokane-county",
+      "intent": "rewrite",
+      "notes": "County-level programmatic page."
+    },
+    {
+      "legacy_url": "/adams-county-pressure-washing-services",
+      "legacy_title": "Adams County Pressure Washing Services",
+      "legacy_description": "",
+      "new_slug": "/service-areas/adams-county",
+      "intent": "rewrite",
+      "notes": "County-level programmatic page."
+    },
+    {
+      "legacy_url": "/ferry-county-pressure-washing-services",
+      "legacy_title": "Ferry County Pressure Washing Services",
+      "legacy_description": "",
+      "new_slug": "/service-areas/ferry-county",
+      "intent": "rewrite",
+      "notes": "County-level programmatic page."
+    },
+    {
+      "legacy_url": "/stevens-county-pressure-washing-services",
+      "legacy_title": "Stevens County Pressure Washing Services",
+      "legacy_description": "",
+      "new_slug": "/service-areas/stevens-county",
+      "intent": "rewrite",
+      "notes": "County-level programmatic page."
+    },
+    {
+      "legacy_url": "/lincoln-county-pressure-washing-services",
+      "legacy_title": "Lincoln County Pressure Washing Services",
+      "legacy_description": "",
+      "new_slug": "/service-areas/lincoln-county",
+      "intent": "rewrite",
+      "notes": "County-level programmatic page."
+    },
+    {
+      "legacy_url": "/pend-oreille-county-pressure-washing-services",
+      "legacy_title": "Pend Oreille County Pressure Washing Services",
+      "legacy_description": "",
+      "new_slug": "/service-areas/pend-oreille-county",
+      "intent": "rewrite",
+      "notes": "County-level programmatic page."
+    },
+    {
+      "legacy_url": "/whitman-county-pressure-washing-services",
+      "legacy_title": "Whitman County Pressure Washing Services",
+      "legacy_description": "",
+      "new_slug": "/service-areas/whitman-county",
+      "intent": "rewrite",
+      "notes": "County-level programmatic page."
+    },
+    {
+      "legacy_url": "/about",
+      "legacy_title": "About Us",
+      "legacy_description": "3 Gen Pressure Washing LLC is a women and minority-owned business proudly serving Spokane, WA and its surrounding areas.",
+      "new_slug": "/about",
+      "intent": "rewrite",
+      "notes": "Standard about page."
+    },
+    {
+      "legacy_url": "/contact",
+      "legacy_title": "Contact Us",
+      "legacy_description": "Contact us today for a free quote!",
+      "new_slug": "/contact",
+      "intent": "rewrite",
+      "notes": "Standard contact page."
+    }
+  ]
+}
