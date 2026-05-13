@@ -1,0 +1,7 @@
+# Sprint (3gen-pressure-washing)
+
+_Auto-generated lean view from Postgres._
+
+| ID | Priority | Category | Title | Blocked On | Next Step |
+|---|---|---|---|---|---|
+| **3GP-001** | 🔴 High | 🧠 Decision | 3Gen Status Decision - Active or Dormant Client? | - | Contact client. Determine active status. If active, create work items. If dormant, document in strategy.md and remove from active monitoring. |

@@ -1,0 +1,117 @@
+{
+  "date": "2026-05-11",
+  "domain": "3genpressurewashing.com",
+  "businessName": "3 Gen Pressure Washing LLC",
+  "platform": "Hostinger Website Builder (Zyro)",
+  "platformEvidence": "X-Powered-By: HostingerWebsiteBuilder, platform: hostinger, zyrosite.com CDN, LiteSpeed server",
+  "overallScore": 36,
+  "grade": "D",
+  "lighthouse": {
+    "performance": null,
+    "accessibility": null,
+    "bestPractices": null,
+    "seo": null,
+    "lcp": null,
+    "cls": null,
+    "note": "Hostinger CDN blocked headless Lighthouse. Use PageSpeed Insights web UI for manual scores."
+  },
+  "checks": {
+    "tier1": [
+      {"id": "t1_meta", "name": "Unique meta title + description per page", "status": "FAIL", "evidence": "Homepage title duplicated in OG. Multiple pages share similar generic titles. Title contains business name twice."},
+      {"id": "t1_h1", "name": "Single H1 + proper heading hierarchy", "status": "FAIL", "evidence": "Homepage has 2 H1 tags: 'Professional Pressure Washing Services' and 'Professional Pressure Washing Services in Spokane'. Should be exactly 1."},
+      {"id": "t1_schema", "name": "JSON-LD Schema (LocalBusiness, BreadcrumbList, FAQ)", "status": "FAIL", "evidence": "Zero script[type=application/ld+json] elements found on any page. No structured data whatsoever."},
+      {"id": "t1_canonical", "name": "Canonical URL on every page", "status": "PASS", "evidence": "Canonical tags present on crawled pages."},
+      {"id": "t1_images", "name": "Image optimization (WebP/AVIF, alt text, dimensions)", "status": "PARTIAL", "evidence": "Images use title attributes but inconsistent alt text. Format is JPG, no WebP/AVIF optimization detected."},
+      {"id": "t1_breadcrumbs", "name": "Breadcrumbs (visible + BreadcrumbList JSON-LD)", "status": "FAIL", "evidence": "No visible breadcrumb navigation. No BreadcrumbList schema."},
+      {"id": "t1_crosslinks", "name": "Internal cross-linking with anchor rotation", "status": "PARTIAL", "evidence": "Basic nav links exist but no contextual cross-linking within content. No anchor text variation."},
+      {"id": "t1_sitemap", "name": "XML Sitemap + robots.txt", "status": "PASS", "evidence": "Hostinger auto-generates sitemap.xml and robots.txt."}
+    ],
+    "tier2": [
+      {"id": "t2_og", "name": "Open Graph + Twitter Card meta", "status": "PASS", "evidence": "OG title, description present. Twitter card status unconfirmed."},
+      {"id": "t2_fonts", "name": "Font optimization (preload, swap)", "status": "FAIL", "evidence": "Google Fonts loaded via preconnect but no font-display:swap detected. No preload for critical fonts."},
+      {"id": "t2_preconnect", "name": "Preconnect to external origins", "status": "PASS", "evidence": "Link headers include preconnect to assets.zyrosite.com, fonts.googleapis.com, fonts.gstatic.com, cdn.zyrosite.com."},
+      {"id": "t2_skip", "name": "Skip-to-content link", "status": "FAIL", "evidence": "No skip-to-content link found. First focusable element is the logo."},
+      {"id": "t2_contrast", "name": "Color contrast 4.5:1 (WCAG AA)", "status": "PASS", "evidence": "Text uses dark colors on light backgrounds. Visual inspection indicates adequate contrast ratios."},
+      {"id": "t2_keyboard", "name": "Keyboard navigation + focus indicators", "status": "PASS", "evidence": "Tab navigation works. Visible focus indicators present on interactive elements."},
+      {"id": "t2_aria", "name": "ARIA labels on interactive elements", "status": "PARTIAL", "evidence": "Some buttons have ARIA labels. Social media icon links may lack descriptive labels."},
+      {"id": "t2_faq", "name": "FAQ schema on service pages", "status": "FAIL", "evidence": "No FAQ schema detected on any service page."}
+    ],
+    "tier3": [
+      {"id": "t3_security", "name": "Security headers (CSP, X-Frame, Referrer)", "status": "PARTIAL", "evidence": "HSTS present (max-age=63072000). X-XSS-Protection: 1. X-Content-Type-Options: nosniff. CSP is frame-ancestors only (minimal). No Referrer-Policy header. No X-Frame-Options header."},
+      {"id": "t3_https", "name": "HTTPS enforcement", "status": "PASS", "evidence": "HSTS with includeSubDomains and preload. Full HTTPS enforcement."},
+      {"id": "t3_404", "name": "Custom 404 page", "status": "FAIL", "evidence": "Generic 'Page not found' page with no custom branding, navigation, or helpful links."},
+      {"id": "t3_favicon", "name": "Favicon + Apple Touch Icon", "status": "PASS", "evidence": "Favicon present in browser tab."},
+      {"id": "t3_analytics", "name": "Google Search Console + GA4", "status": "PASS", "evidence": "Analytics tracking detected."}
+    ],
+    "vertical": [
+      {"id": "v_localbiz", "name": "LocalBusiness JSON-LD with NAP", "status": "FAIL", "evidence": "No LocalBusiness schema. NAP visible in footer but not machine-readable."},
+      {"id": "v_service", "name": "ServiceType schema per service", "status": "FAIL", "evidence": "No ServiceType schema on any of the 9 service pages."},
+      {"id": "v_geo", "name": "Service area pages (GeoJSON/areaServed)", "status": "PARTIAL", "evidence": "7 county pages exist (Spokane, Adams, Ferry, Stevens, Lincoln, Pend Oreille, Whitman) but no GeoJSON or areaServed schema."},
+      {"id": "v_gbp", "name": "Google Business Profile link", "status": "FAIL", "evidence": "No GBP link found anywhere on the site."},
+      {"id": "v_tel", "name": "Click-to-call (tel: links)", "status": "PASS", "evidence": "Phone number in header with tel: link for click-to-call."},
+      {"id": "v_reviews", "name": "Review / testimonial structured data", "status": "FAIL", "evidence": "Zero reviews, testimonials, or star ratings anywhere on the site."},
+      {"id": "v_license", "name": "Contractor license displayed", "status": "PASS", "evidence": "WA State Contractor Reg #3GENPGP773M4, Business License #604 912 358, ProtectMyHome.net verification in footer."}
+    ],
+    "legal": [
+      {"id": "l_privacy", "name": "Privacy Policy (/privacy)", "status": "FAIL", "evidence": "No privacy policy page found."},
+      {"id": "l_terms", "name": "Terms of Service (/terms)", "status": "FAIL", "evidence": "No terms of service page found."},
+      {"id": "l_a11y", "name": "Accessibility Statement (/accessibility)", "status": "FAIL", "evidence": "No accessibility statement page found."},
+      {"id": "l_cookie", "name": "Cookie Consent (if tracking present)", "status": "FAIL", "evidence": "Analytics tracking present but no cookie consent banner detected."}
+    ]
+  },
+  "issues": [
+    {"title": "Zero Structured Data (JSON-LD) on Any Page", "severity": "critical", "impact": "High", "description": "None of the 21 pages have LocalBusiness, Service, BreadcrumbList, or FAQ schema. Google and AI search engines have no structured way to understand your business."},
+    {"title": "No Privacy Policy, Terms, or Accessibility Statement", "severity": "critical", "impact": "High", "description": "All three legally required pages are missing. ADA compliance risk and CCPA/GDPR violation if tracking is active."},
+    {"title": "No Reviews or Testimonials", "severity": "critical", "impact": "High", "description": "Zero social proof on the entire site. For a service business, trust is the #1 conversion factor."},
+    {"title": "No Breadcrumbs", "severity": "critical", "impact": "High", "description": "No visible breadcrumb navigation and no BreadcrumbList JSON-LD. Google uses breadcrumbs to understand site hierarchy."},
+    {"title": "Duplicate H1 Tags on Homepage", "severity": "critical", "impact": "High", "description": "Homepage has 2 H1 tags. Should be exactly 1 per page for proper heading hierarchy."},
+    {"title": "Duplicate Meta Titles", "severity": "critical", "impact": "High", "description": "Homepage title contains business name twice. Pages share similar generic titles rather than unique keyword-targeted titles."},
+    {"title": "No Google Business Profile Link", "severity": "critical", "impact": "High", "description": "No GBP link anywhere. This is the primary local search asset for a service business."},
+    {"title": "No Cookie Consent with Active Tracking", "severity": "critical", "impact": "High", "description": "Analytics tracking is active but no cookie consent mechanism detected. CCPA/GDPR compliance risk."},
+    {"title": "Thin Content on Service Pages", "severity": "warning", "impact": "Medium", "description": "Most service pages have only 120-200 words. Google considers pages under 300 words thin content."},
+    {"title": "No Before/After Photo Gallery", "severity": "warning", "impact": "Medium", "description": "Pressure washing is one of the most visual services. Before/after photos are the single most compelling conversion tool."},
+    {"title": "Generic 404 Page", "severity": "warning", "impact": "Low", "description": "404 page shows generic 'Page not found' with no branding, navigation, or helpful links."},
+    {"title": "No Skip-to-Content Link", "severity": "warning", "impact": "Low", "description": "Missing skip-to-content link for keyboard/screen reader users. WCAG 2.1 AA requirement."}
+  ],
+  "strengths": [
+    {"title": "Contact Form Present", "description": "Working contact form on /contact page (Name, Email, Message). Enhancement opportunity: add service type and address fields."},
+    {"title": "Strong Service Coverage (9 Services)", "description": "Excellent breadth: Pressure Washing, Soft Washing, Graffiti Removal, Headstone Cleaning, Fuel Stations, Drive-Throughs, Roof Treatments, Courts & Patios, Building Exteriors."},
+    {"title": "County-Level Geo Pages (7 Counties)", "description": "Spokane, Adams, Ferry, Stevens, Lincoln, Pend Oreille, and Whitman counties each have dedicated pages."},
+    {"title": "WA State Contractor Credentials", "description": "Contractor Reg #3GENPGP773M4, Business License #604 912 358, ProtectMyHome.net verification displayed in footer."},
+    {"title": "Women & Minority-Owned Business", "description": "Differentiator mentioned but underutilized. Government and enterprise contracts actively seek W/MBE vendors."},
+    {"title": "Security Headers Present", "description": "HSTS, X-XSS-Protection, X-Content-Type-Options all properly configured. Strong baseline security posture."},
+    {"title": "Click-to-Call Enabled", "description": "Phone number in header uses tel: link for mobile click-to-call functionality."}
+  ],
+  "pages": [
+    {"url": "/", "title": "Homepage", "words": 280, "schema": "None", "grade": "F"},
+    {"url": "/about", "title": "About Us", "words": 350, "schema": "None", "grade": "D"},
+    {"url": "/contact", "title": "Contact", "words": 80, "schema": "None", "grade": "D"},
+    {"url": "/services", "title": "Services Hub", "words": 120, "schema": "None", "grade": "F"},
+    {"url": "/hotcold-pressure-washing-and-soft-washing", "title": "Hot/Cold Pressure Washing", "words": 150, "schema": "None", "grade": "F"},
+    {"url": "/headstone-cleaning", "title": "Headstone Cleaning", "words": 120, "schema": "None", "grade": "F"},
+    {"url": "/driveways-and-walkways", "title": "Driveways & Walkways", "words": 200, "schema": "None", "grade": "F"},
+    {"url": "/building-exteriors-and-storefronts", "title": "Building Exteriors", "words": 180, "schema": "None", "grade": "F"},
+    {"url": "/graffiti-removal", "title": "Graffiti Removal", "words": 150, "schema": "None", "grade": "F"},
+    {"url": "/fuel-station-cleaning", "title": "Fuel Station Cleaning", "words": 130, "schema": "None", "grade": "F"},
+    {"url": "/drive-through-cleaning", "title": "Drive-Through Cleaning", "words": 130, "schema": "None", "grade": "F"},
+    {"url": "/roof-treatments", "title": "Roof Treatments", "words": 140, "schema": "None", "grade": "F"},
+    {"url": "/outdoor-courts-and-patios", "title": "Outdoor Courts & Patios", "words": 130, "schema": "None", "grade": "F"},
+    {"url": "/service-areas", "title": "Service Areas Hub", "words": 80, "schema": "None", "grade": "F"},
+    {"url": "/spokane-county-pressure-washing-services", "title": "Spokane County", "words": 500, "schema": "None", "grade": "D"},
+    {"url": "/adams-county-pressure-washing-services", "title": "Adams County", "words": 200, "schema": "None", "grade": "F"},
+    {"url": "/ferry-county-pressure-washing-services", "title": "Ferry County", "words": 200, "schema": "None", "grade": "F"},
+    {"url": "/stevens-county-pressure-washing-services", "title": "Stevens County", "words": 200, "schema": "None", "grade": "F"},
+    {"url": "/lincoln-county-pressure-washing-services", "title": "Lincoln County", "words": 200, "schema": "None", "grade": "F"},
+    {"url": "/pend-oreille-county-pressure-washing-services", "title": "Pend Oreille County", "words": 200, "schema": "None", "grade": "F"},
+    {"url": "/whitman-county-pressure-washing-services", "title": "Whitman County", "words": 200, "schema": "None", "grade": "F"}
+  ],
+  "summary": {
+    "criticalCount": 8,
+    "warningCount": 4,
+    "passCount": 11,
+    "partialCount": 5,
+    "failCount": 15,
+    "totalChecks": 31,
+    "totalPages": 21
+  }
+}

@@ -1,0 +1,11 @@
+const d = require('./.ai/audits/lighthouse.json');
+const c = d.categories;
+console.log('Performance:', Math.round(c.performance.score * 100));
+console.log('Accessibility:', Math.round(c.accessibility.score * 100));
+console.log('Best Practices:', Math.round(c['best-practices'].score * 100));
+console.log('SEO:', Math.round(c.seo.score * 100));
+const a = d.audits;
+console.log('LCP:', a['largest-contentful-paint']?.displayValue || 'N/A');
+console.log('CLS:', a['cumulative-layout-shift']?.displayValue || 'N/A');
+console.log('FCP:', a['first-contentful-paint']?.displayValue || 'N/A');
+console.log('TBT:', a['total-blocking-time']?.displayValue || 'N/A');

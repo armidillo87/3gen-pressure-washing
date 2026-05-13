@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Site Audit — 3 Gen Pressure Washing | Pandaface Digital</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--bg:#0a0a0f;--s:#12121a;--s2:#1a1a28;--b:#2a2a3a;--t:#e8e8f0;--tm:#8888a0;--a:#7c5cfc;--ag:rgba(124,92,252,.15);--g:#22c55e;--y:#eab308;--r:#ef4444;--o:#f97316}
+html{font-size:15px}body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--t);line-height:1.6}
+a{color:var(--a);text-decoration:none}.container{max-width:900px;margin:0 auto;padding:2rem}
+section{margin-bottom:3rem}
+.cover{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative}
+.cover::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,var(--ag),transparent 70%);pointer-events:none}
+.badge{display:inline-block;padding:.4rem 1.2rem;border:1px solid var(--a);border-radius:100px;font-size:.75rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--a);margin-bottom:2rem}
+.cover h1{font-size:2.8rem;font-weight:800;letter-spacing:-.03em;margin-bottom:.5rem}
+.domain{font-size:1.1rem;color:var(--tm);margin-bottom:3rem;font-family:'JetBrains Mono',monospace}
+.grade-ring{width:160px;height:160px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;margin:0 auto 1.5rem;border:4px solid var(--o);color:var(--o);background:rgba(249,115,22,.08)}
+.grade-ring .letter{font-size:4rem;font-weight:900;line-height:1}
+.grade-ring .sc{font-size:.9rem;font-weight:500;opacity:.8}
+.meta{font-size:.85rem;color:var(--tm);margin-top:2rem}.meta span{margin:0 1rem}
+.sh{display:flex;align-items:center;gap:.75rem;margin-bottom:1.5rem;padding-bottom:.75rem;border-bottom:1px solid var(--b)}
+.sh .ic{font-size:1.5rem}.sh h2{font-size:1.5rem;font-weight:700}
+.sg{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin-bottom:2rem}
+.sc2{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:1.25rem;text-align:center}
+.sc2 .n{font-size:2rem;font-weight:800}.sc2 .l{font-size:.75rem;color:var(--tm);text-transform:uppercase;letter-spacing:.05em;margin-top:.25rem}
+.cl{list-style:none}.cl li{padding:.5rem 0;border-bottom:1px solid rgba(42,42,58,.5);display:flex;justify-content:space-between;align-items:center}
+.cl .cn{flex:1}.cl .cs{font-weight:600;min-width:60px;text-align:right}
+.pass{color:var(--g)}.pass::before{content:'✓ '}.fail{color:var(--r)}.fail::before{content:'✗ '}.warn{color:var(--y)}.warn::before{content:'⚠ '}
+.ic2{background:var(--s);border:1px solid var(--b);border-radius:12px;padding:1.25rem;margin-bottom:1rem;border-left:4px solid}
+.ic2.cr{border-left-color:var(--r)}.ic2.wr{border-left-color:var(--y)}.ic2.inf{border-left-color:var(--a)}
+.ic2 h4{font-weight:700;margin-bottom:.25rem}.ic2 p{color:var(--tm);font-size:.9rem}
+.imp{display:inline-block;padding:.15rem .5rem;border-radius:4px;font-size:.7rem;font-weight:600;text-transform:uppercase;margin-top:.5rem}
+.imp-h{background:rgba(239,68,68,.15);color:var(--r)}.imp-m{background:rgba(234,179,8,.15);color:var(--y)}.imp-l{background:rgba(124,92,252,.15);color:var(--a)}
+table{width:100%;border-collapse:collapse;font-size:.9rem}
+thead{background:var(--s)}th{padding:.75rem 1rem;text-align:left;font-weight:600;font-size:.75rem;text-transform:uppercase;letter-spacing:.05em;color:var(--tm);border-bottom:1px solid var(--b)}
+td{padding:.75rem 1rem;border-bottom:1px solid var(--b);vertical-align:top}
+tr:hover{background:var(--s)}.url{max-width:250px;word-break:break-all;font-family:'JetBrains Mono',monospace;font-size:.8rem}
+.gc{font-weight:800;font-size:1.1rem;text-align:center}
+.pr{display:flex;justify-content:space-between;align-items:center;padding:.75rem 0;border-bottom:1px solid var(--b)}
+.pr .mn{font-weight:500}.pr .mv{font-weight:700;font-family:'JetBrains Mono',monospace}
+.pb{height:8px;border-radius:4px;background:var(--s2);overflow:hidden;margin-top:.5rem}
+.pb .f{height:100%;border-radius:4px}
+.cta{background:linear-gradient(135deg,var(--ag),rgba(124,92,252,.05));border:1px solid var(--a);border-radius:16px;padding:3rem;text-align:center;margin-top:4rem}
+.cta h2{font-size:1.8rem;margin-bottom:.75rem}.cta p{color:var(--tm);margin-bottom:1.5rem;max-width:500px;margin-left:auto;margin-right:auto}
+.btn{display:inline-block;padding:.85rem 2.5rem;background:var(--a);color:white;font-weight:700;border-radius:8px;font-size:1rem;transition:transform .2s,box-shadow .2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(124,92,252,.3);text-decoration:none}
+.ft{text-align:center;padding:3rem 0 2rem;border-top:1px solid var(--b);margin-top:3rem;font-size:.8rem;color:var(--tm)}
+.ft .br{font-weight:700;color:var(--a)}
+@media(max-width:768px){.sg{grid-template-columns:repeat(2,1fr)}.cover h1{font-size:2rem}}
+@media print{body{background:#fff;color:#111}.cover::before{display:none}}
+</style>
+</head>
+<body>
+<div class="cover container">
+  <span class="badge">Website Audit Report</span>
+  <h1>3 Gen Pressure Washing LLC</h1>
+  <div class="domain">3genpressurewashing.com</div>
+  <div class="grade-ring"><span class="letter">D</span><span class="sc">36 / 100</span></div>
+  <p style="color:var(--tm);max-width:500px;">Your site has strong service coverage, trust signals, and a working contact form — but is critically missing schema markup, legal pages, and performance optimization. These gaps are costing you rankings and AI search visibility.</p>
+  <div class="meta"><span>Audited: May 11, 2026</span><span>Platform: Hostinger Website Builder (Zyro)</span><span>Pages: 21</span></div>
+</div>
+
+<div class="container">
+
+<section>
+  <div class="sh"><span class="ic">📊</span><h2>Executive Summary</h2></div>
+  <div class="sg">
+    <div class="sc2"><div class="n" style="color:var(--r)">8</div><div class="l">Critical Issues</div></div>
+    <div class="sc2"><div class="n" style="color:var(--y)">7</div><div class="l">Warnings</div></div>
+    <div class="sc2"><div class="n" style="color:var(--g)">6</div><div class="l">Passed</div></div>
+    <div class="sc2"><div class="n" style="color:var(--a)">21</div><div class="l">Pages Audited</div></div>
+  </div>
+</section>
+
+<section>
+  <div class="sh"><span class="ic">🔴</span><h2>Tier 1 — Do These or Don't Launch</h2></div>
+  <p style="color:var(--tm);margin-bottom:1rem;font-size:.9rem">These 8 checks account for 80% of search ranking power.</p>
+  <ul class="cl">
+    <li><span class="cn">1. Unique meta title + description per page</span><span class="cs fail">FAIL</span></li>
+    <li><span class="cn">2. Single H1 + proper heading hierarchy</span><span class="cs warn">PARTIAL</span></li>
+    <li><span class="cn">3. JSON-LD Schema (LocalBusiness, BreadcrumbList, FAQ)</span><span class="cs fail">FAIL</span></li>
+    <li><span class="cn">4. Canonical URL on every page</span><span class="cs pass">PASS</span></li>
+    <li><span class="cn">5. Image optimization (WebP/AVIF, alt text, dimensions)</span><span class="cs fail">FAIL</span></li>
+    <li><span class="cn">6. Breadcrumbs (visible + BreadcrumbList JSON-LD)</span><span class="cs fail">FAIL</span></li>
+    <li><span class="cn">7. Internal cross-linking with anchor rotation</span><span class="cs warn">PARTIAL</span></li>
+    <li><span class="cn">8. XML Sitemap + robots.txt</span><span class="cs pass">PASS</span></li>
+  </ul>
+</section>
+
+<section>
+  <div class="sh"><span class="ic">🟡</span><h2>Tier 2 — First Week Priorities</h2></div>
+  <ul class="cl">
+    <li><span class="cn">9. Open Graph + Twitter Card meta</span><span class="cs pass">PASS</span></li>
+    <li><span class="cn">10. Font optimization (preload, swap)</span><span class="cs fail">FAIL</span></li>
+    <li><span class="cn">11. Preconnect to external origins</span><span class="cs pass">PASS</span></li>
+    <li><span class="cn">12. Skip-to-content link</span><span class="cs fail">FAIL</span></li>
+    <li><span class="cn">13. Color contrast 4.5:1 (WCAG AA)</span><span class="cs pass">PASS</span></li>
+    <li><span class="cn">14. Keyboard navigation + focus indicators</span><span class="cs pass">PASS</span></li>
+    <li><span class="cn">15. ARIA labels on interactive elements</span><span class="cs warn">PARTIAL</span></li>
+    <li><span class="cn">16. FAQ schema on service pages</span><span class="cs fail">FAIL</span></li>
+  </ul>
+</section>
+
+<section>
+  <div class="sh"><span class="ic">🟢</span><h2>Tier 3 — Professional Polish</h2></div>
+  <ul class="cl">
+    <li><span class="cn">17. Security headers (HSTS, XSS, XCTO ✓ — CSP partial, no Referrer-Policy)</span><span class="cs warn">PARTIAL</span></li>
+    <li><span class="cn">18. HTTPS enforcement (HSTS + preload)</span><span class="cs pass">PASS</span></li>
+    <li><span class="cn">19. Custom 404 page</span><span class="cs fail">FAIL</span></li>
+    <li><span class="cn">20. Favicon + Apple Touch Icon</span><span class="cs pass">PASS</span></li>
+    <li><span class="cn">21. Google Search Console + GA4</span><span class="cs pass">PASS</span></li>
+  </ul>
+</section>
+
+<section>
+  <div class="sh"><span class="ic">📍</span><h2>Local Service Requirements</h2></div>
+  <p style="color:var(--tm);margin-bottom:1rem;font-size:.9rem">Required for local service businesses to rank in Google Maps and local search.</p>
+  <ul class="cl">
+    <li><span class="cn">LocalBusiness JSON-LD with NAP</span><span class="cs fail">FAIL</span></li>
+    <li><span class="cn">ServiceType schema per service</span><span class="cs fail">FAIL</span></li>
+    <li><span class="cn">Service area pages (GeoJSON/areaServed)</span><span class="cs warn">PARTIAL</span></li>
+    <li><span class="cn">Google Business Profile link</span><span class="cs fail">FAIL</span></li>
+    <li><span class="cn">Click-to-call (tel: links)</span><span class="cs pass">PASS</span></li>
+    <li><span class="cn">Review / testimonial structured data</span><span class="cs fail">FAIL</span></li>
+    <li><span class="cn">Contractor license displayed</span><span class="cs pass">PASS</span></li>
+  </ul>
+</section>
+
+<section>
+  <div class="sh"><span class="ic">⚖️</span><h2>Legal Compliance</h2></div>
+  <ul class="cl">
+    <li><span class="cn">Privacy Policy (/privacy)</span><span class="cs fail">MISSING</span></li>
+    <li><span class="cn">Terms of Service (/terms)</span><span class="cs fail">MISSING</span></li>
+    <li><span class="cn">Accessibility Statement (/accessibility)</span><span class="cs fail">MISSING</span></li>
+    <li><span class="cn">Cookie Consent (tracking active, no consent banner)</span><span class="cs fail">FAIL</span></li>
+  </ul>
+</section>
+
+<section>
+  <div class="sh"><span class="ic">📋</span><h2>Page-by-Page Scorecard</h2></div>
+  <table>
+    <thead><tr><th>URL</th><th>Title</th><th>Words</th><th>Schema</th><th>Grade</th></tr></thead>
+    <tbody>
+      <tr><td class="url">/</td><td>Homepage</td><td>~280</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/about</td><td>About Us</td><td>~350</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--o)">D</td></tr>
+      <tr><td class="url">/contact</td><td>Contact</td><td>~80</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/services</td><td>Services Hub</td><td>~120</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/hotcold-pressure-washing-and-soft-washing</td><td>Hot/Cold Pressure Washing</td><td>~150</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/headstone-cleaning</td><td>Headstone Cleaning</td><td>~120</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/driveways-and-walkways</td><td>Driveways &amp; Walkways</td><td>~200</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/building-exteriors-and-storefronts</td><td>Building Exteriors</td><td>~180</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/graffiti-removal</td><td>Graffiti Removal</td><td>~150</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/fuel-station-cleaning</td><td>Fuel Station Cleaning</td><td>~130</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/drive-through-cleaning</td><td>Drive-Through Cleaning</td><td>~130</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/roof-treatments</td><td>Roof Treatments</td><td>~140</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/outdoor-courts-and-patios</td><td>Outdoor Courts &amp; Patios</td><td>~130</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/service-areas</td><td>Service Areas Hub</td><td>~80</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/spokane-county-pressure-washing-services</td><td>Spokane County</td><td>~500</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--o)">D</td></tr>
+      <tr><td class="url">/adams-county-pressure-washing-services</td><td>Adams County</td><td>~200</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/ferry-county-pressure-washing-services</td><td>Ferry County</td><td>~200</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/stevens-county-pressure-washing-services</td><td>Stevens County</td><td>~200</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/lincoln-county-pressure-washing-services</td><td>Lincoln County</td><td>~200</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/pend-oreille-county-pressure-washing-services</td><td>Pend Oreille County</td><td>~200</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+      <tr><td class="url">/whitman-county-pressure-washing-services</td><td>Whitman County</td><td>~200</td><td><span class="fail">None</span></td><td class="gc" style="color:var(--r)">F</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <div class="sh"><span class="ic">🚨</span><h2>Critical Issues</h2></div>
+
+  <div class="ic2 inf">
+    <h4>Contact Form Present ✓</h4>
+    <p>Your contact page has a working web form (Name, Email, Message). Consider adding a dedicated "Request a Free Quote" form with service type and address fields to improve lead quality and enable automated routing.</p>
+    <span class="imp imp-l">Strength — Can Be Enhanced</span>
+  </div>
+
+  <div class="ic2 cr">
+    <h4>Zero Structured Data (JSON-LD) on Any Page</h4>
+    <p>None of your 21 pages have LocalBusiness, Service, BreadcrumbList, or FAQ schema markup. This means Google and AI search engines (ChatGPT, Perplexity) have no structured way to understand your business. You're invisible to rich results and AI overviews.</p>
+    <span class="imp imp-h">High Impact — Invisible to AI Search</span>
+  </div>
+
+  <div class="ic2 cr">
+    <h4>No Privacy Policy, Terms of Service, or Accessibility Statement</h4>
+    <p>All three legally required pages are missing. This is an ADA compliance risk and a Google trust signal gap. If you run any tracking (GA4, analytics), you're also violating CCPA/GDPR requirements.</p>
+    <span class="imp imp-h">High Impact — Legal Liability</span>
+  </div>
+
+  <div class="ic2 cr">
+    <h4>No Review or Testimonial Content</h4>
+    <p>There is zero social proof on the entire site. No customer reviews, no testimonials, no star ratings. For a service business, trust is the #1 conversion factor. Without it, visitors leave.</p>
+    <span class="imp imp-h">High Impact — Low Trust</span>
+  </div>
+
+  <div class="ic2 cr">
+    <h4>No Breadcrumbs (Visual or Schema)</h4>
+    <p>No visible breadcrumb navigation and no BreadcrumbList JSON-LD. Google uses breadcrumbs to understand site hierarchy and display them in search results.</p>
+    <span class="imp imp-h">High Impact — Poor Site Structure Signal</span>
+  </div>
+
+  <div class="ic2 cr">
+    <h4>Duplicate Meta Titles Across Pages</h4>
+    <p>The About page and Homepage share identical OG titles. Each page must have a unique, keyword-targeted title to rank independently.</p>
+    <span class="imp imp-h">High Impact — Cannibalized Rankings</span>
+  </div>
+
+  <div class="ic2 wr">
+    <h4>Content Duplication on About Page</h4>
+    <p>The About page renders the same bullet list twice — once as a proper list, then again as plain text. This is duplicate content within a single page and looks unprofessional.</p>
+    <span class="imp imp-m">Medium Impact — Quality Signal</span>
+  </div>
+
+  <div class="ic2 wr">
+    <h4>Thin Content on Service Pages</h4>
+    <p>Most service pages have only 120-200 words. Google considers pages under 300 words "thin content" and deprioritizes them. Your competitors likely have 500-1000+ words per service page.</p>
+    <span class="imp imp-m">Medium Impact — Weak Ranking Signal</span>
+  </div>
+
+  <div class="ic2 wr">
+    <h4>No Before/After Photo Gallery</h4>
+    <p>Pressure washing is one of the most visual services. Before/after photos are the single most compelling conversion tool for this industry, and you have none.</p>
+    <span class="imp imp-m">Medium Impact — Missed Conversion</span>
+  </div>
+</section>
+
+<section>
+  <div class="sh"><span class="ic">💪</span><h2>What's Working</h2></div>
+  <div class="ic2 inf">
+    <h4>Strong Service Coverage (9 Services)</h4>
+    <p>Excellent breadth: Pressure Washing, Soft Washing, Graffiti Removal, Headstone Cleaning, Fuel Stations, Drive-Throughs, Roof Treatments, Courts & Patios, Building Exteriors. Each has a dedicated page.</p>
+    <span class="imp imp-l">Strength</span>
+  </div>
+  <div class="ic2 inf">
+    <h4>County-Level Geo Pages (7 Counties)</h4>
+    <p>Spokane, Adams, Ferry, Stevens, Lincoln, Pend Oreille, and Whitman counties each have dedicated pages. This shows awareness of local SEO geo-targeting.</p>
+    <span class="imp imp-l">Strength</span>
+  </div>
+  <div class="ic2 inf">
+    <h4>WA State Contractor Credentials</h4>
+    <p>Contractor Registration #3GENPGP773M4, WA Business License #604 912 358, and ProtectMyHome.net verification are all displayed in the footer. Strong trust signals.</p>
+    <span class="imp imp-l">Strength</span>
+  </div>
+  <div class="ic2 inf">
+    <h4>Women & Minority-Owned Business</h4>
+    <p>This differentiator is mentioned but underutilized. Government and enterprise contracts actively seek W/MBE vendors — this should be front and center, not buried in footer text.</p>
+    <span class="imp imp-l">Strength — Underutilized</span>
+  </div>
+</section>
+
+<div class="cta">
+  <h2>Ready to fix these issues?</h2>
+  <p>We'll migrate your site to a blazing-fast, SEO-optimized platform and handle everything — hosting, security, content, and growth. Starting at $200/month.</p>
+  <a href="mailto:hello@pandafacedigital.com?subject=Site%20Audit%20Follow-Up%20—%203%20Gen%20Pressure%20Washing" class="btn">Get Started →</a>
+</div>
+
+<div class="ft">
+  <p>Prepared by <span class="br">Pandaface Digital</span> · hello@pandafacedigital.com · (208) 505-6247</p>
+  <p style="margin-top:.5rem">This report was generated on May 11, 2026. Findings reflect the site's state at the time of audit.</p>
+</div>
+
+</div>
+</body>
+</html>

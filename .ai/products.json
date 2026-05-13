@@ -1,0 +1,18 @@
+{
+  "project_id": "3gen-pressure-washing",
+  "vertical": "local-service",
+  "core_offerings": [
+    {
+      "name": "Pressure Washing",
+      "keywords": ["pressure washing", "power washing", "surface cleaner"]
+    },
+    {
+      "name": "Soft Washing",
+      "keywords": ["soft washing", "roof washing", "siding cleaning", "algae removal"]
+    },
+    {
+      "name": "Concrete Cleaning",
+      "keywords": ["concrete cleaning", "driveway washing", "oil stain removal"]
+    }
+  ]
+}
