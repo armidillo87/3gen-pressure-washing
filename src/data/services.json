@@ -1,0 +1,173 @@
+[
+  {
+    "id": "hot-cold-pressure-washing",
+    "slug": "hot-cold-pressure-washing",
+    "name": "Hot & Cold Pressure Washing",
+    "shortName": "Pressure Washing",
+    "description": "Experience the best hot/cold pressure washing and soft washing services in Spokane, WA. Whether it's grease buildup or algae, our hot/cold pressure wash services use temperature-controlled water to tackle tough cleaning challenges efficiently and effectively.",
+    "shortDescription": "Temperature-controlled pressure washing for tough stains, grease, and algae removal.",
+    "icon": "water-drop",
+    "primaryImage": "/images/services/hot-cold-pressure-washing.jpg",
+    "benefits": [
+      "Removes deep-set grease and oil stains",
+      "Sanitizes surfaces with hot water",
+      "Restores original appearance",
+      "Safe for a variety of hard surfaces"
+    ],
+    "targetAudience": ["Commercial", "Industrial", "Residential"],
+    "basePrice": null,
+    "isPopular": true
+  },
+  {
+    "id": "graffiti-removal",
+    "slug": "graffiti-removal",
+    "name": "Graffiti Removal",
+    "shortName": "Graffiti Removal",
+    "description": "Restore the appearance of your property with our efficient graffiti removal services. We use specialized techniques to remove graffiti without damaging underlying surfaces. Trusted by the State of Washington.",
+    "shortDescription": "State-certified, damage-free graffiti removal for commercial and public properties.",
+    "icon": "brush",
+    "primaryImage": "/images/services/graffiti-removal.jpg",
+    "benefits": [
+      "Rapid response to prevent copycats",
+      "No damage to the underlying masonry or paint",
+      "State-certified process",
+      "Complete removal without shadows or ghosting"
+    ],
+    "targetAudience": ["Commercial", "Municipal", "Retail"],
+    "basePrice": null,
+    "isPopular": true
+  },
+  {
+    "id": "commercial-building-washing",
+    "slug": "commercial-building-washing",
+    "name": "Commercial Building & Storefront Washing",
+    "shortName": "Building Washing",
+    "description": "Make a lasting impression with sparkling clean building exteriors and storefronts. Our pressure washing services remove dirt, algae, and pollutants to restore the look of your property, attracting more customers.",
+    "shortDescription": "Enhance your business's curb appeal with exterior and storefront pressure washing.",
+    "icon": "storefront",
+    "primaryImage": "/images/services/commercial-building-washing.jpg",
+    "benefits": [
+      "Improves curb appeal and attracts customers",
+      "Prevents mold and algae damage to exterior walls",
+      "Maintains property value",
+      "Creates a welcoming environment"
+    ],
+    "targetAudience": ["Commercial", "Retail"],
+    "basePrice": null,
+    "isPopular": true
+  },
+  {
+    "id": "fuel-station-cleaning",
+    "slug": "fuel-station-cleaning",
+    "name": "Fuel Station Cleaning",
+    "shortName": "Fuel Stations",
+    "description": "Maintain a clean and safe environment at your fuel station with our comprehensive cleaning services. We target fuel spills, oil stains, and other contaminants for a high-quality result.",
+    "shortDescription": "Targeted hot water pressure washing for gas stations, removing oil, gas, and grease.",
+    "icon": "local-gas-station",
+    "primaryImage": "/images/services/fuel-station-cleaning.jpg",
+    "benefits": [
+      "Removes slip hazards from oil and grease",
+      "Enhances brand image and safety",
+      "Complies with environmental and safety standards",
+      "Hot water extraction for maximum clean"
+    ],
+    "targetAudience": ["Commercial", "Industrial"],
+    "basePrice": null,
+    "isPopular": false
+  },
+  {
+    "id": "driveway-cleaning",
+    "slug": "driveway-cleaning",
+    "name": "Driveway & Walkway Cleaning",
+    "shortName": "Driveways & Walkways",
+    "description": "Enhance the appearance and safety of your property with our driveway and walkway cleaning services. We remove oil stains, tire marks, dirt, mold, and mildew to keep these areas pristine and safe.",
+    "shortDescription": "Restore flatwork by removing tire marks, oil stains, mold, and built-up dirt.",
+    "icon": "add-road",
+    "primaryImage": "/images/services/driveway-cleaning.jpg",
+    "benefits": [
+      "Eliminates slippery mold and mildew",
+      "Lifts deep oil and tire stains",
+      "Brightens concrete instantly",
+      "Prolongs the life of the surface"
+    ],
+    "targetAudience": ["Residential", "Commercial"],
+    "basePrice": null,
+    "isPopular": false
+  },
+  {
+    "id": "headstone-cleaning",
+    "slug": "headstone-cleaning",
+    "name": "Headstone Cleaning",
+    "shortName": "Headstone Cleaning",
+    "description": "Our headstone cleaning service offers a respectful and thorough restoration, ensuring that the final resting places of loved ones are preserved with care and dignity.",
+    "shortDescription": "Gentle, respectful, and effective cleaning for headstones and monuments.",
+    "icon": "church",
+    "primaryImage": "/images/services/headstone-cleaning.jpg",
+    "benefits": [
+      "Uses D/2 or specific gentle biological cleaners",
+      "No harsh pressure that damages aging stone",
+      "Removes lichen, mold, and environmental staining",
+      "Respectful and careful process"
+    ],
+    "targetAudience": ["Residential", "Municipal", "Cemeteries"],
+    "basePrice": null,
+    "isPopular": false
+  },
+  {
+    "id": "roof-cleaning",
+    "slug": "roof-cleaning",
+    "name": "Roof Treatments & Soft Washing",
+    "shortName": "Roof Cleaning",
+    "description": "Looking for professional hot/cold pressure washing and soft washing services in Spokane, WA? Our roof treatments safely remove moss, algae (Gloeocapsa magma), and debris without damaging your shingles.",
+    "shortDescription": "Safe, low-pressure soft washing to remove moss and algae from your roof.",
+    "icon": "roofing",
+    "primaryImage": "/images/services/roof-cleaning.jpg",
+    "benefits": [
+      "Extends the lifespan of your roof",
+      "Improves energy efficiency by removing heat-absorbing algae",
+      "Safe soft-wash method won't void warranties",
+      "Instant curb appeal boost"
+    ],
+    "targetAudience": ["Residential", "Commercial"],
+    "basePrice": null,
+    "isPopular": false
+  },
+  {
+    "id": "drive-thru-cleaning",
+    "slug": "drive-thru-cleaning",
+    "name": "Drive-Through Cleaning",
+    "shortName": "Drive-Throughs",
+    "description": "Experience top-notch hot/cold pressure washing and soft washing services in Spokane, WA. Our team guarantees thorough cleaning using high-quality products to remove heavy grease, oil, and food stains from high-traffic drive-through lanes.",
+    "shortDescription": "High-temperature pressure washing for restaurant and bank drive-through lanes.",
+    "icon": "fastfood",
+    "primaryImage": "/images/services/drive-thru-cleaning.jpg",
+    "benefits": [
+      "Eliminates heavy oil and grease buildup",
+      "Improves customer perception of cleanliness",
+      "Reduces slip hazards",
+      "Flexible scheduling to avoid business disruption"
+    ],
+    "targetAudience": ["Commercial", "Restaurants"],
+    "basePrice": null,
+    "isPopular": false
+  },
+  {
+    "id": "patio-cleaning",
+    "slug": "patio-cleaning",
+    "name": "Outdoor Courts & Patios",
+    "shortName": "Patios & Courts",
+    "description": "Our team guarantees thorough cleaning using top-notch products for your outdoor living spaces and sports courts. We remove embedded dirt, moss, and mildew to prepare your surfaces for enjoyment.",
+    "shortDescription": "Restore outdoor living areas, sports courts, and patios with professional cleaning.",
+    "icon": "deck",
+    "primaryImage": "/images/services/patio-cleaning.jpg",
+    "benefits": [
+      "Removes slip hazards from moss and algae",
+      "Restores vibrant colors to courts and pavers",
+      "Prepares surfaces for sealing or painting",
+      "Safe for delicate surfaces"
+    ],
+    "targetAudience": ["Residential", "Commercial", "Municipal"],
+    "basePrice": null,
+    "isPopular": false
+  }
+]

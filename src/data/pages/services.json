@@ -1,0 +1,45 @@
+{
+  "slug": "services",
+  "title": "Pressure Washing Services | Spokane & Surrounding Areas | 3 Gen Pressure Washing",
+  "description": "3 Gen Pressure Washing provides premium commercial and residential pressure washing, graffiti removal, and exterior cleaning in Spokane. State-certified contractors.",
+  "blocks": [
+    {
+      "type": "Hero",
+      "data": {
+        "heroClass": "dark",
+        "h1": "Master-Level <em class='serif accent'>Exterior Cleaning</em>",
+        "desc": "Whether you are a facility manager battling graffiti or a homeowner needing a roof wash, our certified experts execute flawlessly. Fast turnaround. Zero excuses."
+      }
+    },
+    {
+      "type": "ServiceList",
+      "data": {
+        "title": "Aggressive, High-Performance Solutions",
+        "subtitle": "Select your sector below for immediate dispatch details.",
+        "services": [
+          { "title": "Hot & Cold Pressure Washing", "description": "Temperature-controlled pressure washing for tough stains, grease, and algae removal.", "link": "/services/hot-cold-pressure-washing", "icon": "bolt", "image": "/src/assets/images/hero.png" },
+          { "title": "Graffiti Removal", "description": "State-certified, damage-free graffiti removal for commercial and public properties.", "link": "/services/graffiti-removal", "icon": "business", "image": "/src/assets/images/panel.png" },
+          { "title": "Commercial Building Washing", "description": "Enhance your business's curb appeal with exterior and storefront pressure washing.", "link": "/services/commercial-building-washing", "icon": "home", "image": "/src/assets/images/commercial.png" },
+          { "title": "Fuel Station Cleaning", "description": "Targeted hot water pressure washing for gas stations, removing oil, gas, and grease.", "link": "/services/fuel-station-cleaning", "icon": "bolt", "image": "/src/assets/images/ev-charger.png" },
+          { "title": "Driveway & Walkway Cleaning", "description": "Restore flatwork by removing tire marks, oil stains, mold, and built-up dirt.", "link": "/services/driveway-cleaning", "icon": "home", "image": "/src/assets/images/lighting.png" },
+          { "title": "Roof Treatments & Soft Washing", "description": "Safe, low-pressure soft washing to remove moss and algae from your roof.", "link": "/services/roof-cleaning", "icon": "tool", "image": "/src/assets/images/repair.png" }
+        ]
+      }
+    },
+    {
+      "type": "TrustBar",
+      "data": {
+        "signals": [
+          { "icon": "star", "text": "State Certified", "subtext": "Trusted by Washington" },
+          { "icon": "shield", "text": "Licensed & Insured", "subtext": "Guaranteed Protections" },
+          { "icon": "clock", "text": "Rapid Response", "subtext": "Minimize Downtime" },
+          { "icon": "commercial", "text": "B2B & B2C", "subtext": "Residential to Industrial" }
+        ]
+      }
+    },
+    {
+      "type": "QuoteForm",
+      "data": {}
+    }
+  ]
+}

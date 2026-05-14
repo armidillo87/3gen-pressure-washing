@@ -1,0 +1,41 @@
+{
+  "slug": "index",
+  "title": "3 Gen Pressure Washing | Premium Pressure Washing in Spokane",
+  "description": "Stop struggling with unreliable contractors. 3 Gen Pressure Washing delivers elite hot & cold pressure washing for Spokane homes and businesses.",
+  "blocks": [
+    {
+      "type": "Hero",
+      "data": {
+        "heroClass": "standard",
+        "h1": "Spokane's Trusted <em class='serif accent'>Pressure Washing Experts</em>",
+        "desc": "Don't risk your home or business with cut-rate work. 3 Gen Pressure Washing delivers guaranteed hot and cold washing solutions across Spokane and the surrounding areas."
+      }
+    },
+    {
+      "type": "TrustBar",
+      "data": {
+        "signals": [
+          { "icon": "shield", "text": "Licensed & Insured", "subtext": "Guaranteed Protections" },
+          { "icon": "star", "text": "State Certified", "subtext": "Trusted by Washington" },
+          { "icon": "clock", "text": "Rapid Response", "subtext": "Minimize Downtime" }
+        ]
+      }
+    },
+    {
+      "type": "ServiceList",
+      "data": {
+        "title": "Aggressive, High-Performance Cleaning",
+        "subtitle": "Select your sector below for immediate dispatch details.",
+        "services": [
+          { "title": "Hot & Cold Pressure Washing", "description": "Temperature-controlled pressure washing for tough stains, grease, and algae removal.", "link": "/services/hot-cold-pressure-washing", "icon": "bolt", "image": "/src/assets/images/hero.png" },
+          { "title": "Graffiti Removal", "description": "State-certified, damage-free graffiti removal for commercial and public properties.", "link": "/services/graffiti-removal", "icon": "business", "image": "/src/assets/images/panel.png" },
+          { "title": "Commercial Building Washing", "description": "Enhance your business's curb appeal with exterior and storefront pressure washing.", "link": "/services/commercial-building-washing", "icon": "home", "image": "/src/assets/images/commercial.png" }
+        ]
+      }
+    },
+    {
+      "type": "QuoteForm",
+      "data": {}
+    }
+  ]
+}

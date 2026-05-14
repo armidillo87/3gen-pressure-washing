@@ -1,0 +1,35 @@
+
+> client-site@0.0.1 build
+> astro build
+
+[2m14:38:09[22m [34m[content][39m Syncing content
+[2m14:38:09[22m [34m[content][39m Synced content
+[2m14:38:09[22m [34m[types][39m Generated [2m214ms[22m
+[2m14:38:09[22m [34m[build][39m output: [34m"static"[39m
+[2m14:38:09[22m [34m[build][39m mode: [34m"static"[39m
+[2m14:38:09[22m [34m[build][39m directory: [34mC:\Users\El Hombre de Burrito\.gemini\antigravity\playground\static-satellite\3gen-pressure-washing\dist\[39m
+[2m14:38:09[22m [34m[build][39m Collecting build info...
+[2m14:38:09[22m [34m[build][39m [32m✓ Completed in 267ms.[39m
+[2m14:38:09[22m [34m[build][39m Building static entrypoints...
+[33m[1m14:38:12[22m [WARN] [vite][39m [33m[plugin vite:reporter] 
+(!) C:/Users/El Hombre de Burrito/.gemini/antigravity/playground/static-satellite/3gen-pressure-washing/src/assets/images/hero.png is dynamically imported by C:/Users/El Hombre de Burrito/.gemini/antigravity/playground/static-satellite/3gen-pressure-washing/src/components/Hero.astro, C:/Users/El Hombre de Burrito/.gemini/antigravity/playground/static-satellite/3gen-pressure-washing/src/components/ServiceList.astro but also statically imported by C:/Users/El Hombre de Burrito/.gemini/antigravity/playground/static-satellite/3gen-pressure-washing/src/components/Hero.astro, dynamic import will not move module into another chunk.
+[39m
+[2m14:38:12[22m [34m[vite][39m [32m✓ built in 2.64s[39m
+[2m14:38:12[22m [34m[build][39m [32m✓ Completed in 2.79s.[39m
+
+[42m[30m building client (vite) [39m[49m
+[2m14:38:12[22m [34m[vite][39m transforming...
+[2m14:38:12[22m [34m[vite][39m [32m✓[39m 3 modules transformed.
+[2m14:38:12[22m [34m[vite][39m rendering chunks...
+[2m14:38:12[22m [34m[vite][39m [32m✓ built in 98ms[39m
+
+[42m[30m generating static routes [39m[49m
+[2m14:38:12[22m [32m▶[39m src/pages/404.astro
+[2m14:38:12[22m   [34m└─[39m [2m/404.html[22mCannot read properties of undefined (reading 'name')
+  [1mStack trace:[22m
+[2m    at file:///C:/Users/El%20Hombre%20de%20Burrito/.gemini/antigravity/playground/static-satellite/3gen-pressure-washing/dist/pages/404.astro.mjs?time=1778708292521:8:121
+    at callComponentAsTemplateResultOrResponse (file:///C:/Users/El%20Hombre%20de%20Burrito/.gemini/antigravity/playground/static-satellite/3gen-pressure-washing/node_modules/astro/dist/runtime/server/render/astro/render.js:96:31)
+    at renderPage (file:///C:/Users/El%20Hombre%20de%20Burrito/.gemini/antigravity/playground/static-satellite/3gen-pressure-washing/node_modules/astro/dist/runtime/server/render/page.js:49:18)
+    at async NOOP_MIDDLEWARE_FN (file:///C:/Users/El%20Hombre%20de%20Burrito/.gemini/antigravity/playground/static-satellite/3gen-pressure-washing/node_modules/astro/dist/core/middleware/noop-middleware.js:3:20)
+    at async RenderContext.render (file:///C:/Users/El%20Hombre%20de%20Burrito/.gemini/antigravity/playground/static-satellite/3gen-pressure-washing/node_modules/astro/dist/core/render-context.js:249:22)[22m
+Assertion failed: !(handle->flags & UV_HANDLE_CLOSING), file c:\ws\deps\uv\src\win\async.c, line 76
