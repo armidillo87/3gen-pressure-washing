@@ -1,14 +1,125 @@
 [
   {
-    "id": "spokane-county",
-    "name": "Spokane County",
-    "slug": "spokane-county",
+    "id": "spokane",
+    "name": "Spokane",
+    "slug": "spokane",
     "state": "WA",
     "coordinates": {
-      "lat": 47.6166,
-      "lng": -117.4166
+      "lat": 47.6588,
+      "lng": -117.4260
     },
-    "description": "Providing top-tier commercial and residential pressure washing services across Spokane County, WA.",
+    "description": "Premium residential and commercial hot-water pressure washing, graffiti removal, and soft washing across Spokane, WA.",
     "isPrimary": true
+  },
+  {
+    "id": "spokane-valley",
+    "name": "Spokane Valley",
+    "slug": "spokane-valley",
+    "state": "WA",
+    "coordinates": {
+      "lat": 47.6732,
+      "lng": -117.2394
+    },
+    "description": "Full-service exterior cleaning, commercial building washing, and surface restoration in Spokane Valley, WA.",
+    "isPrimary": false
+  },
+  {
+    "id": "liberty-lake",
+    "name": "Liberty Lake",
+    "slug": "liberty-lake",
+    "state": "WA",
+    "coordinates": {
+      "lat": 47.6696,
+      "lng": -117.0980
+    },
+    "description": "Eco-friendly soft washing, window washing, and residential siding restoration in Liberty Lake, WA.",
+    "isPrimary": false
+  },
+  {
+    "id": "cheney",
+    "name": "Cheney",
+    "slug": "cheney",
+    "state": "WA",
+    "coordinates": {
+      "lat": 47.4874,
+      "lng": -117.5758
+    },
+    "description": "High-powered surface cleaning, concrete driveway washing, and commercial storefront washing in Cheney, WA.",
+    "isPrimary": false
+  },
+  {
+    "id": "airway-heights",
+    "name": "Airway Heights",
+    "slug": "airway-heights",
+    "state": "WA",
+    "coordinates": {
+      "lat": 47.6432,
+      "lng": -117.5872
+    },
+    "description": "Commercial drive-thru and fuel station hot-water degreasing and concrete washing in Airway Heights, WA.",
+    "isPrimary": false
+  },
+  {
+    "id": "medical-lake",
+    "name": "Medical Lake",
+    "slug": "medical-lake",
+    "state": "WA",
+    "coordinates": {
+      "lat": 47.5721,
+      "lng": -117.6833
+    },
+    "description": "Professional residential deck, siding, and roof soft-wash cleaning treatments in Medical Lake, WA.",
+    "isPrimary": false
+  },
+  {
+    "id": "millwood",
+    "name": "Millwood",
+    "slug": "millwood",
+    "state": "WA",
+    "coordinates": {
+      "lat": 47.6846,
+      "lng": -117.2885
+    },
+    "description": "Family-owned and minority-owned exterior cleaning and graffiti removal services in Millwood, WA.",
+    "isPrimary": false
+  },
+  {
+    "id": "south-hill",
+    "name": "South Hill",
+    "slug": "south-hill",
+    "state": "WA",
+    "coordinates": {
+      "lat": 47.6250,
+      "lng": -117.4013
+    },
+    "description": "Empathetic residential soft washing, deck restoration, and driveway cleaning in Spokane's South Hill neighborhood.",
+    "isPrimary": false,
+    "isNeighborhood": true
+  },
+  {
+    "id": "five-mile-prairie",
+    "name": "Five Mile Prairie",
+    "slug": "five-mile-prairie",
+    "state": "WA",
+    "coordinates": {
+      "lat": 47.7324,
+      "lng": -117.4377
+    },
+    "description": "Residential vinyl siding wash, window cleaning, and gutter wash services in the Five Mile Prairie neighborhood.",
+    "isPrimary": false,
+    "isNeighborhood": true
+  },
+  {
+    "id": "indian-trail",
+    "name": "Indian Trail",
+    "slug": "indian-trail",
+    "state": "WA",
+    "coordinates": {
+      "lat": 47.7410,
+      "lng": -117.4721
+    },
+    "description": "Professional walkway pressure washing, roof treatment, and soft wash cleaning in the Indian Trail neighborhood.",
+    "isPrimary": false,
+    "isNeighborhood": true
   }
 ]

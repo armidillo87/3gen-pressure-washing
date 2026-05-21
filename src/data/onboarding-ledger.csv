@@ -1,0 +1,15 @@
+Category,Task,Status,AssignedTo,ResourceUrl,VerificationDate,VerificationNotes
+SEO & Tracking,Google Tag Manager Setup,Pending,Antigravity,https://tagmanager.google.com,,GTM container created and Tag Manager ID loaded in site-config.json
+SEO & Tracking,GA4 Property Provisioning,Pending,Antigravity,https://analytics.google.com,,GA4 Measurement ID loaded into site-config.json and verified trigger tags
+DNS & Ingress,Cloudflare Domain Mapping,Pending,Antigravity,https://dash.cloudflare.com,,Configure DNS A record pointing to Cloudflare Edge Pages deployment
+DNS & Ingress,Cloudflare SSL & Security Headers,Pending,Antigravity,https://dash.cloudflare.com,,Verify SSL/TLS set to Full Strict and HSTS active
+Form Infrastructure,Cloudflare Worker Domain Whitelisting,Pending,Antigravity,https://form-handler.brandon-c29.workers.dev,,Domain 3genpressurewashing.com added to Clients table in CF Worker
+Form Infrastructure,Cloudflare Worker Recipient Email Mapping,Pending,Antigravity,https://form-handler.brandon-c29.workers.dev,,Route form-tag "general" to client email t.alcala@3genpw.com in CF Worker
+Form Infrastructure,Cloudflare Email Routing,Pending,Antigravity,https://dash.cloudflare.com,,Configure and verify catch-all and custom email routing for contact@3genpressurewashing.com
+Legal Documents,Privacy Policy Generation,Pending,Antigravity,https://3genpressurewashing.com/privacy/,,Privacy policy page updated with physical address and email variables
+Legal Documents,Terms of Service Generation,Pending,Antigravity,https://3genpressurewashing.com/terms/,,Terms of service page updated with liability limits and WA jurisdiction
+Legal Documents,TCPA Consent Injection,Pending,Antigravity,https://3genpressurewashing.com/,,TCPA checkboxes integrated on QuoteForm.astro with unique ID validations
+Aesthetic Review,Logo Assets Conversion & Optimization,Pending,Antigravity,https://3genpressurewashing.com/,,Scraped legacy logo optimized to WebP/SVG format and saved to public/images/logo.png
+Aesthetic Review,Scraped Job Site Assets Optimization,Pending,Antigravity,https://3genpressurewashing.com/,,Scraped legacy job site photos resized to highly compressed WebP formats
+Content Audit,Spokane County Neighborhood Map,Pending,Antigravity,https://3genpressurewashing.com/,,Cities list pruned to Spokane County cities and neighborhoods only
+Content Audit,301 Redirect Mapping for Outer Counties,Pending,Antigravity,https://3genpressurewashing.com/,,301 Redirects mapped in astro.config.mjs to redirect outer-county pages to homepage

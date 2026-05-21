@@ -27,9 +27,9 @@
         "title": "Aggressive, High-Performance Cleaning",
         "subtitle": "Select your sector below for immediate dispatch details.",
         "services": [
-          { "title": "Hot & Cold Pressure Washing", "description": "Temperature-controlled pressure washing for tough stains, grease, and algae removal.", "link": "/services/hot-cold-pressure-washing", "icon": "bolt", "image": "/src/assets/images/hero.png" },
-          { "title": "Graffiti Removal", "description": "State-certified, damage-free graffiti removal for commercial and public properties.", "link": "/services/graffiti-removal", "icon": "business", "image": "/src/assets/images/panel.png" },
-          { "title": "Commercial Building Washing", "description": "Enhance your business's curb appeal with exterior and storefront pressure washing.", "link": "/services/commercial-building-washing", "icon": "home", "image": "/src/assets/images/commercial.png" }
+          { "title": "Hot & Cold Pressure Washing", "description": "Temperature-controlled pressure washing for tough stains, grease, and algae removal.", "link": "/services/hot-cold-pressure-washing", "icon": "bolt", "image": "/src/assets/images/hero.jpg" },
+          { "title": "Graffiti Removal", "description": "State-certified, damage-free graffiti removal for commercial and public properties.", "link": "/services/graffiti-removal", "icon": "business", "image": "/src/assets/images/adobestock-cleaning.jpg" },
+          { "title": "Commercial Building Washing", "description": "Enhance your business's curb appeal with exterior and storefront pressure washing.", "link": "/services/commercial-building-washing", "icon": "home", "image": "/src/assets/images/boots.jpg" }
         ]
       }
     },

@@ -7,37 +7,37 @@
 
 :root {
   /* Brand Colors — richer, more dramatic */
-  --black: #08090d;
-  --charcoal: #111318;
-  --dark-surface: #16181f;
-  --dark-surface-2: #1e2029;
+  --black: #0D131A; /* Legacy Slate */
+  --charcoal: #0D1B2B; /* Legacy Charcoal */
+  --dark-surface: #101824;
+  --dark-surface-2: #162233;
   --forest: #0056b3; /* 3 Gen Primary Blue Accent */
-  --forest-deep: #1a1a1a; /* 3 Gen Primary Text/Dark Slate */
+  --forest-deep: #0D131A; /* 3 Gen Primary Text/Dark Slate */
   --forest-light: #ff9900; /* 3 Gen Secondary Accent Orange */
   --gold: #d4a03c;
   --gold-bright: #f0c050;
   --gold-pale: #f5dea0;
-  --cream: #f4f7f6; /* 3 Gen Light Background */
-  --cream-warm: #faf6ef;
+  --cream: #ECEFF3; /* Legacy Cream */
+  --cream-warm: #E2E6EC;
   --sage: #00c853; /* 3 Gen Green Accent */
-  --text-dark: #0a0a0a;
-  --text-mid: #5e6373;
+  --text-dark: #090e14;
+  --text-mid: #4a5468;
   /* WCAG AA 4.6:1 on #f8f4ed */
-  --text-light: #6e7383;
+  --text-light: #5a657c;
   /* WCAG AA 4.5:1 on white */
-  --text-on-dark: #e0e2e8;
-  --text-on-dark-dim: #9da1b2;
-  /* WCAG AA 5.1:1 on #111318 */
+  --text-on-dark: #ECEFF3;
+  --text-on-dark-dim: #a0aec0;
+  /* WCAG AA 5.1:1 on --charcoal */
   --accent-line: rgba(212, 160, 60, 0.15);
-  --gold-wcag: #f0c050; /* WCAG AA 4.8:1 on --forest, use for text on dark green */
+  --gold-wcag: #f0c050;
   --glass-white: rgba(255, 255, 255, 0.04);
   --glass-white-2: rgba(255, 255, 255, 0.07);
   --glass-border: rgba(255, 255, 255, 0.06);
 
   /* Fonts */
-  --font-display: 'Outfit', sans-serif;
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'Inter', sans-serif;
+  --font-display: 'Lato', sans-serif;
+  --font-heading: 'Lato', sans-serif;
+  --font-body: 'Roboto', sans-serif;
 
   /* Sizes */
   --text-xs: 0.75rem;
