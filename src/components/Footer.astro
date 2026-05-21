@@ -19,7 +19,7 @@ const currentYear = new Date().getFullYear();
 
     <div>
       <h4 class="footer__heading">Services</h4>
-      {servicesData.filter((s: any) => s.pillar === 'residential' && s.status !== 'coming-soon').slice(0, 5).map((service: any) => (
+      {servicesData.filter((s: any) => s.targetAudience?.includes('Residential') && s.status !== 'coming-soon').slice(0, 5).map((service: any) => (
         <a href={`/services/${service.slug}/`} class="footer__link">{service.shortName}</a>
       ))}
       <a href="/services/" class="footer__link" style="margin-top: 0.5rem; font-weight: bold; color: var(--color-accent, #d4af37);">View All Services &rarr;</a>
@@ -42,8 +42,9 @@ const currentYear = new Date().getFullYear();
   <div class="container footer__bottom">
     <span>&copy; {currentYear} {business.legalName}. All rights reserved.</span>
     <span>
-      <a href="/privacy/" style="color: var(--text-on-dark-dim);">Privacy</a> &nbsp;|&nbsp;
-      <a href="/terms/" style="color: var(--text-on-dark-dim);">Terms</a>
+      <a href="/privacy/" style="color: var(--text-on-dark-dim);">Privacy Policy</a> &nbsp;|&nbsp;
+      <a href="/terms/" style="color: var(--text-on-dark-dim);">Terms of Service</a> &nbsp;|&nbsp;
+      <a href="/accessibility/" style="color: var(--text-on-dark-dim);">Accessibility</a>
     </span>
   </div>
 </footer>

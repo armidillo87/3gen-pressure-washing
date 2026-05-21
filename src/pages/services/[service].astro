@@ -11,24 +11,26 @@ import ProcessWalkthrough from '@/components/ProcessWalkthrough.astro';
 
 import servicesData from '@/data/services.json';
 import citiesData from '@/data/cities.json';
-import siteConfig from '@/data/site-config.json';
 import copyData from '@/data/copy.json';
 import aboutPageData from '@/data/pages/about.json';
+import { getProjectConfig } from '@/utils/twenty';
 
 export function getStaticPaths() {
-  const services = servicesData.filter((s: any) => s.pillar === 'residential' && s.status !== 'coming-soon');
-  return services.map((service: any) => ({
+  // All services in servicesData are active and ready
+  return servicesData.map((service: any) => ({
     params: { service: service.slug },
     props: { service },
   }));
 }
 
 const { service } = Astro.props as { service: any };
+const siteConfig = await getProjectConfig('3gen-pressure-washing');
 const { business } = siteConfig;
 const serviceCopy = (copyData as any).services?.[service.slug] || null;
+const serviceRadius = "Spokane & Surrounding Areas";
 
-const pageTitle = `${service.name} | ${business.name} | ${business.serviceRadius}`;
-const pageDesc = `Professional ${service.shortName.toLowerCase()} in ${business.serviceRadius}. ${service.shortDesc} ${business.rating}-star rated. Call ${business.phone}.`;
+const pageTitle = `${service.name} | ${business.name} | ${serviceRadius}`;
+const pageDesc = `Professional ${service.shortName.toLowerCase()} in ${serviceRadius}. ${service.shortDescription || service.shortDesc} ${business.rating}-star rated. Call ${business.phoneFormatted || business.phone}.`;
 
 const serviceSchema = {
   "@context": "https://schema.org",
@@ -47,7 +49,7 @@ const serviceSchema = {
       "bestRating": "5"
     }
   },
-  "areaServed": citiesData.map((c: any) => ({ "@type": "City", "name": c.city }))
+  "areaServed": citiesData.map((c: any) => ({ "@type": "City", "name": c.name }))
 };
 
 const faqSchema = service.faq?.length ? {
@@ -67,9 +69,9 @@ const faqSchema = service.faq?.length ? {
   <Hero
     heroClass={service.heroClass}
     label="Our Services"
-    h1={`${service.name} <br><em class='serif accent'>in ${business.serviceRadius}.</em>`}
-    desc={service.shortDesc}
-    bgImage={service.image}
+    h1={`${service.name} <br><em class='serif accent'>in ${serviceRadius}.</em>`}
+    desc={service.shortDescription || service.description || service.shortDesc}
+    bgImage={service.primaryImage || service.image}
     breadcrumbs={[
       { label: 'Services', href: '/services/' },
       { label: service.shortName, href: `/services/${service.slug}/` }
@@ -90,16 +92,16 @@ const faqSchema = service.faq?.length ? {
           Professional <span class="accent serif">{service.shortName}</span>
         </h2>
         <p style="font-size: 1.125rem; line-height: 1.9; margin-top: 1.5rem; color: var(--text-mid);">
-          {serviceCopy?.overview || service.shortDesc}
+          {serviceCopy?.overview || service.shortDescription || service.description || service.shortDesc}
         </p>
       </div>
     </section>
   )}
 
   <WhyChooseUs 
-    title="Why Choose Bam Electric" 
-    desc={`${siteConfig.business.name} stands behind every project. We deliver master-level trade execution on time, every time.`} 
-    reasons={aboutPageData.blocks.find(b => b.type === 'WhyChooseUs')?.data.reasons || []} 
+    title={`Why Choose ${siteConfig.business.shortName || siteConfig.business.name}`} 
+    desc={`${siteConfig.business.name} stands behind every project. We deliver professional-grade exterior cleaning services with hot and cold temperature-controlled power washing.`} 
+    reasons={aboutPageData.blocks.find((b: any) => b.type === 'WhyChooseUs')?.data.reasons || []} 
   />
 
   <ProcessWalkthrough 

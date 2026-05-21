@@ -3,8 +3,9 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import BlockRenderer from '@/components/BlockRenderer.astro';
-import siteConfig from '@/data/site-config.json';
+import { getProjectConfig } from '@/utils/twenty';
 
+const siteConfig = await getProjectConfig('3gen-pressure-washing');
 const { business } = siteConfig;
 
 const schema = {
@@ -38,7 +39,7 @@ import homeData from '@/data/pages/home.json';
 const funnelBlocks = homeData.blocks;
 ---
 
-<BaseLayout title={`${business.name} | Reliable Electrical Contractors`} schema={schema}>
+<BaseLayout title={siteConfig.seo.defaultTitle} description={siteConfig.seo.defaultDescription} schema={schema}>
   <Header slot="header" />
 
   <BlockRenderer blocks={funnelBlocks} />

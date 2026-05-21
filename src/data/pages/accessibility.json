@@ -1,0 +1,23 @@
+{
+  "slug": "accessibility",
+  "title": "Accessibility Statement | 3 Gen Pressure Washing, LLC",
+  "description": "Accessibility Statement for 3 Gen Pressure Washing, LLC. We are committed to digital accessibility for all users.",
+  "blocks": [
+    {
+      "type": "Hero",
+      "data": {
+        "heroClass": "standard",
+        "h1": "Accessibility <em class='serif accent'>Statement</em>",
+        "desc": "Our commitment to digital inclusion."
+      }
+    },
+    {
+      "type": "SeoBlock",
+      "data": {
+        "heading": "Digital Accessibility Commitment",
+        "subheading": "Ensuring Inclusion for Everyone",
+        "content": "<p>3 Gen Pressure Washing, LLC is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards, including the Web Content Accessibility Guidelines (WCAG) 2.1 Level AA.</p><p>We design our pages to be keyboard-navigable, ensure adequate color contrast, provide skip-to-content links, and maintain structured markup to facilitate screen-reader accessibility. If you experience difficulty accessing any part of our website, please contact us at t.alcala@3genpw.com or call 509-939-8757 and we will be happy to assist you.</p>"
+      }
+    }
+  ]
+}

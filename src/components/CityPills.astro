@@ -28,6 +28,6 @@ const wrapperClass = variant === 'light' ? 'areas-pills areas-pills--light' : 'a
 
 <div class={wrapperClass}>
   {cities.map((c: any) => (
-    <a href={linkToService && serviceSlug ? `/${c.slug}/${serviceSlug}/` : `/${c.slug}/`} class="area-pill">{c.city}</a>
+    <a href={linkToService && serviceSlug ? `/${c.slug}/${serviceSlug}/` : `/${c.slug}/`} class="area-pill">{c.name}</a>
   ))}
 </div>

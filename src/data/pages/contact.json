@@ -1,14 +1,14 @@
 {
   "slug": "contact",
-  "title": "Contact [COMPANY_NAME] | Get a Quote Today",
-  "description": "Reach out to [COMPANY_NAME] for expert [INDUSTRY] services in [CITY]. Available for emergency troubleshooting, new installations, and commercial projects.",
+  "title": "Contact 3 Gen Pressure Washing | Spokane WA",
+  "description": "Reach out to 3 Gen Pressure Washing, LLC for expert exterior cleaning, hot/cold pressure washing, and graffiti removal in Spokane. Request a free quote today.",
   "blocks": [
     {
       "type": "Hero",
       "data": {
         "heroClass": "standard",
-        "h1": "Contact <em class='serif accent'>[COMPANY_NAME]</em>",
-        "desc": "Need an expert on-site? Call us directly at [PHONE_NUMBER] or request a quote below."
+        "h1": "Contact <em class='serif accent'>3 Gen Pressure Washing</em>",
+        "desc": "Need an expert on-site? Call us directly at (509) 939-8757 or request a free quote below."
       }
     },
     {

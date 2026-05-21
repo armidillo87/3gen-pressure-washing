@@ -1,57 +1,61 @@
 {
   "slug": "about",
-  "title": "About [COMPANY_NAME] | [CITY] [INDUSTRY]",
-  "description": "Learn how [COMPANY_NAME] has become the most trusted [INDUSTRY] provider in [CITY].",
+  "title": "About 3 Gen Pressure Washing | Spokane WA",
+  "description": "Learn how 3 Gen Pressure Washing, LLC has become Spokane's most trusted certified pressure washing and graffiti removal provider.",
   "blocks": [
     {
       "type": "Hero",
       "data": {
         "heroClass": "standard",
-        "h1": "About <em class='serif accent'>[COMPANY_NAME]</em>",
-        "desc": "Delivering elite [INDUSTRY] services across [SERVICE_RADIUS] since [YEAR]."
+        "h1": "About <em class='serif accent'>3 Gen Pressure Washing</em>",
+        "desc": "Delivering certified pressure washing and graffiti removal across Spokane and surrounding areas since 2022."
       }
     },
     {
       "type": "TrustBar",
       "data": {
         "signals": [
-          { "icon": "shield", "text": "Licensed Pro", "subtext": "Always to code" }
+          { "icon": "shield", "text": "Licensed & Insured", "subtext": "Complete Protection" },
+          { "icon": "star", "text": "State Certified", "subtext": "Trusted by Washington" },
+          { "icon": "home", "text": "Minority & Women-Owned", "subtext": "Locally Run" }
         ]
       }
     },
     {
       "type": "SeoBlock",
       "data": {
-        "heading": "[CITY]'s Leading [INDUSTRY] Contractors",
-        "subheading": "Expertise across [SERVICE_RADIUS]",
-        "content": "<p>We specialize in heavy-duty commercial and rapid-response residential solutions.</p>"
+        "heading": "Spokane's Leading Pressure Washing Specialists",
+        "subheading": "Expertise across Spokane and Surrounding Areas",
+        "content": "<p>3 Gen Pressure Washing, LLC is Spokane's choice for temperature-controlled hot and cold water pressure washing, safe roof treatments, and state-certified damage-free graffiti removal. We are a family-owned, certified minority and women-owned business committed to absolute customer satisfaction.</p>"
       }
     },
     {
       "type": "WhyChooseUs",
       "data": {
-        "title": "Why Choose [COMPANY_NAME]",
-        "desc": "We build trust through communication and master-level execution.",
+        "title": "Why Choose 3 Gen Pressure Washing",
+        "desc": "We build long-term trust through clear communication, transparent pricing, and master-level technical execution.",
         "reasons": [
-          { "headline": "Years of Experience", "description": "Decades of hands-on expertise.", "icon": "check" }
+          { "headline": "State Certified", "description": "Trusted by the State of Washington for professional graffiti removal services.", "icon": "check" },
+          { "headline": "Family-Owned & Operated", "description": "Spokane locals offering personalized care for both home and business owners.", "icon": "check" },
+          { "headline": "Industrial Hot Water", "description": "High-temperature power washing to thoroughly lift grease, oil, and tough buildup.", "icon": "check" }
         ]
       }
     },
     {
       "type": "ProcessWalkthrough",
       "data": {
-        "title": "Our Simple Process",
+        "title": "Our Professional Process",
         "steps": [
-          { "title": "1. The Diagnostic Call", "description": "Reach out so we understand your scope." },
-          { "title": "2. The Strategic Plan", "description": "We formulate a fast-executing battle plan." },
-          { "title": "3. Flawless Execution", "description": "We execute safely and leave the site pristine." }
+          { "title": "1. Free Estimation", "description": "Give us a call or submit a form. We assess your scope and quote transparently." },
+          { "title": "2. The Custom Strategy", "description": "We establish the safest temperatures and methods (like soft washing) for your surfaces." },
+          { "title": "3. Perfect Execution", "description": "Our team executes the cleaning efficiently, leaving your property absolutely pristine." }
         ]
       }
     },
     {
       "type": "Testimonials",
       "data": {
-        "title": "What Our Clients Say",
+        "title": "What Our Spokane Clients Say",
         "reviews": []
       }
     },

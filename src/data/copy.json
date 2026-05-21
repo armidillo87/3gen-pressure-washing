@@ -1,22 +1,22 @@
 {
-    "intro": "Welcome to [COMPANY_NAME]...",
+    "intro": "Welcome to 3 Gen Pressure Washing, LLC...",
     "general": {
-        "about": "[COMPANY_NAME] isn't just another contractor...",
+        "about": "3 Gen Pressure Washing, LLC is a premier certified, family-owned, and minority-owned exterior cleaning service. We deliver high-temperature, temperature-controlled hot and cold pressure washing and soft washing across Spokane County.",
         "process": [
-            { "title": "1. First Contact", "desc": "We ask the right questions immediately." },
-            { "title": "2. Strategy", "desc": "We formulate a fast-executing battle plan." },
-            { "title": "3. Execution", "desc": "We execute safely and clean up." }
+            { "title": "1. First Contact", "desc": "We ask the right questions immediately to understand your scope." },
+            { "title": "2. Strategy", "desc": "We formulate a fast-executing battle plan for zero disruption." },
+            { "title": "3. Execution", "desc": "We execute safely, remove stains or graffiti completely, and clean up." }
         ]
     },
     "services": {},
     "residential": {
-        "benefits": "We deliver master-level execution for homeowners.",
-        "painPoints": "Stop dealing with flaky contractors.",
-        "solution": "We arrive on time, quote transparently, and execute flawlessly."
+        "benefits": "We deliver master-level pressure washing and soft washing for Spokane homeowners.",
+        "painPoints": "Stop dealing with flaky contractors who damage your siding or roof.",
+        "solution": "We arrive on time, quote transparently, and execute damage-free soft wash roof and siding cleaning."
     },
     "commercial": {
-        "benefits": "Industrial-grade reliability for your business.",
-        "painPoints": "Downtime kills revenue.",
-        "solution": "We minimize disruption with rapid, scalable commercial solutions."
+        "benefits": "Industrial-grade reliability, hot-water washing, and certified graffiti removal for your business.",
+        "painPoints": "Downtime, grease buildup, and unsightly graffiti that kills customer trust and revenue.",
+        "solution": "We minimize business disruption with rapid, scalable hot-water commercial cleaning solutions."
     }
 }

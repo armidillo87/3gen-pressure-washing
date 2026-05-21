@@ -6,12 +6,11 @@ import Hero from '@/components/Hero.astro';
 import QuoteForm from '@/components/QuoteForm.astro';
 import CityPills from '@/components/CityPills.astro';
 import servicesData from '@/data/services.json';
-import siteConfig from '@/data/site-config.json';
-// CHANGE: Create this file with your design system styles
-// import '@/styles/pages/residential.css';
+import { getProjectConfig } from '@/utils/twenty';
 
+const siteConfig = await getProjectConfig('3gen-pressure-washing');
 const { business } = siteConfig;
-const activeServices = servicesData.filter((s: any) => s.pillar === 'residential' && s.status !== 'coming-soon');
+const activeServices = servicesData;
 
 const schema = {
   "@context": "https://schema.org",
@@ -39,7 +38,7 @@ const schema = {
     heroClass="home"
     label="Our Services"
     h1="What We <br><em class='serif accent'>Do.</em>"
-    desc="From simple repairs to complex wiring, our experts are here to keep your home safe and powered."
+    desc="Professional temperature-controlled hot and cold pressure washing, soft washing, and graffiti removal in Spokane and surrounding counties."
     breadcrumbs={[{ label: 'Services', href: '/services/' }]}
   />
 

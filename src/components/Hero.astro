@@ -1,6 +1,7 @@
 ---
 import { Image } from 'astro:assets';
-import siteConfig from '@/data/site-config.json';
+import { Image } from 'astro:assets';
+import { getProjectConfig } from '@/utils/twenty';
 import heroImage from '@/assets/images/hero.png';
 
 const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,gif,webp}');
@@ -15,6 +16,7 @@ interface Props {
 }
 
 const { heroClass, label, h1, desc, breadcrumbs, bgImage } = Astro.props;
+const siteConfig = await getProjectConfig('3gen-pressure-washing');
 const { business } = siteConfig;
 
 // Attempt to resolve the background image dynamically matching the heroClass name
@@ -24,9 +26,9 @@ const resolveImage = images[imagePath] || images[imagePath.replace('.png', '.jpg
 
 <section class={`resi-hero resi-hero--${heroClass}`}>
   {resolveImage ? (
-    <Image src={resolveImage()} alt="Bam Electric Services" class="resi-hero__bg-img" loading="eager" fetchpriority="high" width={1920} height={1080} format="webp" />
+    <Image src={resolveImage()} alt={`${business.name} Services`} class="resi-hero__bg-img" loading="eager" fetchpriority="high" width={1920} height={1080} format="webp" />
   ) : (
-    <Image src={heroImage} alt="Bam Electric Services" class="resi-hero__bg-img" loading="eager" fetchpriority="high" width={1920} height={1080} format="webp" />
+    <Image src={heroImage} alt={`${business.name} Services`} class="resi-hero__bg-img" loading="eager" fetchpriority="high" width={1920} height={1080} format="webp" />
   )}
   <div class="resi-hero__overlay"></div>
   

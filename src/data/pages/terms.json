@@ -1,14 +1,14 @@
 {
   "slug": "terms",
-  "title": "Terms of Service | [COMPANY_NAME]",
-  "description": "Terms of Service for [COMPANY_NAME].",
+  "title": "Terms of Service | 3 Gen Pressure Washing, LLC",
+  "description": "Terms of Service for 3 Gen Pressure Washing, LLC. Learn about our service terms, liability, and payment conditions.",
   "blocks": [
     {
       "type": "Hero",
       "data": {
         "heroClass": "standard",
         "h1": "Terms of <em class='serif accent'>Service</em>",
-        "desc": "Operating definitions for [COMPANY_NAME]."
+        "desc": "Operating terms for 3 Gen Pressure Washing, LLC."
       }
     },
     {
@@ -16,7 +16,7 @@
       "data": {
         "heading": "Terms & Conditions",
         "subheading": "Service Agreements",
-        "content": "<p>Generic terms of service text goes here. Update per local legal requirements.</p>"
+        "content": "<p>By scheduling service with 3 Gen Pressure Washing, LLC, you agree to our terms of service. We provide temperature-controlled hot and cold pressure washing and soft washing services. Estimates are valid for 30 days. Homeowners and business operators must provide clear access to all work areas and a functional external water source unless otherwise agreed. Payment is due upon completion of the service unless net terms have been established prior to the job.</p>"
       }
     }
   ]

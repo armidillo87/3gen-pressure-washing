@@ -3,7 +3,7 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import BlockRenderer from '@/components/BlockRenderer.astro';
-import siteConfig from '@/data/site-config.json';
+import { getProjectConfig } from '@/utils/twenty';
 
 // 1. Generate static paths for all JSON files in src/data/pages
 export async function getStaticPaths() {
@@ -21,6 +21,7 @@ export async function getStaticPaths() {
 }
 
 const { page } = Astro.props;
+const siteConfig = await getProjectConfig('3gen-pressure-washing');
 const { business } = siteConfig;
 
 const schema = {

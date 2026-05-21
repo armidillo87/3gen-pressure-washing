@@ -1,5 +1,5 @@
 /* ============================================
-   AIM HIGH LAWN & LANDSCAPE — DESIGN SYSTEM v2
+   3 GEN PRESSURE WASHING — DESIGN SYSTEM v2
    Premium, bold, distinctive — NOT generic.
    ============================================ */
 
@@ -11,15 +11,15 @@
   --charcoal: #111318;
   --dark-surface: #16181f;
   --dark-surface-2: #1e2029;
-  --forest: #1b3e92; /* BAM Vibrant Blue Accent */
-  --forest-deep: #3d4852; /* BAM Primary Text/Dark Navy */
-  --forest-light: #2c5ba3; /* BAM Intermediate Blue */
+  --forest: #0056b3; /* 3 Gen Primary Blue Accent */
+  --forest-deep: #1a1a1a; /* 3 Gen Primary Text/Dark Slate */
+  --forest-light: #ff9900; /* 3 Gen Secondary Accent Orange */
   --gold: #d4a03c;
   --gold-bright: #f0c050;
   --gold-pale: #f5dea0;
-  --cream: #f8f4ed;
+  --cream: #f4f7f6; /* 3 Gen Light Background */
   --cream-warm: #faf6ef;
-  --sage: #a8b8c5; /* BAM Slate */
+  --sage: #00c853; /* 3 Gen Green Accent */
   --text-dark: #0a0a0a;
   --text-mid: #5e6373;
   /* WCAG AA 4.6:1 on #f8f4ed */
