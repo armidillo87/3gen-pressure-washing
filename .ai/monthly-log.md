@@ -1,18 +1,11 @@
-## 2026-03
+# 3GEN-PRESSURE-WASHING Monthly Log
 
-### Content
-- **Created:** Populated `site-config.json`, `services.json`, `cities.json`, and `copy.json` from scraped data off `bamelectricid.com` (2026-03-16)
+_Auto-generated from Postgres events table._
 
-### Technical
-- **Files Modified:** 4 JSON data files
+## 2026-05
 
-- Overhauled Bam Electric copywriting architecture using Halbert/Hormozi and BANT frameworks (`home.json`, `services.json`, `copy.json`).
-- Added Lead Qualification fields (`Timeline`, `Project Type`) to the QuoteForm component.
-- Executed full V11.0 Build Checklist audit. Passed WCAG, SEO, and Performance non-negotiables.
-- Completed Phase 5 Site Completion. Generated 57 production pages successfully.
+- **✍️ Content**: Created 3GP-003: The Hidden Cost of DIY Pressure Washing: How You're Destroying Your Siding → backlog [3GP-003] `work_item.created`
+- **🧠 Decision**: 3GP-001: 3Gen Status Decision - Active or Dormant Client? — sprint → killed. Status confirmed active by owner. Replaced with actual migration work item. [3GP-001] `work_item.transitioned`
+- **🏗️ Build**: Created 3GP-002: Full Site Migration - 3genpressurewashing.com → sprint [3GP-002] `work_item.created`
+- **🧠 Decision**: Created 3GP-001: 3Gen Status Decision - Active or Dormant Client? → sprint [3GP-001] `work_item.created`
 
-### System Diagnostics & Root Cause Fixes (2026-03-17)
-- **Astro Compiler Trap:** Isolated and fixed a `$$render` AST build failure caused by JSX comments (`{/* @ts-ignore */}`) inside ternary evaluations nested in `.astro` components.
-- **Node C++ Panic Trap:** Fixed a Node file-lock panic triggered by modifying root architecture directories while the Vite dev server was active.
-- **Universal Routing Pivot:** Flattened legacy `/residential` siloes down to strict `/services/` arrays.
-- **Completed Action:** Site reduced to 8-page Starter standard. All build steps greenlit for Cloudflare.

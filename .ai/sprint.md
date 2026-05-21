@@ -1,4 +1,8 @@
-# Sprint: BAM Electric (Active)
+# Sprint (3gen-pressure-washing)
 
-No active tasks remaining. Phase 5 Scaffold & Optimization complete. 
-Next steps rely on the Owner provisioning the Cloudflare repo connection.
+_Auto-generated lean view from Postgres._
+
+| ID | Priority | Category | Title | Blocked On | Next Step |
+|---|---|---|---|---|---|
+| **3GP-002** | 🔴 High | 🏗️ Build | Full Site Migration - 3genpressurewashing.com | - | Run /import-site workflow. Run Deep Research for local pressure washing pain points. Migrate full pipeline. |
+| **3GP-002** | 🔴 High | 🏗️ Build | Full Site Migration - 3genpressurewashing.com | - | Run /import-site workflow. Run Deep Research for local pressure washing pain points. Migrate full pipeline. |
