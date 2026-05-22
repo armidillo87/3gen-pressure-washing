@@ -13,7 +13,7 @@ import servicesData from '@/data/services.json';
 import citiesData from '@/data/cities.json';
 import copyData from '@/data/copy.json';
 import aboutPageData from '@/data/pages/about.json';
-import { getProjectConfig } from '@/utils/twenty';
+import { getProjectConfig, getResolvedCopy } from '@/utils/twenty';
 
 export function getStaticPaths() {
   // All services in servicesData are active and ready
@@ -26,17 +26,18 @@ export function getStaticPaths() {
 const { service } = Astro.props as { service: any };
 const siteConfig = await getProjectConfig('3gen-pressure-washing');
 const { business } = siteConfig;
+const resolvedCopy = await getResolvedCopy(service.slug, null, service);
 const serviceCopy = (copyData as any).services?.[service.slug] || null;
 const serviceRadius = "Spokane & Surrounding Areas";
 
 const pageTitle = `${service.name} | ${business.name} | ${serviceRadius}`;
-const pageDesc = `Professional ${service.shortName.toLowerCase()} in ${serviceRadius}. ${service.shortDescription || service.shortDesc} ${business.rating}-star rated. Call ${business.phoneFormatted || business.phone}.`;
+const pageDesc = `Professional ${service.shortName.toLowerCase()} in ${serviceRadius}. ${resolvedCopy.overview.substring(0, 140)}... ${business.rating}-star rated. Call ${business.phoneFormatted || business.phone}.`;
 
 const serviceSchema = {
   "@context": "https://schema.org",
   "@type": "Service",
   "name": service.name,
-  "description": serviceCopy?.overview || service.shortDesc,
+  "description": resolvedCopy.overview,
   "provider": {
     "@type": "LocalBusiness",
     "name": business.name,
@@ -70,7 +71,7 @@ const faqSchema = service.faq?.length ? {
     heroClass={service.heroClass}
     label="Our Services"
     h1={`${service.name} <br><em class='serif accent'>in ${serviceRadius}.</em>`}
-    desc={service.shortDescription || service.description || service.shortDesc}
+    desc={resolvedCopy.overview}
     bgImage={service.primaryImage || service.image}
     breadcrumbs={[
       { label: 'Services', href: '/services/' },
@@ -92,7 +93,7 @@ const faqSchema = service.faq?.length ? {
           Professional <span class="accent serif">{service.shortName}</span>
         </h2>
         <p style="font-size: 1.125rem; line-height: 1.9; margin-top: 1.5rem; color: var(--text-mid);">
-          {serviceCopy?.overview || service.shortDescription || service.description || service.shortDesc}
+          {resolvedCopy.overview}
         </p>
       </div>
     </section>
@@ -106,7 +107,7 @@ const faqSchema = service.faq?.length ? {
 
   <ProcessWalkthrough 
     title={`Our ${service.shortName} Process`} 
-    steps={copyData.general.process.map((s: any) => ({ title: s.title, description: s.desc }))}
+    steps={resolvedCopy.process.map((s: any) => ({ title: s.title, description: s.desc || s.description }))}
   />
 
   <!-- FAQ -->
