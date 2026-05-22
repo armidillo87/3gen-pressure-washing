@@ -374,6 +374,130 @@ export async function getCopy(projectSlug = '3gen-pressure-washing') {
   return cachedCopyPromise;
 }
 
+let cachedWebsiteCopies: any = null;
+let cachedWebsiteCopiesPromise: Promise<any> | null = null;
+
+const websiteCopiesFallback: Record<string, Record<string, { headline: string; body: string }>> = {
+  "/services": {
+    "hero": {
+      "headline": "What We <br><em class='serif accent'>Do.</em>",
+      "body": "Professional temperature-controlled hot and cold pressure washing, soft washing, and graffiti removal in Spokane and surrounding counties."
+    },
+    "services-list": {
+      "headline": "{s.name}",
+      "body": "{s.shortDesc}"
+    },
+    "areas-we-serve": {
+      "headline": "Areas We Serve",
+      "body": "Premium local services."
+    }
+  },
+  "/services/[service]": {
+    "section": {
+      "headline": "Professional {service.shortName}",
+      "body": "{serviceCopy?.overview || service.shortDescription || service.description || service.shortDesc}"
+    },
+    "faq": {
+      "headline": "Questions About {service.shortName}",
+      "body": "{item.a}"
+    }
+  }
+};
+
+export async function getWebsiteCopies(projectSlug = '3gen-pressure-washing') {
+  if (cachedWebsiteCopies) {
+    return cachedWebsiteCopies;
+  }
+  if (cachedWebsiteCopiesPromise) {
+    return cachedWebsiteCopiesPromise;
+  }
+
+  cachedWebsiteCopiesPromise = (async () => {
+    try {
+      // First, get the project ID dynamically by name
+      const projectData = await queryTwenty(`
+        query GetProject($slug: String!) {
+          projects(filter: { name: { eq: $slug } }) {
+            edges {
+              node {
+                id
+              }
+            }
+          }
+        }
+      `, { slug: projectSlug });
+
+      const projectId = projectData?.projects?.edges?.[0]?.node?.id;
+      if (!projectId) {
+        throw new Error(`Project '${projectSlug}' not found in Twenty DB.`);
+      }
+
+      // Now query website copies for this project
+      const copiesData = await queryTwenty(`
+        query GetWebsiteCopies($projectId: String!) {
+          websiteCopies(
+            filter: { projectId: { eq: $projectId }, status: { eq: "approved" } }
+            first: 200
+          ) {
+            edges {
+              node {
+                page
+                section
+                headline
+                body
+                status
+              }
+            }
+          }
+        }
+      `, { projectId });
+
+      const edges = copiesData?.websiteCopies?.edges || [];
+      const copies: Record<string, Record<string, { headline: string; body: string }>> = {};
+
+      for (const edge of edges) {
+        const node = edge.node;
+        if (!node.page || !node.section) continue;
+        if (!copies[node.page]) {
+          copies[node.page] = {};
+        }
+        copies[node.page][node.section] = {
+          headline: node.headline || '',
+          body: node.body || ''
+        };
+      }
+
+      // Merge websiteCopiesFallback with dynamic approved copies to guarantee completeness
+      const mergedCopies: Record<string, Record<string, { headline: string; body: string }>> = {};
+
+      // Seed with static copy fallback
+      for (const page in websiteCopiesFallback) {
+        mergedCopies[page] = { ...websiteCopiesFallback[page] };
+      }
+
+      // Overlay with approved dynamic copy
+      for (const page in copies) {
+        if (!mergedCopies[page]) {
+          mergedCopies[page] = {};
+        }
+        for (const section in copies[page]) {
+          mergedCopies[page][section] = copies[page][section];
+        }
+      }
+
+      cachedWebsiteCopies = sanitizeCopy(mergedCopies);
+      return cachedWebsiteCopies;
+    } catch (err: any) {
+      console.warn(`[Twenty CRM Fallback] getWebsiteCopies failed, using static fallback:`, err.message);
+      cachedWebsiteCopies = websiteCopiesFallback;
+      return websiteCopiesFallback;
+    }
+  })();
+
+  return cachedWebsiteCopiesPromise;
+}
+
+
 // ==========================================
 // Phase B: PostgreSQL & Fallback Copy Engine
 // ==========================================
@@ -580,5 +704,34 @@ export async function getResolvedCopy(serviceSlug: string, cityRecord: any | nul
     solution,
     valueStack,
     process
+  });
+}
+export function mergeWebsiteCopies(blocks: any[], pageCopies: Record<string, { headline: string; body: string }> | undefined) {
+  if (!pageCopies || !blocks) return blocks;
+  
+  return blocks.map(block => {
+    // Look for matching section keys in pageCopies (case-insensitive)
+    const blockTypeLower = block.type.toLowerCase();
+    const matchingKey = Object.keys(pageCopies).find(key => key.toLowerCase() === blockTypeLower);
+    
+    if (matchingKey) {
+      const copy = pageCopies[matchingKey];
+      const newBlock = { ...block, data: { ...block.data } };
+      
+      if (copy.headline) {
+        if ('h1' in newBlock.data) newBlock.data.h1 = copy.headline;
+        else if ('title' in newBlock.data) newBlock.data.title = copy.headline;
+      }
+      
+      if (copy.body) {
+        if ('desc' in newBlock.data) newBlock.data.desc = copy.body;
+        else if ('subtitle' in newBlock.data) newBlock.data.subtitle = copy.body;
+        else if ('content' in newBlock.data) newBlock.data.content = copy.body;
+        else if ('text' in newBlock.data) newBlock.data.text = copy.body;
+      }
+      
+      return newBlock;
+    }
+    return block;
   });
 }

@@ -3,10 +3,13 @@ import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
 import BlockRenderer from '@/components/BlockRenderer.astro';
-import { getProjectConfig } from '@/utils/twenty';
+import { getProjectConfig, getWebsiteCopies, mergeWebsiteCopies } from '@/utils/twenty';
 
 const siteConfig = await getProjectConfig('3gen-pressure-washing');
 const { business } = siteConfig;
+
+const websiteCopies = await getWebsiteCopies('3gen-pressure-washing');
+const pageCopies = websiteCopies?.['/'];
 
 const schema = {
   "@context": "https://schema.org",
@@ -36,7 +39,7 @@ const schema = {
 import homeData from '@/data/pages/home.json';
 
 // Use the blocks from the imported JSON
-const funnelBlocks = homeData.blocks;
+const funnelBlocks = mergeWebsiteCopies(homeData.blocks, pageCopies);
 ---
 
 <BaseLayout title={siteConfig.seo.defaultTitle} description={siteConfig.seo.defaultDescription} schema={schema}>

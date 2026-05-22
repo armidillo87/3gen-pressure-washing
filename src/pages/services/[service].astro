@@ -13,7 +13,7 @@ import servicesData from '@/data/services.json';
 import citiesData from '@/data/cities.json';
 import copyData from '@/data/copy.json';
 import aboutPageData from '@/data/pages/about.json';
-import { getProjectConfig, getResolvedCopy } from '@/utils/twenty';
+import { getProjectConfig, getResolvedCopy, getWebsiteCopies } from '@/utils/twenty';
 
 export function getStaticPaths() {
   // All services in servicesData are active and ready
@@ -29,6 +29,30 @@ const { business } = siteConfig;
 const resolvedCopy = await getResolvedCopy(service.slug, null, service);
 const serviceCopy = (copyData as any).services?.[service.slug] || null;
 const serviceRadius = "Spokane & Surrounding Areas";
+
+const websiteCopies = await getWebsiteCopies('3gen-pressure-washing');
+const pageCopies = websiteCopies?.['/services/[service]'];
+
+function compileTemplate(tmpl, s, rc) {
+  if (!tmpl) return '';
+  return tmpl
+    .replace(/{service\.shortName}/g, s.shortName)
+    .replace(/{service\.name}/g, s.name)
+    .replace(/{service\.slug}/g, s.slug)
+    .replace(/{resolvedCopy\.overview}/g, rc.overview)
+    .replace(/{serviceCopy\?\.overview\s*\|\|\s*service\.shortDescription\s*\|\|\s*service\.description\s*\|\|\s*service\.shortDesc}/g, rc.overview);
+}
+
+const sectionHeadlineTmpl = pageCopies?.['section']?.headline || "Professional <span class='accent serif'>{service.shortName}</span>";
+const sectionBodyTmpl = pageCopies?.['section']?.body || "{resolvedCopy.overview}";
+
+const sectionHeadline = compileTemplate(sectionHeadlineTmpl, service, resolvedCopy);
+const sectionBody = compileTemplate(sectionBodyTmpl, service, resolvedCopy);
+
+const faqHeadlineTmpl = pageCopies?.['faq']?.headline || "Questions About <span class='accent serif'>{service.shortName}</span>";
+const faqBodyTmpl = pageCopies?.['faq']?.body || "{item.a}";
+
+const faqHeadline = compileTemplate(faqHeadlineTmpl, service, resolvedCopy);
 
 const pageTitle = `${service.name} | ${business.name} | ${serviceRadius}`;
 const pageDesc = `Professional ${service.shortName.toLowerCase()} in ${serviceRadius}. ${resolvedCopy.overview.substring(0, 140)}... ${business.rating}-star rated. Call ${business.phoneFormatted || business.phone}.`;
@@ -71,7 +95,7 @@ const faqSchema = service.faq?.length ? {
     heroClass={service.heroClass}
     label="Our Services"
     h1={`${service.name} <br><em class='serif accent'>in ${serviceRadius}.</em>`}
-    desc={resolvedCopy.overview}
+    desc={sectionBody}
     bgImage={service.primaryImage || service.image}
     breadcrumbs={[
       { label: 'Services', href: '/services/' },
@@ -89,12 +113,8 @@ const faqSchema = service.faq?.length ? {
   {!serviceCopy?.seoContent && (
     <section class="section section--cream" style="padding: 80px 0;">
       <div class="container" style="max-width: 800px; margin: 0 auto; text-align: center;">
-        <h2 style="font-family: var(--font-display); font-size: clamp(1.9rem,3.5vw,2.75rem);">
-          Professional <span class="accent serif">{service.shortName}</span>
-        </h2>
-        <p style="font-size: 1.125rem; line-height: 1.9; margin-top: 1.5rem; color: var(--text-mid);">
-          {resolvedCopy.overview}
-        </p>
+        <h2 style="font-family: var(--font-display); font-size: clamp(1.9rem,3.5vw,2.75rem);" set:html={sectionHeadline}></h2>
+        <p style="font-size: 1.125rem; line-height: 1.9; margin-top: 1.5rem; color: var(--text-mid);" set:html={sectionBody}></p>
       </div>
     </section>
   )}
@@ -114,16 +134,17 @@ const faqSchema = service.faq?.length ? {
   {service.faq?.length > 0 && (
     <section class="section section--white" id="faq" style="padding: 80px 0;">
       <div class="container" style="max-width: 800px; margin: 0 auto;">
-        <h2 style="text-align: center; font-family: var(--font-display); font-size: clamp(1.9rem,3.5vw,2.75rem); margin-bottom: 2rem;">
-          Questions About <span class="accent serif">{service.shortName}</span>
-        </h2>
+        <h2 style="text-align: center; font-family: var(--font-display); font-size: clamp(1.9rem,3.5vw,2.75rem); margin-bottom: 2rem;" set:html={faqHeadline}></h2>
         <div class="faq-list">
-          {service.faq.map((item: any, i: number) => (
-            <details class="faq-item">
-              <summary class="faq-item__q">{item.q}</summary>
-              <p class="faq-item__a">{item.a}</p>
-            </details>
-          ))}
+          {service.faq.map((item: any, i: number) => {
+            const answer = faqBodyTmpl.replace(/{item\.a}/g, item.a);
+            return (
+              <details class="faq-item">
+                <summary class="faq-item__q">{item.q}</summary>
+                <p class="faq-item__a" set:html={answer}></p>
+              </details>
+            );
+          })}
         </div>
       </div>
       {faqSchema && <script type="application/ld+json" set:html={JSON.stringify(faqSchema)} />}

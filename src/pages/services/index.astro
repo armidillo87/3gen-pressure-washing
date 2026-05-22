@@ -6,11 +6,22 @@ import Hero from '@/components/Hero.astro';
 import QuoteForm from '@/components/QuoteForm.astro';
 import CityPills from '@/components/CityPills.astro';
 import servicesData from '@/data/services.json';
-import { getProjectConfig } from '@/utils/twenty';
+import { getProjectConfig, getWebsiteCopies } from '@/utils/twenty';
 
 const siteConfig = await getProjectConfig('3gen-pressure-washing');
 const { business } = siteConfig;
 const activeServices = servicesData;
+
+const websiteCopies = await getWebsiteCopies('3gen-pressure-washing');
+const pageCopies = websiteCopies?.['/services'];
+
+const heroHeadline = pageCopies?.['hero']?.headline || "What We <br><em class='serif accent'>Do.</em>";
+const heroBody = pageCopies?.['hero']?.body || "Professional temperature-controlled hot and cold pressure washing, soft washing, and graffiti removal in Spokane and surrounding counties.";
+
+const listHeadlineTemplate = pageCopies?.['services-list']?.headline || "{s.name}";
+const listBodyTemplate = pageCopies?.['services-list']?.body || "{s.shortDesc}";
+
+const areasHeadline = pageCopies?.['areas-we-serve']?.headline || "Areas We <span class='accent serif'>Serve</span>";
 
 const schema = {
   "@context": "https://schema.org",
@@ -37,32 +48,36 @@ const schema = {
   <Hero
     heroClass="home"
     label="Our Services"
-    h1="What We <br><em class='serif accent'>Do.</em>"
-    desc="Professional temperature-controlled hot and cold pressure washing, soft washing, and graffiti removal in Spokane and surrounding counties."
+    h1={heroHeadline}
+    desc={heroBody}
     breadcrumbs={[{ label: 'Services', href: '/services/' }]}
   />
 
   <section class="section section--cream">
     <div class="container">
       <div class="services-grid">
-        {activeServices.map((s: any) => (
-          <a href={`/services/${s.slug}/`} class="service-card">
-            <div class="service-card__icon">{s.icon}</div>
-            <h3 class="service-card__title">{s.name}</h3>
-            <p class="service-card__desc">{s.shortDesc}</p>
-            <div class="service-card__meta">
-              {s.pricing && <span class="service-card__tag">From ${s.pricing.min}</span>}
-              <span class="service-card__arrow">&rarr;</span>
-            </div>
-          </a>
-        ))}
+        {activeServices.map((s: any) => {
+          const title = listHeadlineTemplate.replace(/{s\.name}/g, s.name);
+          const desc = listBodyTemplate.replace(/{s\.shortDesc}/g, s.shortDesc);
+          return (
+            <a href={`/services/${s.slug}/`} class="service-card">
+              <div class="service-card__icon">{s.icon}</div>
+              <h3 class="service-card__title" set:html={title}></h3>
+              <p class="service-card__desc" set:html={desc}></p>
+              <div class="service-card__meta">
+                {s.pricing && <span class="service-card__tag">From ${s.pricing.min}</span>}
+                <span class="service-card__arrow">&rarr;</span>
+              </div>
+            </a>
+          );
+        })}
       </div>
     </div>
   </section>
 
   <section class="section section--white" style="padding: 60px 0;">
     <div class="container" style="text-align: center;">
-      <h2 style="font-family: var(--font-display); margin-bottom: 1.5rem;">Areas We <span class="accent serif">Serve</span></h2>
+      <h2 style="font-family: var(--font-display); margin-bottom: 1.5rem;" set:html={areasHeadline}></h2>
       <CityPills variant="light" />
     </div>
   </section>

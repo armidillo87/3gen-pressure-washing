@@ -16,7 +16,7 @@ const { business, brand, tracking } = siteConfig;
 
 const fullTitle = title.includes(business.name) ? title : `${title} | ${business.name}`;
 const canonicalUrl = new URL(Astro.url.pathname, business.url).href;
-const metaDescription = description || `${business.name} — ${business.tagline}. Call ${business.phone}.`;
+const metaDescription = description || `${business.name} - ${brand.tagline}. Call ${business.phone}.`;
 const resolvedOgImage = ogImage || `${business.url}/img/og-default.png`;
 ---
 
@@ -98,7 +98,7 @@ const resolvedOgImage = ogImage || `${business.url}/img/og-default.png`;
   </main>
   <slot name="footer" />
 
-  <!-- Reveal animation — processed by Vite, not inline -->
+  <!-- Reveal animation - processed by Vite, not inline -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const reveals = document.querySelectorAll('.reveal');

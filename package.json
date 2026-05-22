@@ -7,7 +7,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "generate": "node scripts/generate-site.mjs"
+    "generate": "node scripts/generate-site.mjs",
+    "postbuild": "node scripts/pfd-qa-sentinel.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",
