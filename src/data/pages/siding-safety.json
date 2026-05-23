@@ -1,0 +1,37 @@
+{
+  "slug": "siding-safety",
+  "title": "DIY Siding Destruction Guide: The Real Risks | Spokane WA",
+  "description": "Learn how high-pressure DIY washing causes structural mold, wood rot, warped panels, and voided siding warranties - and why soft washing is Spokane's safe standard.",
+  "blocks": [
+    {
+      "type": "Hero",
+      "data": {
+        "heroClass": "standard",
+        "h1": "DIY Siding Destruction: <em class='serif accent'>The Costly Truth</em>",
+        "desc": "Why high-pressure DIY washing causes thousands in hidden structural damage - and the safe, certified alternative."
+      }
+    },
+    {
+      "type": "TrustBar",
+      "data": {
+        "signals": [
+          { "icon": "shield", "text": "Licensed & Insured", "subtext": "Complete Protection" },
+          { "icon": "star", "text": "State Certified", "subtext": "Trusted by Washington" },
+          { "icon": "home", "text": "Minority & Women-Owned", "subtext": "Locally Run" }
+        ]
+      }
+    },
+    {
+      "type": "SeoBlock",
+      "data": {
+        "heading": "The Danger of Pointing High Pressure at Your Home",
+        "subheading": "Spokane's Protective Guide to Exterior Surface Integrity",
+        "content": "<p>For many homeowners in the Inland Northwest, renting a consumer pressure washer from a big-box store seems like a satisfying, cost-effective weekend chore. However, pointing a high-pressure stream of water directly at your home's vinyl, wood, metal, or fiber-cement siding is one of the most common causes of catastrophic, expensive property damage.</p><p>Standard consumer pressure washers operate between 2,500 and 4,000 Pounds per Square Inch (PSI). While this pressure is excellent for stripping oil stains off solid concrete, it acts like a physical blade on delicate siding materials, leading to costly structural failures.</p><h3>1. Trapped Moisture, Mold, & Wood Rot</h3><p>Your siding is designed to protect your home from rain falling vertically, not water forced horizontally or upwards at high velocities. High-pressure streams easily slip beneath vinyl laps, behind wood boards, and around window seals, introducing high-volume moisture directly into the wall cavity.</p><p>Once water is forced behind the siding, it becomes trapped against the wooden sheathing and house wrap with zero airflow to dry it out. Over several months, this trapped water inevitably leads to:</p><ul><li><strong>Invisible Wood Rot:</strong> The structural plywood sheathing softens and rots, compromising your home's stability.</li><li><strong>Toxic Black Mold:</strong> Mold spreads rapidly inside wall spaces, degrading indoor air quality and creating severe health hazards for your family.</li><li><strong>Insulation Failure:</strong> Wet fiberglass or cellulose insulation permanently loses its R-value, sending your winter heating bills through the roof.</li></ul><h3>2. Warped Vinyl, Blown Paint, and Destroyed Seals</h3><p>Different materials fail under high pressure in highly destructive ways:</p><ul><li><strong>Vinyl Siding:</strong> High-pressure streams will chip, crack, or physically warp vinyl panels. In cold weather, vinyl becomes brittle, and high pressure will blow holes directly through the siding.</li><li><strong>Wood & Hardie Plank:</strong> High-pressure streams slice into wood fibers, causing splintering, deep gouging, and fuzzy wood textures. On fiber-cement (Hardie) boards, high pressure can strip away protective paint finishes and erode the board layers.</li><li><strong>Blown Window and Door Seals:</strong> Aiming a high-pressure wand near windows instantly blows out double-pane window seals, causing fogging, moisture accumulation, and permanent seal failure.</li></ul><h3>3. Voided Manufacturer Warranties</h3><p>Perhaps the most shocking reality for homeowners is that using high-pressure washing on your home can void your siding manufacturer's structural warranty. Companies like James Hardie and major vinyl manufacturers explicitly state in their maintenance guidelines that high-pressure washers must not be used on their products. If your siding fails or warp, and inspectors trace it to pressure washer usage, you are entirely on the hook for replacement costs.</p><h2>The Professional Alternative: Low-Pressure Soft Washing</h2><p>At 3Gen Pressure Washing, we employ the industry-standard **Soft Wash System** as a safe, damage-free alternative to high pressure. Instead of relying on raw water velocity to blast dirt away, soft washing relies on a scientifically formulated, biodegradable surfactant treatment combined with a gentle, garden-hose-pressure rinse (under 500 PSI).</p><h3>How Our Soft Wash System Protects Your Home:</h3><ul><li><strong>Low Velocity:</strong> The water stream is as gentle as rain, ensuring zero water intrusion behind siding panels or seals.</li><li><strong>Sanitization:</strong> Standard pressure washing only shears the top off mold and algae, leaving the spores active to grow back in weeks. Soft washing applies a specialized wash that kills spores at the microscopic level, keeping your home clean 3x longer.</li><li><strong>Warranty Compliant:</strong> Our gentle soft washing process aligns 100% with James Hardie and vinyl manufacturer specifications, keeping your active home warranties fully protected.</li></ul><h2>Schedule Spokane's Certified Home Washing Professionals</h2><p>Don't risk structural rot or damaged siding. Let Spokane's certified, family-owned crew wash your home safely. We are fully licensed, bonded, state-certified, and carry comprehensive $2M insurance policies for your complete protection.</p>"
+      }
+    },
+    {
+      "type": "QuoteForm",
+      "data": {}
+    }
+  ]
+}

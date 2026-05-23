@@ -54,15 +54,14 @@ function stripContent(html) {
 
 // Check an individual HTML file
 function checkHtmlFile(filePath) {
+  const relativePath = path.relative(distDir, filePath);
   const content = fs.readFileSync(filePath, 'utf8');
   
-  // Skip Astro-generated redirect HTML files to avoid SEO/placeholder false-positives
-  if (content.includes('http-equiv="refresh"') || content.includes('http-equiv="Refresh"')) {
-    checkedFiles++;
+  // Skip redirect pages (e.g. Astro redirects)
+  if (content.includes('http-equiv="refresh"') || content.includes('Redirecting to:')) {
     return;
   }
 
-  const relativePath = path.relative(distDir, filePath);
   const stripped = stripContent(content);
 
   const errors = [];
