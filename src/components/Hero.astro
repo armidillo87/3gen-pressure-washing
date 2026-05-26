@@ -24,6 +24,12 @@ const resolveImage = images[imagePath] || images[imagePath.replace('.png', '.jpg
 ---
 
 <section class={`resi-hero resi-hero--${heroClass}`}>
+  {heroClass === "standard" && (
+    <video autoplay loop muted playsinline class="resi-hero__bg-video" poster="https://images.pexels.com/videos/3571264/free-video-3571264.jpg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200">
+      <source src="https://videos.pexels.com/video-files/3571264/3571264-hd_1920_1080_30fps.mp4" type="video/mp4" />
+    </video>
+  )}
+
   {heroClass !== "standard" && (
     resolveImage ? (
       <Image src={resolveImage()} alt={`${business.name} Services`} class="resi-hero__bg-img" loading="eager" fetchpriority="high" width={1920} height={1080} format="webp" />
