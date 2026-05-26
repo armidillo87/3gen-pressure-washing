@@ -2,7 +2,7 @@
 import { Image } from 'astro:assets';
 
 // Use dynamic import for assets to allow Vite to bundle them when referenced by string path
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,gif}');
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/**/*.{jpeg,jpg,png,gif}');
 
 interface Props {
   title?: string;

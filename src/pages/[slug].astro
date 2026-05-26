@@ -56,7 +56,7 @@ const schema = {
 };
 ---
 
-<BaseLayout title={`${page.title || business.name} | ${business.tagline}`} description={page.description || business.description} schema={schema}>
+<BaseLayout title={page.title || business.name} description={page.description || business.description} schema={schema}>
   <Header slot="header" />
 
   <BlockRenderer blocks={funnelBlocks} />

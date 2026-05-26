@@ -26,15 +26,72 @@
     {
       "type": "ServiceList",
       "data": {
-        "title": "Our Pressure Washing Services",
-        "subtitle": "From residential driveways to state-certified graffiti removal - we handle it all.",
+        "title": "Our Professional Pressure Washing Services",
+        "subtitle": "Spokane's certified commercial, industrial, and high-value residential exterior cleaning specialist.",
         "services": [
-          { "title": "Hot & Cold Pressure Washing", "description": "Temperature-controlled pressure washing for tough stains, grease, and algae removal on any surface.", "link": "/services/hot-cold-pressure-washing", "icon": "bolt", "image": "/src/assets/images/hero.jpg" },
-          { "title": "Graffiti Removal", "description": "State-certified, damage-free graffiti removal for commercial and public properties. Trusted by the State of Washington.", "link": "/services/graffiti-removal", "icon": "business", "image": "/src/assets/images/adobestock-cleaning.jpg" },
-          { "title": "Commercial Building Washing", "description": "Enhance your business curb appeal with professional exterior and storefront pressure washing.", "link": "/services/commercial-building-washing", "icon": "home", "image": "/src/assets/images/boots.jpg" },
-          { "title": "Driveway & Walkway Cleaning", "description": "Remove oil stains, tire marks, mold, and mildew to restore your flatwork and improve safety.", "link": "/services/driveway-cleaning", "icon": "tool" },
-          { "title": "Roof Treatments & Soft Washing", "description": "Safe, low-pressure soft washing to remove moss and algae without damaging your shingles.", "link": "/services/roof-cleaning", "icon": "home" },
-          { "title": "Fuel Station Cleaning", "description": "Hot water pressure washing for gas stations - removing oil, gas, and grease for safety and compliance.", "link": "/services/fuel-station-cleaning", "icon": "bolt" }
+          {
+            "title": "Hot & Cold Pressure Washing",
+            "description": "Temperature-controlled hot water washing operating up to 200°F to lift heavy grease, industrial oil, and carbon buildup that cold water can't touch.",
+            "link": "/services/hot-cold-pressure-washing",
+            "icon": "water-drop",
+            "image": "/src/assets/images/services/hot-cold-pressure-washing.jpg"
+          },
+          {
+            "title": "Graffiti Removal",
+            "description": "Washington State certified, rapid-response damage-free masonry paint abatement to restore vandalized building facades within 24 hours.",
+            "link": "/services/graffiti-removal",
+            "icon": "brush",
+            "image": "/src/assets/images/services/graffiti-removal.jpg"
+          },
+          {
+            "title": "Commercial Building Washing",
+            "description": "Curb appeal restoration and facade soft-washing for commercial retail plazas, storefronts, and offices using gentle organic biocide treatments.",
+            "link": "/services/commercial-building-washing",
+            "icon": "storefront",
+            "image": "/src/assets/images/services/commercial-building-washing.jpg"
+          },
+          {
+            "title": "Fuel Station Cleaning",
+            "description": "Heavy-duty de-greasing for fuel canopies and drive lanes with 100% active wastewater reclamation for full EPA storm drain compliance.",
+            "link": "/services/fuel-station-cleaning",
+            "icon": "local-gas-station",
+            "image": "/src/assets/images/services/fuel-station-cleaning.jpg"
+          },
+          {
+            "title": "Driveway & Walkway Cleaning",
+            "description": "Restorative concrete and walkway pressure washing to eliminate slippery algae hazards, tire tracking, and stubborn rust stains.",
+            "link": "/services/driveway-cleaning",
+            "icon": "add-road",
+            "image": "/src/assets/images/services/driveway-cleaning.jpg"
+          },
+          {
+            "title": "Headstone Cleaning",
+            "description": "Museum-grade, respectful monument preservation using specialized D/2 Biological Solutions safe for historical marble, granite, and sandstone.",
+            "link": "/services/headstone-cleaning",
+            "icon": "church",
+            "image": "/src/assets/images/services/headstone-cleaning.jpg"
+          },
+          {
+            "title": "Roof Treatments & Soft Washing",
+            "description": "ARMA-compliant low-pressure soft washing that completely neutralizes moss and black algae spores without stripping protective shingle granules.",
+            "link": "/services/roof-cleaning",
+            "icon": "roofing",
+            "image": "/src/assets/images/services/roof-cleaning.jpg"
+          },
+          {
+            "title": "Drive-Through Cleaning",
+            "description": "Sanitary hot-water pressure washing and deep chewing gum extraction for retail drive-through lanes scheduled off-hours to avoid downtime.",
+            "link": "/services/drive-thru-cleaning",
+            "icon": "fastfood",
+            "image": "/src/assets/images/services/drive-thru-cleaning.jpg"
+          },
+          {
+            "title": "Outdoor Courts & Patios",
+            "description": "Professional biological cleaning and paint safe restoration for commercial patios, public plazas, and multi-purpose sports courts.",
+            "link": "/services/patio-cleaning",
+            "icon": "deck",
+            "image": "/src/assets/images/services/patio-cleaning.jpg"
+          }
         ]
       }
     },

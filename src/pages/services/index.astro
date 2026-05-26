@@ -7,6 +7,10 @@ import QuoteForm from '@/components/QuoteForm.astro';
 import CityPills from '@/components/CityPills.astro';
 import servicesData from '@/data/services.json';
 import { getProjectConfig, getWebsiteCopies } from '@/utils/twenty';
+import { Image } from 'astro:assets';
+
+// Dynamically import all assets recursively
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/**/*.{jpeg,jpg,png,gif}');
 
 const siteConfig = await getProjectConfig('3gen-pressure-washing');
 const { business } = siteConfig;
@@ -55,18 +59,32 @@ const schema = {
 
   <section class="section section--cream">
     <div class="container">
-      <div class="services-grid">
+      <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 2rem;">
         {activeServices.map((s: any) => {
           const title = listHeadlineTemplate.replace(/{s\.name}/g, s.name);
-          const desc = listBodyTemplate.replace(/{s\.shortDesc}/g, s.shortDesc);
+          const desc = listBodyTemplate.replace(/{s\.shortDesc}/g, s.shortDescription || s.shortDesc || s.description);
+          
+          // Map static public path to Vite assets path dynamically
+          const rawImg = s.primaryImage || s.image;
+          const resolvedPath = rawImg && rawImg.startsWith('/images/services/') 
+            ? rawImg.replace('/images/services/', '/src/assets/images/services/') 
+            : rawImg;
+          
+          const imageAsset = resolvedPath ? images[resolvedPath] : null;
+
           return (
-            <a href={`/services/${s.slug}/`} class="service-card">
-              <div class="service-card__icon">{s.icon}</div>
-              <h3 class="service-card__title" set:html={title}></h3>
-              <p class="service-card__desc" set:html={desc}></p>
-              <div class="service-card__meta">
-                {s.pricing && <span class="service-card__tag">From ${s.pricing.min}</span>}
-                <span class="service-card__arrow">&rarr;</span>
+            <a href={`/services/${s.slug}/`} class="service-card--photo">
+              {imageAsset ? (
+                // @ts-ignore
+                <Image src={imageAsset()} alt={s.name} class="service-card__bg" format="webp" width={480} height={360} fetchpriority="low" />
+              ) : (
+                <div class="service-card__bg" style="background-color: var(--charcoal); font-size: 5rem; display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.05); font-family: var(--font-heading); font-weight: 900;">3G</div>
+              )}
+              <div class="service-card__photo-overlay"></div>
+              <div class="service-card__photo-content">
+                <h3 class="service-card__title" set:html={title}></h3>
+                <p class="service-card__desc" set:html={desc}></p>
+                <span class="service-card__photo-cta">Explore Service &rarr;</span>
               </div>
             </a>
           );

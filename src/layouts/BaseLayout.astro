@@ -14,7 +14,7 @@ interface Props {
 const { title, description, schema, ogImage, noindex = false } = Astro.props;
 const { business, brand, tracking } = siteConfig;
 
-const fullTitle = title.includes(business.name) ? title : `${title} | ${business.name}`;
+const fullTitle = title.includes(business.shortName) || title.includes(business.name) ? title : `${title} | ${business.name}`;
 const canonicalUrl = new URL(Astro.url.pathname, business.url).href;
 const metaDescription = description || `${business.name} - ${brand.tagline}. Call ${business.phone}.`;
 const resolvedOgImage = ogImage || `${business.url}/img/og-default.png`;

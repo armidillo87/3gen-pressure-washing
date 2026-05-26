@@ -55,7 +55,7 @@ const faqBodyTmpl = pageCopies?.['faq']?.body || "{item.a}";
 const faqHeadline = compileTemplate(faqHeadlineTmpl, service, resolvedCopy);
 
 const pageTitle = `${service.name} | ${business.name} | ${serviceRadius}`;
-const pageDesc = `Professional ${service.shortName.toLowerCase()} in ${serviceRadius}. ${resolvedCopy.overview.substring(0, 140)}... ${business.rating}-star rated. Call ${business.phoneFormatted || business.phone}.`;
+const pageDesc = `Professional ${service.shortName.toLowerCase()} in ${serviceRadius}. ${resolvedCopy.overview.substring(0, 75)}... ${business.rating}-star rated. Call ${business.phoneFormatted || business.phone}.`;
 
 const serviceSchema = {
   "@context": "https://schema.org",

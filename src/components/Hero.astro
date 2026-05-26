@@ -3,7 +3,8 @@ import { Image } from 'astro:assets';
 import { getProjectConfig } from '@/utils/twenty';
 import heroImage from '@/assets/images/hero.png';
 
-const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/*.{jpeg,jpg,png,gif,webp}');
+// Recursively glob all assets so subdirectories like services/ are included
+const images = import.meta.glob<{ default: ImageMetadata }>('/src/assets/images/**/*.{jpeg,jpg,png,gif,webp}');
 
 interface Props {
   heroClass: string;
@@ -18,9 +19,24 @@ const { heroClass, label, h1, desc, breadcrumbs, bgImage } = Astro.props;
 const siteConfig = await getProjectConfig('3gen-pressure-washing');
 const { business } = siteConfig;
 
-// Attempt to resolve the background image dynamically matching the heroClass name
-const imagePath = bgImage || `/src/assets/images/${heroClass}.png`;
-const resolveImage = images[imagePath] || images[imagePath.replace('.png', '.jpg')] || images[imagePath.replace('.png', '.webp')];
+// Helper to map public paths like /images/services/xxx.jpg to Vite assets /src/assets/images/services/xxx.jpg
+const resolveImageAsset = (path?: string) => {
+  if (!path) return null;
+  if (path.startsWith('/images/services/')) {
+    return path.replace('/images/services/', '/src/assets/images/services/');
+  }
+  return path;
+};
+
+const resolvedBg = resolveImageAsset(bgImage);
+const resolvedDefault = `/src/assets/images/${heroClass}.png`;
+
+const targetPath = resolvedBg || resolvedDefault;
+const resolveImage = images[targetPath] || 
+                     images[targetPath.replace('.png', '.jpg')] || 
+                     images[targetPath.replace('.png', '.webp')] ||
+                     images[targetPath.replace('.jpg', '.png')] ||
+                     images[targetPath.replace('.webp', '.png')];
 ---
 
 <section class={`resi-hero resi-hero--${heroClass}`}>
