@@ -36,8 +36,12 @@ const currentYear = new Date().getFullYear();
         {social.google && <a href={social.google} class="footer__social-icon" aria-label="Google" target="_blank" rel="noopener noreferrer">G</a>}
       </div>
       <div class="footer__badges">
-        <img src="/images/omwbe-certified-badge.png" alt="Washington State OMWBE Certified Minority & Women Business Enterprise" class="footer__badge" width="120" height="60" loading="lazy" />
-        <img src="/images/partner-badge.png" alt="Greater Spokane Inc. Proud Partner" class="footer__badge" width="120" height="60" loading="lazy" />
+        <a href="https://omwbe.wa.gov/" target="_blank" rel="noopener noreferrer" aria-label="Verify OMWBE Certification">
+          <img src="/images/omwbe-certified-badge.png" alt="Washington State OMWBE Certified Minority & Women Business Enterprise" class="footer__badge" width="120" height="60" loading="lazy" />
+        </a>
+        <a href="https://greaterspokane.org/" target="_blank" rel="noopener noreferrer" aria-label="Verify Greater Spokane Inc. Partnership">
+          <img src="/images/partner-badge.png" alt="Greater Spokane Inc. Proud Partner" class="footer__badge" width="120" height="60" loading="lazy" />
+        </a>
       </div>
     </div>
 

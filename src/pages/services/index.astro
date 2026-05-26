@@ -19,7 +19,7 @@ const activeServices = servicesData;
 const websiteCopies = await getWebsiteCopies('3gen-pressure-washing');
 const pageCopies = websiteCopies?.['/services'];
 
-const heroHeadline = pageCopies?.['hero']?.headline || "Commercial-Grade <br><em class='serif accent'>Exterior Cleaning.</em>";
+const heroHeadline = pageCopies?.['hero']?.headline || "Commercial-Grade <em class='serif accent'>Exterior Cleaning.</em>";
 const heroBody = pageCopies?.['hero']?.body || "Professional temperature-controlled hot and cold pressure washing, soft washing, and graffiti removal in Spokane and surrounding counties.";
 
 const listHeadlineTemplate = pageCopies?.['services-list']?.headline || "{s.name}";

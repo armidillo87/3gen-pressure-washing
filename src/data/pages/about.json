@@ -17,7 +17,7 @@
       "data": {
         "signals": [
           { "icon": "shield", "text": "Licensed & Insured", "subtext": "Complete Protection" },
-          { "icon": "star", "text": "State-Certified OMWBE", "subtext": "Minority & Women Owned", "image": "/images/omwbe-certified-badge.png" },
+          { "icon": "star", "text": "State-Certified OMWBE", "subtext": "Minority & Women Owned", "image": "/images/omwbe-certified-badge.png", "link": "https://omwbe.wa.gov/" },
           { "icon": "home", "text": "Spokane Locals", "subtext": "Family Owned & Operated" }
         ]
       }
@@ -27,7 +27,7 @@
       "data": {
         "heading": "Spokane's Leading Pressure Washing Specialists",
         "subheading": "Expertise across Spokane and Surrounding Areas",
-        "content": "<p>3 Gen Pressure Washing, LLC is Spokane's choice for temperature-controlled hot and cold water pressure washing, safe roof treatments, and state-certified damage-free graffiti removal. We are a family-owned, fully licensed, bonded, and insured business committed to absolute customer satisfaction.</p>"
+        "content": "<p>3 Gen Pressure Washing, LLC is Spokane's choice for temperature-controlled hot and cold water pressure washing, safe roof treatments, and state-certified damage-free graffiti removal. We are a family-owned, fully licensed, bonded, and insured business committed to absolute customer satisfaction.</p><div class='about__badges-showcase' style='display: flex; gap: 1.5rem; margin-top: 2rem; align-items: center; justify-content: center; flex-wrap: wrap;'><a href='https://omwbe.wa.gov/' target='_blank' rel='noopener noreferrer' style='display: block; transition: transform 0.2s;' onmouseover='this.style.transform=\"translateY(-4px)\"' onmouseout='this.style.transform=\"none\"'><img src='/images/omwbe-certified-badge.png' alt='OMWBE State Certified' style='height: 90px; width: auto; background: white; padding: 10px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 25px rgba(0,0,0,0.35);' /></a><a href='https://greaterspokane.org/' target='_blank' rel='noopener noreferrer' style='display: block; transition: transform 0.2s;' onmouseover='this.style.transform=\"translateY(-4px)\"' onmouseout='this.style.transform=\"none\"'><img src='/images/partner-badge.png' alt='Greater Spokane Inc. Partner' style='height: 90px; width: auto; background: white; padding: 10px 16px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1); box-shadow: 0 10px 25px rgba(0,0,0,0.35);' /></a></div>"
       }
     },
     {

@@ -17,7 +17,7 @@
       "data": {
         "signals": [
           { "icon": "shield", "text": "Licensed & Insured", "subtext": "Complete Protection" },
-          { "icon": "star", "text": "State-Certified OMWBE", "subtext": "Minority & Women Owned", "image": "/images/omwbe-certified-badge.png" },
+          { "icon": "star", "text": "State-Certified OMWBE", "subtext": "Minority & Women Owned", "image": "/images/omwbe-certified-badge.png", "link": "https://omwbe.wa.gov/" },
           { "icon": "family", "text": "Spokane Locals", "subtext": "Family Owned & Operated" }
         ]
       }

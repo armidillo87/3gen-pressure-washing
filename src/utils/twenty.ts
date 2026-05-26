@@ -380,7 +380,7 @@ let cachedWebsiteCopiesPromise: Promise<any> | null = null;
 const websiteCopiesFallback: Record<string, Record<string, { headline: string; body: string }>> = {
   "/services": {
     "hero": {
-      "headline": "Commercial-Grade <br><em class='serif accent'>Exterior Cleaning.</em>",
+      "headline": "Commercial-Grade <em class='serif accent'>Exterior Cleaning.</em>",
       "body": "Professional temperature-controlled hot and cold pressure washing, soft washing, and graffiti removal in Spokane and surrounding counties."
     },
     "services-list": {
