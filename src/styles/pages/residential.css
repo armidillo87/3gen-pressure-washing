@@ -6,23 +6,14 @@
 /* ---------- HERO ---------- */
 .resi-hero {
     position: relative;
-    min-height: 90vh;
+    min-height: 85vh; /* Refined sleek height to eliminate vertical bulk */
     display: flex;
     align-items: center;
-    padding: 160px 0 100px; /* Reduced top padding slightly for less bulk */
+    padding: 160px 0 100px;
     overflow: hidden;
-    background: var(--black);
-}
-
-/* ---------- HERO VIDEO & FALLBACK IMAGE ---------- */
-.resi-hero__bg-video {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: 2; /* Sits above fallback image, below overlay */
-    opacity: 0.75;
+    /* High-contrast Black-to-Red Brand Fade */
+    background: radial-gradient(circle at 85% 50%, rgba(192, 0, 0, 0.22) 0%, rgba(8, 14, 30, 0) 70%),
+                linear-gradient(to right, #080E1E 0%, #120D1A 50%, #3B0000 100%);
 }
 
 .resi-hero__bg-img {
@@ -31,17 +22,17 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1; /* Fallback underneath video */
-    opacity: 0.4; /* Soft dark fallback */
+    z-index: 1; /* Renders under text on subpages */
+    opacity: 0.25; /* Soft blend with red-black background gradient */
+    mix-blend-mode: overlay;
 }
 
 .resi-hero__overlay {
     position: absolute;
     inset: 0;
-    /* Sleek modern left-to-right gradient: maximum readability on left, crystal clear video on right */
-    background: linear-gradient(to right, rgba(8, 14, 30, 0.95) 0%, rgba(8, 14, 30, 0.6) 45%, rgba(8, 14, 30, 0.15) 100%),
-                linear-gradient(to bottom, rgba(8, 14, 30, 0.4) 0%, transparent 25%);
-    z-index: 3; /* Sits over media assets */
+    /* Subtle contrast shadow to optimize WCAG text readability on left */
+    background: linear-gradient(to right, rgba(8, 14, 30, 0.75) 0%, rgba(8, 14, 30, 0.3) 50%, transparent 100%);
+    z-index: 2; /* Sits over image, below text */
 }
 
 .resi-hero__content {

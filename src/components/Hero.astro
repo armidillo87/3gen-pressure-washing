@@ -24,16 +24,12 @@ const resolveImage = images[imagePath] || images[imagePath.replace('.png', '.jpg
 ---
 
 <section class={`resi-hero resi-hero--${heroClass}`}>
-  <!-- Staging & Fallback Background Video -->
-  <video autoplay loop muted playsinline class="resi-hero__bg-video" poster={heroImage.src}>
-    <source src="/video/hero.mp4" type="video/mp4" />
-    <source src="https://assets.mixkit.co/videos/preview/mixkit-man-cleaning-the-sidewalk-with-a-pressure-washer-34386-large.mp4" type="video/mp4" />
-  </video>
-
-  {resolveImage ? (
-    <Image src={resolveImage()} alt={`${business.name} Services`} class="resi-hero__bg-img" loading="eager" fetchpriority="high" width={1920} height={1080} format="webp" />
-  ) : (
-    <Image src={heroImage} alt={`${business.name} Services`} class="resi-hero__bg-img" loading="eager" fetchpriority="high" width={1920} height={1080} format="webp" />
+  {heroClass !== "standard" && (
+    resolveImage ? (
+      <Image src={resolveImage()} alt={`${business.name} Services`} class="resi-hero__bg-img" loading="eager" fetchpriority="high" width={1920} height={1080} format="webp" />
+    ) : (
+      <Image src={heroImage} alt={`${business.name} Services`} class="resi-hero__bg-img" loading="eager" fetchpriority="high" width={1920} height={1080} format="webp" />
+    )
   )}
   <div class="resi-hero__overlay"></div>
   
