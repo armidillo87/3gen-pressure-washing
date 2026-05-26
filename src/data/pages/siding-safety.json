@@ -17,8 +17,8 @@
       "data": {
         "signals": [
           { "icon": "shield", "text": "Licensed & Insured", "subtext": "Complete Protection" },
-          { "icon": "star", "text": "State Certified", "subtext": "Trusted by Washington" },
-          { "icon": "home", "text": "Minority & Women-Owned", "subtext": "Locally Run" }
+          { "icon": "star", "text": "Fully Vetted", "subtext": "State-Certified Crew" },
+          { "icon": "home", "text": "Spokane Locals", "subtext": "Family Owned & Operated" }
         ]
       }
     },

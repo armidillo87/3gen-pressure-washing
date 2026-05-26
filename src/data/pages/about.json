@@ -17,8 +17,8 @@
       "data": {
         "signals": [
           { "icon": "shield", "text": "Licensed & Insured", "subtext": "Complete Protection" },
-          { "icon": "star", "text": "State Certified", "subtext": "Trusted by Washington" },
-          { "icon": "home", "text": "Minority & Women-Owned", "subtext": "Locally Run" }
+          { "icon": "star", "text": "Fully Vetted", "subtext": "State-Certified Crew" },
+          { "icon": "home", "text": "Spokane Locals", "subtext": "Family Owned & Operated" }
         ]
       }
     },
@@ -27,7 +27,7 @@
       "data": {
         "heading": "Spokane's Leading Pressure Washing Specialists",
         "subheading": "Expertise across Spokane and Surrounding Areas",
-        "content": "<p>3 Gen Pressure Washing, LLC is Spokane's choice for temperature-controlled hot and cold water pressure washing, safe roof treatments, and state-certified damage-free graffiti removal. We are a family-owned, certified minority and women-owned business committed to absolute customer satisfaction.</p>"
+        "content": "<p>3 Gen Pressure Washing, LLC is Spokane's choice for temperature-controlled hot and cold water pressure washing, safe roof treatments, and state-certified damage-free graffiti removal. We are a family-owned, fully licensed, bonded, and insured business committed to absolute customer satisfaction.</p>"
       }
     },
     {
@@ -36,7 +36,7 @@
         "title": "Why Choose 3 Gen Pressure Washing",
         "desc": "We build long-term trust through clear communication, transparent pricing, and master-level technical execution.",
         "reasons": [
-          { "headline": "State Certified", "description": "Trusted by the State of Washington for professional graffiti removal services.", "icon": "check" },
+          { "headline": "Vetted Contractors", "description": "State-certified and carrying comprehensive $2M liability policies for absolute B2B protection.", "icon": "check" },
           { "headline": "Family-Owned & Operated", "description": "Spokane locals offering personalized care for both home and business owners.", "icon": "check" },
           { "headline": "Industrial Hot Water", "description": "High-temperature power washing to thoroughly lift grease, oil, and tough buildup.", "icon": "check" }
         ]

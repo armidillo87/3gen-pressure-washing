@@ -95,7 +95,7 @@ const faqSchema = service.faq?.length ? {
     heroClass={service.heroClass}
     label="Our Services"
     h1={`${service.name} <br><em class='serif accent'>in ${serviceRadius}.</em>`}
-    desc={sectionBody}
+    desc={service.shortDescription || service.shortDesc || service.description}
     bgImage={service.primaryImage || service.image}
     breadcrumbs={[
       { label: 'Services', href: '/services/' },

@@ -1,7 +1,7 @@
 {
   "slug": "index",
   "title": "3 Gen Pressure Washing | Professional Pressure Washing in Spokane, WA",
-  "description": "Family-owned, women & minority-owned pressure washing company serving Spokane, WA. Hot & cold pressure washing, soft washing, and certified graffiti removal. Call 509-939-8757 for a free quote.",
+  "description": "Family-owned, fully licensed and insured pressure washing company serving Spokane, WA. Hot & cold pressure washing, soft washing, and certified graffiti removal. Call 509-939-8757 for a free quote.",
   "blocks": [
     {
       "type": "Hero",
@@ -9,7 +9,7 @@
         "heroClass": "standard",
         "label": "Family-Owned & Operated in Spokane",
         "h1": "Spokane's Trusted <em class='serif accent'>Pressure Washing</em> Experts",
-        "desc": "3 Gen Pressure Washing is a family-owned, women & minority-owned business proudly serving Spokane and surrounding communities. We deliver safe, effective hot and cold pressure washing - backed by Washington State certification."
+        "desc": "3 Gen Pressure Washing is a family-owned, professional exterior cleaning company proudly serving Spokane and surrounding communities. We deliver safe, effective hot and cold pressure washing - backed by $2M liability insurance and state licensing."
       }
     },
     {
@@ -17,8 +17,8 @@
       "data": {
         "signals": [
           { "icon": "shield", "text": "Licensed & Insured", "subtext": "WA Contractor #3GENPGP773M4" },
-          { "icon": "star", "text": "State Certified", "subtext": "Trusted by Washington" },
-          { "icon": "family", "text": "Family-Owned", "subtext": "Women & Minority Owned" },
+          { "icon": "star", "text": "Fully Vetted", "subtext": "State-Certified Crew" },
+          { "icon": "family", "text": "Spokane Locals", "subtext": "Family Owned & Operated" },
           { "icon": "clock", "text": "Rapid Response", "subtext": "Free Quotes Within 24 hrs" }
         ]
       }

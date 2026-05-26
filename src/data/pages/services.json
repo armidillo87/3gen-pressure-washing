@@ -1,7 +1,7 @@
 {
   "slug": "services",
   "title": "Pressure Washing Services | Spokane & Surrounding Areas | 3 Gen Pressure Washing",
-  "description": "3 Gen Pressure Washing provides premium commercial and residential pressure washing, graffiti removal, and exterior cleaning in Spokane. State-certified contractors.",
+  "description": "3 Gen Pressure Washing provides premium commercial and residential pressure washing, graffiti removal, and exterior cleaning in Spokane. Fully licensed, bonded, and insured contractors.",
   "blocks": [
     {
       "type": "Hero",
@@ -31,7 +31,7 @@
       "type": "TrustBar",
       "data": {
         "signals": [
-          { "icon": "star", "text": "State Certified", "subtext": "Trusted by Washington" },
+          { "icon": "star", "text": "Fully Vetted", "subtext": "Licensed, Bonded, Insured" },
           { "icon": "shield", "text": "Licensed & Insured", "subtext": "Guaranteed Protections" },
           { "icon": "clock", "text": "Rapid Response", "subtext": "Minimize Downtime" },
           { "icon": "commercial", "text": "B2B & B2C", "subtext": "Residential to Industrial" }
