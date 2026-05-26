@@ -1546,3 +1546,44 @@
     margin-right: auto;
     margin-bottom: 0;
 }
+
+/* Prominent Hero Trust Seals Showcase */
+.resi-hero__badges {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    margin-top: 2.25rem;
+    flex-wrap: wrap;
+}
+
+.resi-hero__badge-link {
+    display: block;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.resi-hero__badge-link:hover {
+    transform: translateY(-3px);
+}
+
+.resi-hero__badge-img {
+    height: 80px;
+    width: auto;
+    object-fit: contain;
+    background: white;
+    padding: 8px 16px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+}
+
+@media (max-width: 768px) {
+    .resi-hero__badges {
+        justify-content: center;
+        margin-top: 1.75rem;
+        gap: 1rem;
+    }
+    .resi-hero__badge-img {
+        height: 65px;
+        padding: 6px 12px;
+    }
+}
