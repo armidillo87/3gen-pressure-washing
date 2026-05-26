@@ -134,6 +134,54 @@ function checkHtmlFile(filePath) {
     }
   });
 
+  // 7. Visual check: Stacked dark sections
+  const sectionClassMatches = [...content.matchAll(/<(section|header|footer)\b[^>]*class=["']([^"']*)["']/gi)];
+  let lastWasDark = false;
+  sectionClassMatches.forEach((match) => {
+    const tagName = match[1].toLowerCase();
+    const classVal = match[2].toLowerCase();
+    // Identify if the block has dark styling
+    const isDark = classVal.includes('dark') || classVal.includes('charcoal') || classVal.includes('black') || classVal.includes('resi-hero');
+    if (isDark && lastWasDark) {
+      errors.push(`Visual Stacking Violation: Stacked dark sections found! Consecutive <${tagName}> classes are "${classVal}".`);
+    }
+    // We only toggle dark status if it's a major section (ignoring header/footer for alternating rhythm)
+    if (tagName === 'section') {
+      lastWasDark = isDark;
+    }
+  });
+
+  // 8. Visual check: Empty/Placeholder Image paths
+  const srcMatches = [...content.matchAll(/src=["']([^"']*)["']/gi)];
+  srcMatches.forEach((match) => {
+    const srcVal = match[1].toLowerCase();
+    if (srcVal.includes('hero.png') || srcVal.includes('ev-charger.png') || srcVal.includes('lighting.png') || srcVal.includes('panel.png') || srcVal.includes('repair.png') || srcVal.includes('commercial.png')) {
+      errors.push(`Visual Placeholder Sin: Asset reference "${srcVal}" points to an empty placeholder layout file!`);
+    }
+  });
+
+  // 9. Visual check: Raw Text Icon slugs
+  const iconSlugs = ['water-drop', 'brush', 'storefront', 'local-gas-station', 'add-road', 'church', 'roofing', 'fastfood', 'deck'];
+  iconSlugs.forEach(slug => {
+    const regex = new RegExp(`>\\s*${slug}\\s*<`, 'i');
+    if (regex.test(stripped)) {
+      errors.push(`Visual Bug: Raw plain-text icon slug "${slug}" is rendered directly on screen inside HTML tags!`);
+    }
+  });
+
+  // 10. SEO check: Double Brand Title appending
+  if (titleMatch) {
+    const titleVal = titleMatch[1].trim();
+    const segments = titleVal.split(/[|\-]/);
+    const uniqueSegments = new Set(segments.map(s => s.trim().toLowerCase()));
+    if (uniqueSegments.size < segments.length) {
+      const duplicates = segments.filter((s, i) => segments.map(seg => seg.trim().toLowerCase()).indexOf(s.trim().toLowerCase()) !== i);
+      if (duplicates.length > 0 && duplicates.some(d => d.trim() !== '')) {
+        errors.push(`SEO Title Warning: Double brand or keyword segment detected in title tag: "${titleVal}"`);
+      }
+    }
+  }
+
   if (errors.length > 0) {
     console.error(`\n🚨 COMPLIANCE FAILURE in [${relativePath}]:`);
     errors.forEach(err => console.error(`   - ${err}`));

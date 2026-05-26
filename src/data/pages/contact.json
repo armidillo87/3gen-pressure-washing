@@ -12,6 +12,10 @@
       }
     },
     {
+      "type": "TrustBar",
+      "data": {}
+    },
+    {
       "type": "QuoteForm",
       "data": {}
     }
