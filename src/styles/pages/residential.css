@@ -11,9 +11,8 @@
     align-items: center;
     padding: 160px 0 100px;
     overflow: hidden;
-    /* High-contrast Black-to-Red Brand Fade */
-    background: radial-gradient(circle at 85% 50%, rgba(192, 0, 0, 0.22) 0%, rgba(8, 14, 30, 0) 70%),
-                linear-gradient(to right, #080E1E 0%, #120D1A 50%, #3B0000 100%);
+    /* High-contrast Slate-to-Black Premium Blend (no red in video container bg) */
+    background: linear-gradient(135deg, #020617 0%, #0B1528 50%, #020617 100%);
 }
 
 /* ---------- HERO VIDEO & FALLBACK IMAGE ---------- */
@@ -24,7 +23,7 @@
     height: 100%;
     object-fit: cover;
     z-index: 1; /* Sits behind overlay, above container bg */
-    opacity: 0.75;
+    opacity: 0.9; /* Near full opacity to preserve the video's true water/concrete colors */
 }
 
 .resi-hero__bg-img {
@@ -34,7 +33,7 @@
     height: 100%;
     object-fit: cover;
     z-index: 1; /* Renders under text on subpages */
-    opacity: 0.25; /* Soft blend with red-black background gradient */
+    opacity: 0.25; /* Soft blend with dark background gradient */
     mix-blend-mode: overlay;
 }
 
@@ -42,14 +41,14 @@
     position: absolute;
     inset: 0;
     /* Subtle contrast shadow to optimize WCAG text readability on left */
-    background: linear-gradient(to right, rgba(8, 14, 30, 0.75) 0%, rgba(8, 14, 30, 0.3) 50%, transparent 100%);
+    background: linear-gradient(to right, rgba(2, 6, 23, 0.75) 0%, rgba(2, 6, 23, 0.3) 50%, transparent 100%);
     z-index: 2; /* Sits over image, below text */
 }
 
 /* Homepage-specific video overlay: maximum readability on left, crystal clear video on right */
 .resi-hero--standard .resi-hero__overlay {
-    background: linear-gradient(to right, rgba(8, 14, 30, 0.95) 0%, rgba(8, 14, 30, 0.6) 45%, rgba(8, 14, 30, 0.1) 100%),
-                linear-gradient(to bottom, rgba(8, 14, 30, 0.3) 0%, transparent 25%);
+    background: linear-gradient(to right, rgba(2, 6, 23, 0.95) 0%, rgba(2, 6, 23, 0.6) 45%, rgba(2, 6, 23, 0.1) 100%),
+                linear-gradient(to bottom, rgba(2, 6, 23, 0.3) 0%, transparent 25%);
 }
 
 .resi-hero__content {
