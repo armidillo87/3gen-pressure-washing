@@ -9,7 +9,7 @@
         "heroClass": "about",
         "bgImage": "/src/assets/images/3gen_Equipment.webp",
         "h1": "About <em class='serif accent'>3 Gen Pressure Washing</em>",
-        "desc": "Delivering certified pressure washing and graffiti removal across Spokane and surrounding areas since 2022."
+        "desc": "Spokane's certified, family-operated, and state-certified OMWBE minority & women-owned exterior cleaning specialist serving Eastern Washington."
       }
     },
     {
@@ -17,7 +17,7 @@
       "data": {
         "signals": [
           { "icon": "shield", "text": "Licensed & Insured", "subtext": "Complete Protection" },
-          { "icon": "star", "text": "Fully Vetted", "subtext": "State-Certified Crew" },
+          { "icon": "star", "text": "State-Certified OMWBE", "subtext": "Minority & Women Owned", "image": "/images/omwbe-certified-badge.png" },
           { "icon": "home", "text": "Spokane Locals", "subtext": "Family Owned & Operated" }
         ]
       }
