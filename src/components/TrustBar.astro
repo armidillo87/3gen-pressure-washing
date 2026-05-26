@@ -9,7 +9,14 @@ interface Props {
   }[];
 }
 
-const { signals = [] } = Astro.props;
+const defaultSignals = [
+  { "icon": "shield", "text": "Licensed & Insured", "subtext": "WA Contractor #3GENPGP773M4" },
+  { "icon": "award", "text": "Greater Spokane Inc.", "subtext": "Proud Business Partner", "image": "/images/partner-badge.png", "link": "https://greaterspokane.org/" },
+  { "icon": "family", "text": "Spokane Locals", "subtext": "Family Owned & Operated" },
+  { "icon": "clock", "text": "Rapid Response", "subtext": "Free Quotes Within 24 hrs" }
+];
+
+const { signals = defaultSignals } = Astro.props;
 ---
 
 <section class="trust-bar">

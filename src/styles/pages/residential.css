@@ -1547,43 +1547,70 @@
     margin-bottom: 0;
 }
 
-/* Prominent Hero Trust Seals Showcase */
-.resi-hero__badges {
-    display: flex;
-    align-items: center;
-    gap: 1.25rem;
-    margin-top: 2.25rem;
-    flex-wrap: wrap;
+/* Elegant Floating GSI Partner Badge on Desktop */
+.resi-hero__container--standard {
+    position: relative;
+    width: 100%;
 }
 
-.resi-hero__badge-link {
+.resi-hero__gsi-badge-wrapper {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    z-index: 5;
+}
+
+.resi-hero__gsi-badge {
     display: block;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    background: white;
+    padding: 12px 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: floatBadge 4s ease-in-out infinite;
 }
 
-.resi-hero__badge-link:hover {
-    transform: translateY(-3px);
+.resi-hero__gsi-badge:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 45px rgba(0, 183, 225, 0.3); /* brand pool cyan glow */
 }
 
-.resi-hero__badge-img {
-    height: 80px;
+.resi-hero__gsi-badge-img {
+    height: 72px;
     width: auto;
     object-fit: contain;
-    background: white;
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+    display: block;
+}
+
+@media (max-width: 992px) {
+    .resi-hero__gsi-badge-img {
+        height: 64px;
+    }
 }
 
 @media (max-width: 768px) {
-    .resi-hero__badges {
-        justify-content: center;
-        margin-top: 1.75rem;
-        gap: 1rem;
+    .resi-hero__container--standard {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    .resi-hero__badge-img {
-        height: 65px;
-        padding: 6px 12px;
+    
+    .resi-hero__gsi-badge-wrapper {
+        position: static;
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .resi-hero__gsi-badge {
+        padding: 10px 20px;
+        animation: none;
+    }
+    
+    .resi-hero__gsi-badge-img {
+        height: 60px;
     }
 }
