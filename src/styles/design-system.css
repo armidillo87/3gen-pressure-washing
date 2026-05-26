@@ -7,24 +7,24 @@
 
 :root {
   /* ==========================================
-     3 GEN PRESSURE WASHING - LIQUID BRAND DNA
-     Decoupled fluid design system.
-     - Brand Blue: #0056B3
-     - Spray Orange: #FF9900
-     - Water Cyan: #0EA5E9
-     - Cool Canvas White: #F8FAFE
+     3 GEN PRESSURE WASHING - SLEEK BRAND DNA
+     Decoupled brand-accurate design system.
+     - Brand Blue: #006FBF (Logo Accurate)
+     - Brand Red: #C00000 (Logo CTA Accurate)
+     - Brand Cyan: #00B7E1 (Logo Accurate)
+     - Cool Canvas White: #F8FAFC
      ========================================== */
-  --black: #0B132B; /* Deep Navy Black (nav/footer only) */
-  --charcoal: #1C2541; /* Dark sections (nav/footer) */
+  --black: #080E1E; /* Rich deep navy */
+  --charcoal: #0F172A; /* Sleek slate */
   --dark-surface: #1E293B;
   --dark-surface-2: #334155;
-  --forest: #0056B3; /* 3Gen Primary Blue */
-  --forest-deep: #003366; /* 3Gen Deep Blue */
-  --forest-light: #0EA5E9; /* 3Gen Water Cyan */
-  --gold: #FF9900; /* 3Gen Orange Accent */
-  --gold-bright: #F97316; /* Lighter Orange */
-  --gold-pale: #FFF7ED; /* Pale Orange tint */
-  --cream: #F0F7FF; /* Cool Light Blue-White */
+  --forest: #006FBF; /* 3Gen Logo Brand Blue */
+  --forest-deep: #004E89; /* 3Gen Logo Deep Blue */
+  --forest-light: #00B7E1; /* 3Gen Logo Bright Cyan */
+  --gold: #C00000; /* 3Gen Logo Brand Red CTA */
+  --gold-bright: #E01E1E; /* Vibrant CTA Hover Red */
+  --gold-pale: #FEF2F2; /* Soft red tint */
+  --cream: #F8FAFC; /* Soothing cool white */
   --cream-warm: #E2EEFF;
   --sage: #00C853; /* Success Green */
   --text-dark: #0F172A;
@@ -35,13 +35,13 @@
   --text-on-dark: #FFFFFF;
   --text-on-dark-dim: #CBD5E1;
   /* WCAG AA 5.1:1 on --charcoal */
-  --accent-line: rgba(0, 86, 179, 0.12);
-  --gold-wcag: #FF9900;
+  --accent-line: rgba(0, 111, 191, 0.12);
+  --gold-wcag: #C00000;
   --glass-white: rgba(255, 255, 255, 0.06);
   --glass-white-2: rgba(255, 255, 255, 0.10);
   --glass-border: rgba(255, 255, 255, 0.08);
 
-  /* Fonts - Liquid Geometry */
+  /* Fonts - Sleek Premium Geometry */
   --font-display: 'Sora', sans-serif;
   --font-heading: 'Sora', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
@@ -60,13 +60,13 @@
   --text-7xl: 5.5rem;
   --text-8xl: 7rem;
 
-  /* Rounded Geometry - Water drop style */
-  --radius-sm: 10px;
-  --radius-md: 18px;
-  --radius-lg: 26px;
-  --radius-xl: 36px;
+  /* Premium Geometry - Sleek and Structured */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-xl: 24px;
 
-  --nav-height: 110px;
+  --nav-height: 80px; /* Reduced from 110px to eliminate bulk */
   --max-width: 1320px;
 }
 
@@ -237,15 +237,15 @@ h6 {
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 16px 36px;
+  padding: 14px 32px; /* Slimmer, less bulky */
   font-family: var(--font-heading);
   font-size: var(--text-sm);
   font-weight: 600;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.02em;
   border: none;
-  border-radius: 100px;
+  border-radius: var(--radius-md); /* Structured sleek radius instead of capsule pill */
   cursor: pointer;
-  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
   overflow: hidden;
 }
@@ -253,27 +253,27 @@ h6 {
 .btn--gold {
   background: linear-gradient(135deg, var(--forest-light), var(--forest));
   color: #FFFFFF;
-  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 16px rgba(0, 111, 191, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn--gold:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(14, 165, 233, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 111, 191, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 
-/* 3Gen Orange Accent Button */
+/* 3Gen Logo Brand Red CTA Button */
 .btn--accent {
   background: linear-gradient(135deg, var(--gold-bright), var(--gold));
   color: #FFFFFF;
-  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 16px rgba(192, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 100px;
+  border-radius: var(--radius-md);
 }
 
 .btn--accent:hover {
-  transform: translateY(-4px) scale(1.02);
-  box-shadow: 0 12px 30px rgba(249, 115, 22, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(192, 0, 0, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 
 .btn--glass {
@@ -289,8 +289,8 @@ h6 {
   background: rgba(255, 255, 255, 0.1);
   border-color: var(--gold);
   color: var(--gold);
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.2);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(192, 0, 0, 0.2);
 }
 
 .btn--dark {
@@ -316,7 +316,7 @@ h6 {
   background: rgba(255, 255, 255, 0.1);
   border-color: white;
   color: white;
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
 }
 
