@@ -1,5 +1,5 @@
 /* ============================================
-   AIM HIGH - HOMEPAGE v2
+   3 GEN PRESSURE WASHING - HOMEPAGE v2
    Bold. Dramatic. Not generic.
    ============================================ */
 
@@ -277,7 +277,7 @@
 }
 
 .intro::before {
-    content: 'AH';
+    content: '3G';
     position: absolute;
     font-family: var(--font-heading);
     font-size: 400px;
