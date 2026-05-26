@@ -9,45 +9,39 @@
     min-height: 90vh;
     display: flex;
     align-items: center;
-    padding: 200px 0 100px;
+    padding: 160px 0 100px; /* Reduced top padding slightly for less bulk */
     overflow: hidden;
     background: var(--black);
 }
 
-    /* Atmospheric Glowing Orb Behind Text */
-.resi-hero::before {
-    content: '';
+/* ---------- HERO VIDEO & FALLBACK IMAGE ---------- */
+.resi-hero__bg-video {
     position: absolute;
-    top: 50%;
-    left: 40%;
-    width: 60vw;
-    height: 60vw;
-    background: radial-gradient(circle, rgba(27, 62, 146, 0.45) 0%, rgba(27, 62, 146, 0) 70%);
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
-    z-index: 2; /* Sits above image, below overlay */
-    pointer-events: none;
-    filter: blur(80px);
-    mix-blend-mode: screen;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 2; /* Sits above fallback image, below overlay */
+    opacity: 0.75;
 }
 
-/* ---------- HERO IMAGE ---------- */
 .resi-hero__bg-img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    z-index: 1; /* Base layer inside relative container */
-    opacity: 0.85; /* Let some dark background through */
+    z-index: 1; /* Fallback underneath video */
+    opacity: 0.4; /* Soft dark fallback */
 }
 
 .resi-hero__overlay {
     position: absolute;
     inset: 0;
-    /* Lightened gradient blending charcoal and deep navy for better image visibility */
-    background: linear-gradient(135deg, rgba(8, 9, 13, 0.85) 0%, rgba(15, 34, 64, 0.75) 50%, rgba(8, 9, 13, 0.65) 100%);
-    z-index: 3; /* Sits over image and orb */
+    /* Sleek modern left-to-right gradient: maximum readability on left, crystal clear video on right */
+    background: linear-gradient(to right, rgba(8, 14, 30, 0.95) 0%, rgba(8, 14, 30, 0.6) 45%, rgba(8, 14, 30, 0.15) 100%),
+                linear-gradient(to bottom, rgba(8, 14, 30, 0.4) 0%, transparent 25%);
+    z-index: 3; /* Sits over media assets */
 }
 
 .resi-hero__content {
