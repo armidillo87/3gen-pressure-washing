@@ -7,7 +7,7 @@
       "type": "Hero",
       "data": {
         "heroClass": "standard",
-        "label": "Certified OMWBE Minority & Women-Owned",
+        "label": "Greater Spokane Inc. Proud Partner",
         "h1": "Spokane's Trusted <em class='serif accent'>Pressure Washing</em> Experts",
         "desc": "3 Gen Pressure Washing is a family-owned, professional exterior cleaning company. We operate heavy-duty, trailer-mounted industrial hot-water rigs delivering 200°F thermal grease melting power across Spokane - backed by $2M liability insurance and full state credentials."
       }
@@ -17,7 +17,7 @@
       "data": {
         "signals": [
           { "icon": "shield", "text": "Licensed & Insured", "subtext": "WA Contractor #3GENPGP773M4" },
-          { "icon": "star", "text": "State-Certified OMWBE", "subtext": "Minority & Women Owned", "image": "/images/omwbe-certified-badge.png", "link": "https://omwbe.wa.gov/" },
+          { "icon": "award", "text": "Greater Spokane Inc.", "subtext": "Proud Business Partner", "image": "/images/partner-badge.png", "link": "https://greaterspokane.org/" },
           { "icon": "family", "text": "Spokane Locals", "subtext": "Family Owned & Operated" },
           { "icon": "clock", "text": "Rapid Response", "subtext": "Free Quotes Within 24 hrs" }
         ]
