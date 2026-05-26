@@ -1,0 +1,677 @@
+---
+import BaseLayout from '@/layouts/BaseLayout.astro';
+import Header from '@/components/Header.astro';
+import Footer from '@/components/Footer.astro';
+import siteConfig from '@/data/site-config.json';
+
+const { business } = siteConfig;
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": business.url
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Leave a Review",
+      "item": `${business.url}/review`
+    }
+  ]
+};
+---
+
+<BaseLayout
+  title={`Leave a Review | ${business.name}`}
+  description={`Share your experience with ${business.name}. Your feedback helps us serve the Spokane community better.`}
+  schema={breadcrumbSchema}
+  noindex
+>
+  <Header slot="header" transparent={false} />
+
+  <!-- Breadcrumbs (visible) -->
+  <nav class="review-breadcrumbs" aria-label="Breadcrumb">
+    <div class="container">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li aria-current="page">Leave a Review</li>
+      </ol>
+    </div>
+  </nav>
+
+  <section class="review-hero">
+    <div class="container">
+      <div class="review-card">
+        <!-- Step 1: Star Rating -->
+        <div id="step-rating" class="review-step">
+          <div class="review-icon">💬</div>
+          <h1>How Was Your Experience?</h1>
+          <p class="review-subtitle">
+            Your feedback means the world to our family. Tap a star to let us know how we did.
+          </p>
+
+          <div class="stars-container" role="radiogroup" aria-label="Rate your experience from 1 to 5 stars">
+            {[1, 2, 3, 4, 5].map((star) => (
+              <button
+                type="button"
+                class="star-btn"
+                data-rating={star}
+                aria-label={`${star} star${star > 1 ? 's' : ''}`}
+                role="radio"
+                aria-checked="false"
+              >
+                <svg viewBox="0 0 24 24" class="star-svg" aria-hidden="true">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+              </button>
+            ))}
+          </div>
+          <p class="stars-hint" id="stars-hint" aria-live="polite">Select a rating above</p>
+        </div>
+
+        <!-- Step 2a: Positive (4-5 stars) - Route to Google -->
+        <div id="step-positive" class="review-step" style="display:none;">
+          <div class="review-icon review-icon--success">🎉</div>
+          <h2>Thank You So Much!</h2>
+          <p class="review-subtitle">
+            We're so glad you had a great experience! As a family-owned, women and minority-owned business, 
+            every review helps us grow and serve more families in Spokane.
+          </p>
+          <p class="review-subtitle" style="margin-top: 0.5rem;">
+            Would you mind sharing your experience on Google? It only takes a minute and means so much to our team.
+          </p>
+          <a
+            href="#"
+            id="google-review-link"
+            data-gbp-url=""
+            class="btn btn--gold btn--lg review-google-btn"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ⭐ Leave a Google Review
+          </a>
+          <p class="review-alt-action">
+            Or call us anytime at
+            <a href={`tel:${business.phoneClean}`}>{business.phone}</a>
+            - we love hearing from you!
+          </p>
+        </div>
+
+        <!-- Step 2b: Negative (1-3 stars) - Private Feedback -->
+        <div id="step-negative" class="review-step" style="display:none;">
+          <div class="review-icon review-icon--feedback">🤝</div>
+          <h2>We Want to Make It Right</h2>
+          <p class="review-subtitle">
+            We're sorry your experience wasn't what you expected. As a family business, 
+            every customer matters to us personally. Please share your feedback below and 
+            we'll reach out to make things right.
+          </p>
+
+          <form id="feedback-form" class="feedback-form">
+            <input type="hidden" name="form_tag" value="review-negative" />
+            <input type="hidden" name="page_url" id="feedback_page_url" value="" />
+            <input type="hidden" name="star_rating" id="feedback_star_rating" value="" />
+            <input type="checkbox" name="botcheck" class="sr-only" style="display:none" aria-label="Bot Check" />
+
+            <div class="feedback-form__group">
+              <label for="feedback-name" class="feedback-form__label">Your Name</label>
+              <input
+                type="text"
+                id="feedback-name"
+                name="name"
+                placeholder="Full Name"
+                required
+                class="feedback-form__input"
+                autocomplete="name"
+              />
+            </div>
+
+            <div class="feedback-form__row">
+              <div class="feedback-form__group">
+                <label for="feedback-phone" class="feedback-form__label">Phone</label>
+                <input
+                  type="tel"
+                  id="feedback-phone"
+                  name="phone"
+                  placeholder="(509) 555-1234"
+                  class="feedback-form__input"
+                  autocomplete="tel"
+                />
+              </div>
+              <div class="feedback-form__group">
+                <label for="feedback-email" class="feedback-form__label">Email</label>
+                <input
+                  type="email"
+                  id="feedback-email"
+                  name="email"
+                  placeholder="you@email.com"
+                  required
+                  class="feedback-form__input"
+                  autocomplete="email"
+                />
+              </div>
+            </div>
+
+            <div class="feedback-form__group">
+              <label for="feedback-message" class="feedback-form__label">What happened?</label>
+              <textarea
+                id="feedback-message"
+                name="message"
+                placeholder="Please share the details of your experience so we can make it right…"
+                required
+                class="feedback-form__input feedback-form__textarea"
+                rows="5"
+              ></textarea>
+            </div>
+
+            <button type="submit" class="btn btn--gold btn--lg feedback-form__submit">
+              Send Private Feedback
+            </button>
+            <p class="feedback-form__note">
+              This goes directly to our team - not posted publicly. We'll follow up within 24 hours.
+            </p>
+
+            <div id="feedback-error" class="feedback-form__error" style="display:none;">
+              Something went wrong. Please call us directly at
+              <a href={`tel:${business.phoneClean}`}>{business.phone}</a>.
+            </div>
+          </form>
+        </div>
+
+        <!-- Step 3: Feedback Sent Confirmation -->
+        <div id="step-sent" class="review-step" style="display:none;">
+          <div class="review-icon review-icon--success">✅</div>
+          <h2>Feedback Received</h2>
+          <p class="review-subtitle">
+            Thank you for taking the time to share your experience. A member of our team 
+            will reach out to you within 24 hours.
+          </p>
+          <p class="review-subtitle" style="margin-top: 0.5rem;">
+            If you need immediate assistance, please call us:
+          </p>
+          <a href={`tel:${business.phoneClean}`} class="btn btn--gold btn--lg">
+            📞 Call {business.phone}
+          </a>
+          <a href="/" class="review-home-link">← Back to Home</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <Footer slot="footer" />
+</BaseLayout>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // ── Elements ───────────────────────────────────────────
+    const stepRating = document.getElementById('step-rating')!;
+    const stepPositive = document.getElementById('step-positive')!;
+    const stepNegative = document.getElementById('step-negative')!;
+    const stepSent = document.getElementById('step-sent')!;
+    const starsHint = document.getElementById('stars-hint')!;
+    const starBtns = document.querySelectorAll<HTMLButtonElement>('.star-btn');
+    const feedbackForm = document.getElementById('feedback-form') as HTMLFormElement;
+    const pageUrlInput = document.getElementById('feedback_page_url') as HTMLInputElement;
+    const starRatingInput = document.getElementById('feedback_star_rating') as HTMLInputElement;
+
+    let selectedRating = 0;
+
+    // Set page URL for tracking
+    if (pageUrlInput) pageUrlInput.value = window.location.href;
+
+    // ── Star hover + click ─────────────────────────────────
+    const hintLabels = [
+      '',
+      'Poor - we want to hear from you',
+      'Below expectations - tell us more',
+      'Okay - we can do better',
+      'Great - glad we delivered!',
+      'Excellent - you made our day!'
+    ];
+
+    function highlightStars(upTo: number) {
+      starBtns.forEach((btn) => {
+        const r = parseInt(btn.dataset.rating || '0');
+        const svg = btn.querySelector('.star-svg')!;
+        if (r <= upTo) {
+          svg.classList.add('star-svg--active');
+        } else {
+          svg.classList.remove('star-svg--active');
+        }
+      });
+    }
+
+    starBtns.forEach((btn) => {
+      const rating = parseInt(btn.dataset.rating || '0');
+
+      btn.addEventListener('mouseenter', () => {
+        highlightStars(rating);
+        starsHint.textContent = hintLabels[rating] || '';
+      });
+
+      btn.addEventListener('mouseleave', () => {
+        highlightStars(selectedRating);
+        starsHint.textContent = selectedRating
+          ? hintLabels[selectedRating]
+          : 'Select a rating above';
+      });
+
+      btn.addEventListener('click', () => {
+        selectedRating = rating;
+        highlightStars(rating);
+        starsHint.textContent = hintLabels[rating] || '';
+
+        // Update ARIA
+        starBtns.forEach((b) => {
+          b.setAttribute('aria-checked',
+            b.dataset.rating === String(rating) ? 'true' : 'false'
+          );
+        });
+
+        // Set hidden field
+        if (starRatingInput) starRatingInput.value = String(rating);
+
+        // Transition after a brief moment
+        setTimeout(() => {
+          stepRating.style.display = 'none';
+          if (rating >= 4) {
+            stepPositive.style.display = 'block';
+            stepPositive.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            stepNegative.style.display = 'block';
+            stepNegative.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Focus the name field for accessibility
+            const nameField = document.getElementById('feedback-name');
+            if (nameField) nameField.focus();
+          }
+        }, 400);
+      });
+    });
+
+    // ── Keyboard navigation for stars ──────────────────────
+    starBtns.forEach((btn, index) => {
+      btn.addEventListener('keydown', (e: KeyboardEvent) => {
+        let newIndex = index;
+        if (e.key === 'ArrowRight' || e.key === 'ArrowUp') {
+          e.preventDefault();
+          newIndex = Math.min(index + 1, starBtns.length - 1);
+        } else if (e.key === 'ArrowLeft' || e.key === 'ArrowDown') {
+          e.preventDefault();
+          newIndex = Math.max(index - 1, 0);
+        }
+        if (newIndex !== index) {
+          (starBtns[newIndex] as HTMLButtonElement).focus();
+        }
+      });
+    });
+
+    // ── Feedback form submission ───────────────────────────
+    if (feedbackForm) {
+      feedbackForm.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const submitBtn = feedbackForm.querySelector<HTMLButtonElement>('.feedback-form__submit')!;
+        const originalText = submitBtn.innerText;
+        submitBtn.innerText = 'SENDING…';
+        submitBtn.disabled = true;
+
+        try {
+          const res = await fetch('https://form-handler.brandon-c29.workers.dev', {
+            method: 'POST',
+            body: new FormData(feedbackForm),
+          });
+          const json = await res.json();
+          if (json.success) {
+            stepNegative.style.display = 'none';
+            stepSent.style.display = 'block';
+            stepSent.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          } else {
+            throw new Error(json.error || 'Submission failed');
+          }
+        } catch (err) {
+          console.error('[ReviewFunnel] Submission failed:', err);
+          const errorEl = document.getElementById('feedback-error');
+          if (errorEl) errorEl.style.display = 'block';
+          submitBtn.innerText = originalText;
+          submitBtn.disabled = false;
+        }
+      });
+
+      // Clear error on input
+      feedbackForm.addEventListener('input', () => {
+        const errorEl = document.getElementById('feedback-error');
+        if (errorEl) errorEl.style.display = 'none';
+      });
+    }
+  });
+</script>
+
+<style>
+  /* ─── Review Page Layout ─────────────────────────────── */
+  .review-breadcrumbs {
+    background: var(--charcoal);
+    padding: 120px 0 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  .review-breadcrumbs ol {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    list-style: none;
+    padding: 16px 0;
+    font-size: var(--text-sm);
+    color: var(--text-on-dark-dim);
+  }
+
+  .review-breadcrumbs li::before {
+    content: none;
+  }
+
+  .review-breadcrumbs li + li::before {
+    content: '›';
+    margin-right: 8px;
+    color: var(--text-on-dark-dim);
+  }
+
+  .review-breadcrumbs a {
+    color: var(--forest-light);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .review-breadcrumbs a:hover {
+    color: var(--forest-light);
+    text-decoration: underline;
+  }
+
+  .review-hero {
+    background: linear-gradient(
+      180deg,
+      var(--charcoal) 0%,
+      var(--black) 100%
+    );
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 0 120px;
+  }
+
+  .review-card {
+    max-width: 640px;
+    margin: 0 auto;
+    background: var(--dark-surface);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-top: 4px solid var(--forest);
+    border-radius: var(--radius-md);
+    padding: 56px 48px;
+    box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .review-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(
+      circle at top center,
+      rgba(0, 86, 179, 0.04) 0%,
+      transparent 60%
+    );
+    pointer-events: none;
+  }
+
+  /* ─── Review Steps ───────────────────────────────────── */
+  .review-step {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    animation: fadeUp 0.5s ease-out;
+  }
+
+  .review-icon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    display: inline-block;
+  }
+
+  .review-step h1,
+  .review-step h2 {
+    font-family: var(--font-heading);
+    font-size: clamp(1.75rem, 3vw, 2.25rem);
+    color: white;
+    line-height: 1.15;
+    margin-bottom: 16px;
+    letter-spacing: -0.02em;
+  }
+
+  .review-subtitle {
+    font-family: var(--font-body);
+    font-size: var(--text-base);
+    color: var(--text-on-dark-dim);
+    line-height: 1.7;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+
+  /* ─── Star Rating ────────────────────────────────────── */
+  .stars-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin: 36px 0 20px;
+  }
+
+  .star-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: transform 0.2s ease, background 0.2s ease;
+    outline-offset: 4px;
+  }
+
+  .star-btn:hover {
+    transform: scale(1.2);
+    background: rgba(244, 169, 59, 0.08);
+  }
+
+  .star-btn:focus-visible {
+    outline: 2px solid var(--forest);
+    outline-offset: 4px;
+  }
+
+  .star-btn:active {
+    transform: scale(0.95);
+  }
+
+  .star-svg {
+    width: 48px;
+    height: 48px;
+    fill: rgba(255, 255, 255, 0.15);
+    stroke: rgba(255, 255, 255, 0.25);
+    stroke-width: 0.5;
+    transition: fill 0.25s ease, transform 0.2s ease, filter 0.25s ease;
+  }
+
+  .star-svg--active {
+    fill: #F4A93B;
+    stroke: #F4A93B;
+    filter: drop-shadow(0 0 8px rgba(244, 169, 59, 0.4));
+  }
+
+  .stars-hint {
+    font-size: var(--text-sm);
+    color: var(--text-on-dark-dim);
+    min-height: 1.5em;
+    transition: color 0.2s;
+    font-style: italic;
+  }
+
+  /* ─── Positive Step (Google CTA) ─────────────────────── */
+  .review-google-btn {
+    margin-top: 28px;
+    display: inline-flex;
+    font-size: var(--text-base);
+  }
+
+  .review-alt-action {
+    margin-top: 20px;
+    font-size: var(--text-sm);
+    color: var(--text-on-dark-dim);
+  }
+
+  .review-alt-action a {
+    color: var(--forest-light);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* ─── Negative Step (Feedback Form) ──────────────────── */
+  .feedback-form {
+    text-align: left;
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .feedback-form__row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+  }
+
+  .feedback-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .feedback-form__label {
+    font-family: var(--font-heading);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--forest-light);
+  }
+
+  .feedback-form__input {
+    padding: 14px 18px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-sm);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    color: white;
+    transition: border-color 0.3s, box-shadow 0.3s, background 0.3s;
+    outline: none;
+    width: 100%;
+  }
+
+  .feedback-form__input::placeholder {
+    color: #7a8599;
+  }
+
+  .feedback-form__input:focus {
+    border-color: var(--forest);
+    box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.15);
+    background: rgba(0, 0, 0, 0.45);
+  }
+
+  .feedback-form__textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+
+  .feedback-form__submit {
+    width: 100%;
+    margin-top: 8px;
+  }
+
+  .feedback-form__note {
+    text-align: center;
+    font-size: var(--text-xs);
+    color: var(--text-on-dark-dim);
+    font-style: italic;
+    margin-top: 4px;
+  }
+
+  .feedback-form__error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: var(--radius-sm);
+    padding: 16px;
+    color: #fca5a5;
+    font-size: var(--text-sm);
+    text-align: center;
+  }
+
+  .feedback-form__error a {
+    color: inherit;
+    text-decoration: underline;
+  }
+
+  /* ─── Sent Confirmation ──────────────────────────────── */
+  .review-home-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: var(--text-sm);
+    color: var(--text-on-dark-dim);
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .review-home-link:hover {
+    color: var(--forest-light);
+  }
+
+  /* ─── Responsive ─────────────────────────────────────── */
+  @media (max-width: 640px) {
+    .review-card {
+      padding: 40px 24px;
+      margin: 0 16px;
+    }
+
+    .star-svg {
+      width: 40px;
+      height: 40px;
+    }
+
+    .stars-container {
+      gap: 6px;
+    }
+
+    .feedback-form__row {
+      grid-template-columns: 1fr;
+    }
+
+    .review-hero {
+      padding: 40px 0 80px;
+    }
+  }
+
+  /* ─── Animation ──────────────────────────────────────── */
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

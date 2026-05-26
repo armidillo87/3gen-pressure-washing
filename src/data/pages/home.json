@@ -1,41 +1,118 @@
 {
   "slug": "index",
-  "title": "3 Gen Pressure Washing | Premium Pressure Washing in Spokane",
-  "description": "Stop struggling with unreliable contractors. 3 Gen Pressure Washing delivers elite hot & cold pressure washing for Spokane homes and businesses.",
+  "title": "3 Gen Pressure Washing | Professional Pressure Washing in Spokane, WA",
+  "description": "Family-owned, women & minority-owned pressure washing company serving Spokane, WA. Hot & cold pressure washing, soft washing, and certified graffiti removal. Call 509-939-8757 for a free quote.",
   "blocks": [
     {
       "type": "Hero",
       "data": {
         "heroClass": "standard",
-        "h1": "Spokane's Trusted <em class='serif accent'>Pressure Washing Experts</em>",
-        "desc": "Don't risk your home or business with cut-rate work. 3 Gen Pressure Washing delivers guaranteed hot and cold washing solutions across Spokane and the surrounding areas."
+        "label": "Family-Owned & Operated in Spokane",
+        "h1": "Spokane's Trusted <em class='serif accent'>Pressure Washing</em> Experts",
+        "desc": "3 Gen Pressure Washing is a family-owned, women & minority-owned business proudly serving Spokane and surrounding communities. We deliver safe, effective hot and cold pressure washing - backed by Washington State certification."
       }
     },
     {
       "type": "TrustBar",
       "data": {
         "signals": [
-          { "icon": "shield", "text": "Licensed & Insured", "subtext": "Guaranteed Protections" },
+          { "icon": "shield", "text": "Licensed & Insured", "subtext": "WA Contractor #3GENPGP773M4" },
           { "icon": "star", "text": "State Certified", "subtext": "Trusted by Washington" },
-          { "icon": "clock", "text": "Rapid Response", "subtext": "Minimize Downtime" }
+          { "icon": "family", "text": "Family-Owned", "subtext": "Women & Minority Owned" },
+          { "icon": "clock", "text": "Rapid Response", "subtext": "Free Quotes Within 24 hrs" }
         ]
       }
     },
     {
       "type": "ServiceList",
       "data": {
-        "title": "Aggressive, High-Performance Cleaning",
-        "subtitle": "Select your sector below for immediate dispatch details.",
+        "title": "Our Pressure Washing Services",
+        "subtitle": "From residential driveways to state-certified graffiti removal - we handle it all.",
         "services": [
-          { "title": "Hot & Cold Pressure Washing", "description": "Temperature-controlled pressure washing for tough stains, grease, and algae removal.", "link": "/services/hot-cold-pressure-washing", "icon": "bolt", "image": "/src/assets/images/hero.jpg" },
-          { "title": "Graffiti Removal", "description": "State-certified, damage-free graffiti removal for commercial and public properties.", "link": "/services/graffiti-removal", "icon": "business", "image": "/src/assets/images/adobestock-cleaning.jpg" },
-          { "title": "Commercial Building Washing", "description": "Enhance your business's curb appeal with exterior and storefront pressure washing.", "link": "/services/commercial-building-washing", "icon": "home", "image": "/src/assets/images/boots.jpg" }
+          { "title": "Hot & Cold Pressure Washing", "description": "Temperature-controlled pressure washing for tough stains, grease, and algae removal on any surface.", "link": "/services/hot-cold-pressure-washing", "icon": "bolt", "image": "/src/assets/images/hero.jpg" },
+          { "title": "Graffiti Removal", "description": "State-certified, damage-free graffiti removal for commercial and public properties. Trusted by the State of Washington.", "link": "/services/graffiti-removal", "icon": "business", "image": "/src/assets/images/adobestock-cleaning.jpg" },
+          { "title": "Commercial Building Washing", "description": "Enhance your business curb appeal with professional exterior and storefront pressure washing.", "link": "/services/commercial-building-washing", "icon": "home", "image": "/src/assets/images/boots.jpg" },
+          { "title": "Driveway & Walkway Cleaning", "description": "Remove oil stains, tire marks, mold, and mildew to restore your flatwork and improve safety.", "link": "/services/driveway-cleaning", "icon": "tool" },
+          { "title": "Roof Treatments & Soft Washing", "description": "Safe, low-pressure soft washing to remove moss and algae without damaging your shingles.", "link": "/services/roof-cleaning", "icon": "home" },
+          { "title": "Fuel Station Cleaning", "description": "Hot water pressure washing for gas stations - removing oil, gas, and grease for safety and compliance.", "link": "/services/fuel-station-cleaning", "icon": "bolt" }
+        ]
+      }
+    },
+    {
+      "type": "WhyChooseUs",
+      "data": {
+        "title": "Why Spokane Trusts 3 Gen",
+        "subtitle": "At the heart of our company is a deep commitment to delivering top-notch outdoor cleaning services backed by years of hands-on experience.",
+        "reasons": [
+          {
+            "title": "Women & Minority Owned",
+            "desc": "3 Gen Pressure Washing LLC is an OMWBE-certified, women and minority-owned business. We're proud to represent diversity in the trades.",
+            "icon": "heart"
+          },
+          {
+            "title": "State-Certified Graffiti Removal",
+            "desc": "We are trusted by the State of Washington for our Graffiti Removal Service - a testament to our commitment to quality and community.",
+            "icon": "award"
+          },
+          {
+            "title": "Top-of-the-Line Equipment",
+            "desc": "We use carefully selected cleaning solutions and industrial-grade equipment to ensure your property shines. No shortcuts.",
+            "icon": "tool"
+          },
+          {
+            "title": "Family Values, Professional Results",
+            "desc": "As a family-owned and operated business, we take great pride in helping maintain Spokane's infrastructure, one clean surface at a time.",
+            "icon": "shield"
+          }
+        ]
+      }
+    },
+    {
+      "type": "ProcessWalkthrough",
+      "data": {
+        "title": "Our Simple 3-Step Process",
+        "subtitle": "From the first call to the final rinse - here's how we work.",
+        "steps": [
+          { "title": "1. Free Consultation", "desc": "Call or fill out our form. We'll discuss your needs, schedule a site visit, and provide a transparent quote with no hidden fees." },
+          { "title": "2. Professional Cleaning", "desc": "Our trained crew arrives on time with industrial-grade hot and cold water systems. We pre-treat surfaces, wash methodically, and clean up thoroughly." },
+          { "title": "3. Walk-Through & Guarantee", "desc": "We walk the job with you to ensure 100% satisfaction. If anything doesn't meet your expectations, we make it right - guaranteed." }
+        ]
+      }
+    },
+    {
+      "type": "Testimonials",
+      "data": {
+        "title": "What Our Customers Say",
+        "testimonials": [
+          { "name": "Local Business Owner", "text": "3 Gen did an incredible job on our storefront. The team was professional, on-time, and the results were night and day. Highly recommend!", "rating": 5 },
+          { "name": "Spokane Homeowner", "text": "Our driveway hadn't been cleaned in years. 3 Gen made it look brand new. Fair price, great communication, and they even cleaned up after themselves.", "rating": 5 },
+          { "name": "Property Manager", "text": "We use 3 Gen for all our commercial properties. Reliable, consistent, and they always go above and beyond. True professionals.", "rating": 5 }
+        ]
+      }
+    },
+    {
+      "type": "CityPills",
+      "data": {
+        "title": "Areas We Serve",
+        "subtitle": "Serving Spokane and 7 surrounding counties across Eastern Washington.",
+        "cities": [
+          { "name": "Spokane County", "slug": "/service-areas/spokane-county" },
+          { "name": "Adams County", "slug": "/service-areas/adams-county" },
+          { "name": "Ferry County", "slug": "/service-areas/ferry-county" },
+          { "name": "Stevens County", "slug": "/service-areas/stevens-county" },
+          { "name": "Lincoln County", "slug": "/service-areas/lincoln-county" },
+          { "name": "Pend Oreille County", "slug": "/service-areas/pend-oreille-county" },
+          { "name": "Whitman County", "slug": "/service-areas/whitman-county" }
         ]
       }
     },
     {
       "type": "QuoteForm",
-      "data": {}
+      "data": {
+        "label": "Free Estimate",
+        "h2": "Get Your Free <br><em class='serif accent'>Pressure Washing Quote.</em>",
+        "desc": "Fill out the form or call us directly. We respond within 24 hours - no pressure, no obligation."
+      }
     }
   ]
 }

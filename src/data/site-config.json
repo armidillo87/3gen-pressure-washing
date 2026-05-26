@@ -32,11 +32,11 @@
   },
   "brand": {
     "colors": {
-      "primary": "#ECEFF3",
-      "secondary": "#0D1B2B",
-      "accent": "#FFFFFF",
-      "dark": "#0D131A",
-      "light": "#ECEFF3"
+      "primary": "#0056B3",
+      "secondary": "#00BCD4",
+      "accent": "#8B1A1A",
+      "dark": "#0D1B2A",
+      "light": "#FFFFFF"
     },
     "logo": "/images/logo.png",
     "tagline": "Make your business shine with our expert pressure washing services",

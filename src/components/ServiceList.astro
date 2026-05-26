@@ -18,7 +18,7 @@ interface Props {
 
 const { 
   title = "Our Services", 
-  subtitle = "Expert electrical solutions for your home and business",
+  subtitle = "Expert exterior cleaning and pressure washing solutions for your home and business",
   services = [] 
 } = Astro.props;
 ---
@@ -59,7 +59,7 @@ const {
 
 <style>
   .service-list {
-    background-color: var(--color-bg, #ffffff);
+    background-color: var(--cream, #F8FAFE);
     padding: 5rem 0;
   }
   
@@ -89,7 +89,7 @@ const {
     display: flex;
     flex-direction: column;
     background: #fff;
-    border: 1px solid var(--color-border, #eee);
+    border: 1px solid var(--cream-warm, #EDF2F7);
     border-radius: 8px;
     text-decoration: none;
     color: inherit;
@@ -120,7 +120,7 @@ const {
   
   .service-card:hover {
     box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-    border-color: var(--color-accent, #d4af37);
+    border-color: var(--color-accent, #0056B3);
     transform: translateY(-5px);
   }
   
@@ -131,18 +131,18 @@ const {
   .service-icon {
     font-size: 2rem;
     margin: 2.5rem 2.5rem 0; /* Margin instead of padding since wrapper has no padding now */
-    color: var(--color-accent, #d4af37);
+    color: var(--color-accent, #0056B3);
   }
   
   .service-card h3 {
     font-size: 1.25rem;
     margin-bottom: 1rem;
     font-family: var(--font-display, sans-serif);
-    color: var(--color-dark, #1a1a1a);
+    color: var(--text-dark, #0A1929);
   }
   
   .service-card p {
-    color: var(--color-text-mid, #555);
+    color: var(--text-mid, #3D5A80);
     line-height: 1.6;
     margin-bottom: 1.5rem;
     flex-grow: 1; /* Pushes the learn more link to the bottom */

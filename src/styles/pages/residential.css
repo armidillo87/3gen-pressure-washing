@@ -1,5 +1,5 @@
 /* ============================================
-   RESIDENTIAL HUB — Micro-Site Landing Page
+   RESIDENTIAL HUB - Micro-Site Landing Page
    The page most organic traffic will hit.
    ============================================ */
 
@@ -74,7 +74,7 @@
 }
 
 .breadcrumb a:hover {
-    color: var(--gold);
+    color: var(--forest-light);
 }
 
 .breadcrumb span {
@@ -169,15 +169,15 @@
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--forest), var(--gold));
+    background: linear-gradient(90deg, var(--forest), #0067D6);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
 
 .service-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 24px 64px rgba(27, 62, 146, 0.08), 0 12px 24px rgba(212, 160, 60, 0.1);
-    border-color: rgba(212, 160, 60, 0.3);
+    box-shadow: 0 24px 64px rgba(27, 62, 146, 0.08), 0 12px 24px rgba(0, 86, 179, 0.1);
+    border-color: rgba(0, 86, 179, 0.3);
 }
 
 .service-card:hover::before {
@@ -200,7 +200,7 @@
 
 .service-card:hover .service-card__icon {
     background: var(--forest);
-    color: var(--gold-bright);
+    color: var(--forest-light);
     transform: scale(1.05);
 }
 
@@ -246,7 +246,7 @@
 
 .service-card__arrow {
     font-size: var(--text-xl);
-    color: var(--gold);
+    color: var(--forest);
     transition: transform 0.3s;
 }
 
@@ -276,7 +276,7 @@
 .why-card:hover {
     transform: translateY(-6px);
     background: rgba(255, 255, 255, 0.08);
-    border-color: rgba(212, 160, 60, 0.4);
+    border-color: rgba(0, 86, 179, 0.4);
     box-shadow: 0 16px 40px rgba(0, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2);
 }
 
@@ -284,7 +284,7 @@
     font-family: var(--font-display);
     font-size: var(--text-4xl);
     font-weight: 800;
-    color: var(--gold);
+    color: var(--forest-light);
     opacity: 0.3;
     line-height: 1;
     margin-bottom: 16px;
@@ -294,7 +294,7 @@
 .why-card:hover .why-card__number {
     opacity: 0.8;
     transform: scale(1.05) translateX(4px);
-    text-shadow: 0 0 16px rgba(212, 160, 60, 0.4);
+    text-shadow: 0 0 16px rgba(0, 86, 179, 0.4);
 }
 
 .why-card h3 {
@@ -353,9 +353,9 @@
 
 .area-pill:hover,
 .area-pill--active {
-    background: var(--gold);
-    color: var(--black);
-    border-color: var(--gold);
+    background: var(--forest);
+    color: white;
+    border-color: var(--forest);
     transform: translateY(-2px);
 }
 
@@ -378,7 +378,7 @@
 
 /* Testimonial star fix for light bg */
 .testimonial-card__stars {
-    color: var(--gold-bright, #d4a03c);
+    color: #F4A93B;
 }
 
 /* ---------- CTA BAR (compact) ---------- */
@@ -414,14 +414,14 @@
     border-radius: var(--radius-md);
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-    border-left: 4px solid var(--gold);
+    border-left: 4px solid var(--forest);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
 }
 
 .testimonial-card:hover {
     transform: translateY(-8px);
-    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08), 0 12px 24px rgba(212, 160, 60, 0.1);
+    box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08), 0 12px 24px rgba(0, 86, 179, 0.1);
     border-left-color: var(--forest);
 }
 
@@ -449,7 +449,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--gold), var(--gold-bright));
+    background: linear-gradient(135deg, var(--forest), #0067D6);
     color: var(--black);
     display: flex;
     align-items: center;
@@ -480,7 +480,7 @@
 }
 
 .testimonial-card--dark .testimonial-card__stars {
-    color: var(--gold);
+    color: #F4A93B;
 }
 
 .testimonial-card--dark .testimonial-card__text {
@@ -601,8 +601,8 @@
 }
 
 .faq-item[open] {
-    border-color: var(--gold);
-    box-shadow: 0 4px 20px rgba(212, 160, 60, 0.08);
+    border-color: var(--forest);
+    box-shadow: 0 4px 20px rgba(0, 86, 179, 0.08);
 }
 
 .faq-item__q {
@@ -621,7 +621,7 @@
 .faq-item__q::after {
     content: '+';
     font-size: 20px;
-    color: var(--gold);
+    color: var(--forest);
     font-weight: 300;
     transition: transform 0.3s;
 }
@@ -722,7 +722,7 @@
     z-index: 1;
 }
 
-/* Pain section — solid dark background, content-focused (no distracting bg images) */
+/* Pain section - solid dark background, content-focused (no distracting bg images) */
 
 .pain-grid {
     display: grid;
@@ -743,7 +743,7 @@
 
 .pain-item--glass:hover {
     background: rgba(255, 255, 255, 0.12);
-    border-color: rgba(212, 160, 60, 0.3);
+    border-color: rgba(0, 86, 179, 0.3);
     transform: translateY(-2px);
 }
 
@@ -755,8 +755,8 @@
 }
 
 .solution-block--glass {
-    background: rgba(212, 160, 60, 0.1);
-    border: 1px solid rgba(212, 160, 60, 0.25);
+    background: rgba(0, 86, 179, 0.1);
+    border: 1px solid rgba(0, 86, 179, 0.25);
     backdrop-filter: blur(12px);
     border-radius: var(--radius-md);
     padding: 32px;
@@ -841,7 +841,7 @@
     font-family: var(--font-display);
     font-size: 2.5rem;
     font-weight: 800;
-    color: var(--gold);
+    color: var(--forest-light);
     opacity: 0.4;
     line-height: 1;
     margin-bottom: 12px;
@@ -872,7 +872,7 @@
     padding: 48px 40px;
     background: white;
     border-radius: var(--radius-lg);
-    border: 2px solid rgba(212, 160, 60, 0.2);
+    border: 2px solid rgba(0, 86, 179, 0.2);
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.06);
 }
 
@@ -930,7 +930,7 @@
 
 
 /* ============================================
-   SPRINT 7 — Conversion-Optimized Components
+   SPRINT 7 - Conversion-Optimized Components
    Photo cards, gallery, before/after, value stack,
    risk reversal, downloads, solution split layout.
    ============================================ */
@@ -1016,7 +1016,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--gold);
+    color: var(--forest-light);
     transition: letter-spacing 0.3s;
 }
 
@@ -1175,7 +1175,7 @@
 }
 
 .ba-pair__badge--after {
-    background: var(--gold);
+    background: var(--forest);
     color: var(--charcoal);
 }
 
@@ -1236,7 +1236,7 @@
 }
 
 .value-stack__star {
-    color: var(--gold);
+    color: #F4A93B;
     flex-shrink: 0;
     margin-top: 2px;
 }
@@ -1304,7 +1304,7 @@
     font-family: var(--font-heading);
     font-size: 1rem;
     font-weight: 700;
-    color: var(--gold);
+    color: var(--forest-light);
     margin-bottom: 6px;
 }
 
@@ -1344,7 +1344,7 @@
 }
 
 .download-card:hover {
-    border-color: var(--gold);
+    border-color: var(--forest);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
     transform: translateY(-3px);
 }

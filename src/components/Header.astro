@@ -1,7 +1,6 @@
 ---
-/* CHANGE: Update logo import path once you add your logo */
-// import { Image } from 'astro:assets';
-// import logoImg from '@/assets/img/logo.png';
+import { Image } from 'astro:assets';
+import logoImg from '@/assets/images/logo.png';
 import siteConfig from '@/data/site-config.json';
 
 interface Props {
@@ -13,6 +12,7 @@ const { business } = siteConfig;
 
 const navItems = [
   { label: 'Services', href: '/services/' },
+  { label: 'Service Areas', href: '/service-areas/' },
   { label: 'About', href: '/about/' },
   { label: 'Contact', href: '/contact/' },
 ];
@@ -21,21 +21,23 @@ const navItems = [
 <nav class={`nav ${transparent ? 'nav--transparent' : 'nav--solid'}`} id="nav" aria-label="Main navigation">
   <div class="container nav__inner">
     <a href="/" class="nav__logo">
-      <!-- CHANGE: Uncomment Image component once logo is added -->
-      {/* <Image src={logoImg} alt={business.name} class="nav__logo-img" width={702} height={192} format="webp" quality={90} loading="eager" fetchpriority="high" /> */}
-      <span class="nav__logo-text">{business.name}</span>
+      <Image src={logoImg} alt={business.name} class="nav__logo-img" width={280} height={77} format="webp" quality={90} loading="eager" fetchpriority="high" />
     </a>
 
-    <div class="nav__links">
+    <div class="nav__links" id="nav-links">
       {navItems.map(item => (
         <a href={item.href} class="nav__link">{item.label}</a>
       ))}
-      <a href={typeof siteConfig?.cta?.primary === 'object' ? siteConfig?.cta?.primary?.href : '#quote'} class="btn btn--gold nav__cta">
-      {typeof siteConfig?.cta?.primary === 'object' ? siteConfig?.cta?.primary?.label : (siteConfig?.cta?.primary || 'Get a Quote')}
-    </a>
+      <a href={`tel:${business.phoneClean}`} class="nav__phone">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:16px;height:16px;margin-right:4px;vertical-align:middle;">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
+        </svg>
+        {business.phone}
+      </a>
+      <a href="#quote" class="btn btn--accent nav__cta">Get a Free Quote</a>
     </div>
 
-    <button class="nav__toggle" aria-label="Menu" aria-expanded="false">
+    <button class="nav__toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
@@ -44,11 +46,20 @@ const navItems = [
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const nav = document.getElementById('nav');
-    if (!nav) return;
-    
-    // Only toggle if it started as transparent
+    const toggle = document.getElementById('nav-toggle');
+    const links = document.getElementById('nav-links');
+    if (!nav || !toggle || !links) return;
+
+    // Mobile menu toggle
+    toggle.addEventListener('click', () => {
+      const expanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', String(!expanded));
+      links.classList.toggle('nav__links--open');
+      toggle.classList.toggle('nav__toggle--active');
+    });
+
+    // Scroll behavior for transparent nav
     const isTransparent = nav.classList.contains('nav--transparent');
-    
     if (isTransparent) {
       const handleScroll = () => {
         if (window.scrollY > 50) {
@@ -59,9 +70,60 @@ const navItems = [
           nav.classList.remove('nav--solid');
         }
       };
-      
       window.addEventListener('scroll', handleScroll, { passive: true });
-      handleScroll(); // init on load
+      handleScroll();
     }
   });
 </script>
+
+<style>
+  .nav__phone {
+    display: flex;
+    align-items: center;
+    color: var(--forest-light);
+    font-weight: 700;
+    font-family: var(--font-heading);
+    font-size: var(--text-sm);
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+    white-space: nowrap;
+  }
+  .nav__phone:hover {
+    color: #FFFFFF;
+  }
+  .nav__logo-img {
+    max-height: 55px;
+    width: auto;
+    object-fit: contain;
+    background: white;
+    border-radius: 6px;
+    padding: 4px 10px;
+  }
+  @media (max-width: 1024px) {
+    .nav__links {
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--charcoal);
+      padding: 1.5rem 2rem;
+      gap: 1rem;
+      border-top: 2px solid var(--forest);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    }
+    .nav__links--open {
+      display: flex;
+    }
+    .nav__toggle--active span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .nav__toggle--active span:nth-child(2) {
+      opacity: 0;
+    }
+    .nav__toggle--active span:nth-child(3) {
+      transform: rotate(-45deg) translate(7px, -6px);
+    }
+  }
+</style>

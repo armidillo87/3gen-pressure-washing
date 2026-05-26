@@ -1,5 +1,5 @@
 /* ======================================================
-   LEGAL PAGES — Sidebar TOC Layout
+   LEGAL PAGES - Sidebar TOC Layout
    Used by: terms.astro, privacy.astro, accessibility.astro
    ====================================================== */
 
@@ -80,8 +80,8 @@
 .legal-toc a.active {
   color: var(--forest, #1a2e1a);
   font-weight: 600;
-  border-left-color: var(--gold, #c8a04e);
-  background: rgba(200,160,78,0.08);
+  border-left-color: var(--forest);
+  background: rgba(0,86,179,0.08);
 }
 
 /* ── Content Column ── */

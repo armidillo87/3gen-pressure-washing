@@ -576,7 +576,7 @@ const GLOBAL_VERTICAL_PRESSURE_WASHING_DEFAULT = {
 function sanitizeCopyString(text: string): string {
   if (typeof text !== 'string') return '';
   return text
-    .replace(/—/g, ' - ') // Rule 17: Replace em dashes with hyphen
+    .replace(/-/g, ' - ') // Rule 17: Replace em dashes with hyphen
     .replace(/\b(unlock|leverage|harness|revolution|revolutionary|unleash|demystify|redefine|pave the way|testament)\b/gi, (match) => {
       const replacements: Record<string, string> = {
         unlock: 'reveal',

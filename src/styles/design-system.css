@@ -1,43 +1,50 @@
 /* ============================================
-   3 GEN PRESSURE WASHING — DESIGN SYSTEM v2
-   Premium, bold, distinctive — NOT generic.
+   3 GEN PRESSURE WASHING - DESIGN SYSTEM v2
+   Premium, bold, distinctive - NOT generic.
    ============================================ */
 
-/* Fonts loaded via BaseLayout.astro preload pattern — no @import needed */
+/* Fonts loaded via BaseLayout.astro preload pattern - no @import needed */
 
 :root {
-  /* Brand Colors — richer, more dramatic */
-  --black: #0D131A; /* Legacy Slate */
-  --charcoal: #0D1B2B; /* Legacy Charcoal */
-  --dark-surface: #101824;
-  --dark-surface-2: #162233;
-  --forest: #0056b3; /* 3 Gen Primary Blue Accent */
-  --forest-deep: #0D131A; /* 3 Gen Primary Text/Dark Slate */
-  --forest-light: #ff9900; /* 3 Gen Secondary Accent Orange */
-  --gold: #d4a03c;
-  --gold-bright: #f0c050;
-  --gold-pale: #f5dea0;
-  --cream: #ECEFF3; /* Legacy Cream */
-  --cream-warm: #E2E6EC;
-  --sage: #00c853; /* 3 Gen Green Accent */
-  --text-dark: #090e14;
-  --text-mid: #4a5468;
-  /* WCAG AA 4.6:1 on #f8f4ed */
-  --text-light: #5a657c;
+  /* ==========================================
+     3 GEN PRESSURE WASHING - LIQUID BRAND DNA
+     Decoupled fluid design system.
+     - Brand Blue: #0056B3
+     - Spray Orange: #FF9900
+     - Water Cyan: #0EA5E9
+     - Cool Canvas White: #F8FAFE
+     ========================================== */
+  --black: #0B132B; /* Deep Navy Black (nav/footer only) */
+  --charcoal: #1C2541; /* Dark sections (nav/footer) */
+  --dark-surface: #1E293B;
+  --dark-surface-2: #334155;
+  --forest: #0056B3; /* 3Gen Primary Blue */
+  --forest-deep: #003366; /* 3Gen Deep Blue */
+  --forest-light: #0EA5E9; /* 3Gen Water Cyan */
+  --gold: #FF9900; /* 3Gen Orange Accent */
+  --gold-bright: #F97316; /* Lighter Orange */
+  --gold-pale: #FFF7ED; /* Pale Orange tint */
+  --cream: #F0F7FF; /* Cool Light Blue-White */
+  --cream-warm: #E2EEFF;
+  --sage: #00C853; /* Success Green */
+  --text-dark: #0F172A;
+  --text-mid: #475569;
+  /* WCAG AA 4.6:1 on white */
+  --text-light: #64748B;
   /* WCAG AA 4.5:1 on white */
-  --text-on-dark: #ECEFF3;
-  --text-on-dark-dim: #a0aec0;
+  --text-on-dark: #FFFFFF;
+  --text-on-dark-dim: #CBD5E1;
   /* WCAG AA 5.1:1 on --charcoal */
-  --accent-line: rgba(212, 160, 60, 0.15);
-  --gold-wcag: #f0c050;
-  --glass-white: rgba(255, 255, 255, 0.04);
-  --glass-white-2: rgba(255, 255, 255, 0.07);
-  --glass-border: rgba(255, 255, 255, 0.06);
+  --accent-line: rgba(0, 86, 179, 0.12);
+  --gold-wcag: #FF9900;
+  --glass-white: rgba(255, 255, 255, 0.06);
+  --glass-white-2: rgba(255, 255, 255, 0.10);
+  --glass-border: rgba(255, 255, 255, 0.08);
 
-  /* Fonts */
-  --font-display: 'Lato', sans-serif;
-  --font-heading: 'Lato', sans-serif;
-  --font-body: 'Roboto', sans-serif;
+  /* Fonts - Liquid Geometry */
+  --font-display: 'Sora', sans-serif;
+  --font-heading: 'Sora', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
 
   /* Sizes */
   --text-xs: 0.75rem;
@@ -53,10 +60,11 @@
   --text-7xl: 5.5rem;
   --text-8xl: 7rem;
 
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 22px;
-  --radius-xl: 32px;
+  /* Rounded Geometry - Water drop style */
+  --radius-sm: 10px;
+  --radius-md: 18px;
+  --radius-lg: 26px;
+  --radius-xl: 36px;
 
   --nav-height: 110px;
   --max-width: 1320px;
@@ -84,13 +92,13 @@
   border: 0;
 }
 
-/* Skip-to-content link (WCAG 2.4.1) — visible on Tab focus */
+/* Skip-to-content link (WCAG 2.4.1) - visible on Tab focus */
 .skip-link {
   position: absolute;
   top: -100%;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--gold);
+  background: var(--forest);
   color: var(--black);
   padding: 12px 24px;
   font-family: var(--font-heading);
@@ -116,7 +124,7 @@ body {
   font-size: var(--text-base);
   line-height: 1.6;
   color: var(--text-dark);
-  background: var(--black);
+  background: #FFFFFF;
   overflow-x: hidden;
 }
 
@@ -170,7 +178,7 @@ button {
 }
 
 .accent {
-  color: var(--gold-wcag, var(--gold));
+  color: var(--forest);
 }
 
 /* Forest accent on light backgrounds */
@@ -207,7 +215,7 @@ h6 {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold-wcag, var(--gold));
+  color: var(--forest);
 }
 
 /* Forest label on light backgrounds */
@@ -220,7 +228,7 @@ h6 {
   content: '';
   width: 30px;
   height: 1px;
-  background: var(--gold);
+  background: var(--forest);
 }
 
 /* ---------- BUTTONS ---------- */
@@ -243,17 +251,29 @@ h6 {
 }
 
 .btn--gold {
-  background: linear-gradient(135deg, var(--gold-bright), var(--gold));
-  color: var(--black);
-  /* Stronger outer glow and sharp inner border for a premium feel */
-  box-shadow: 0 4px 20px rgba(212, 160, 60, 0.4), inset 0 1px 1px rgba(255, 255, 255, 0.5);
+  background: linear-gradient(135deg, var(--forest-light), var(--forest));
+  color: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(14, 165, 233, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn--gold:hover {
   transform: translateY(-4px) scale(1.02);
-  /* Intense glow on hover */
-  box-shadow: 0 12px 30px rgba(212, 160, 60, 0.6), inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  box-shadow: 0 12px 30px rgba(14, 165, 233, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.3);
+}
+
+/* 3Gen Orange Accent Button */
+.btn--accent {
+  background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+  color: #FFFFFF;
+  box-shadow: 0 4px 20px rgba(249, 115, 22, 0.35), inset 0 1px 1px rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+}
+
+.btn--accent:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 30px rgba(249, 115, 22, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 
 .btn--glass {
@@ -270,7 +290,7 @@ h6 {
   border-color: var(--gold);
   color: var(--gold);
   transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(212, 160, 60, 0.2);
+  box-shadow: 0 8px 24px rgba(249, 115, 22, 0.2);
 }
 
 .btn--dark {
@@ -281,8 +301,8 @@ h6 {
 
 .btn--dark:hover {
   background: var(--dark-surface);
-  border-color: var(--gold);
-  color: var(--gold);
+  border-color: var(--forest);
+  color: var(--forest-light);
   transform: translateY(-2px);
 }
 
@@ -356,7 +376,7 @@ h6 {
   font-size: 1.5rem;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  color: var(--gold-wcag, var(--gold));
+  color: #FFFFFF;
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
@@ -364,12 +384,15 @@ h6 {
   height: 96px;
   width: auto;
   display: block;
-  filter: brightness(0) invert(1);
+  filter: none;
   transition: filter 0.3s;
+  background: white;
+  border-radius: 6px;
+  padding: 4px 8px;
 }
 
 .nav--solid .nav__logo-img {
-  filter: brightness(0) invert(1);
+  filter: none;
 }
 
 .footer__logo-img {
@@ -623,7 +646,7 @@ h6 {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--forest-light);
   margin-bottom: 24px;
 }
 
@@ -642,7 +665,7 @@ h6 {
 }
 
 .footer__link:hover {
-  color: var(--gold);
+  color: var(--forest-light);
 }
 
 .footer__social {
@@ -666,9 +689,9 @@ h6 {
 }
 
 .footer__social-icon:hover {
-  background: var(--gold);
+  background: var(--forest);
   color: var(--black);
-  border-color: var(--gold);
+  border-color: var(--forest);
   transform: translateY(-2px);
 }
 
@@ -704,7 +727,7 @@ h6 {
 }
 
 .quote-section__text p a {
-  color: var(--gold-wcag, var(--gold));
+  color: var(--forest-light);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -737,7 +760,7 @@ h6 {
   gap: 16px;
   padding: 48px 40px;
   background: var(--forest-deep);
-  border-top: 4px solid var(--gold);
+  border-top: 4px solid var(--forest);
   border-radius: var(--radius-md);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -776,8 +799,8 @@ h6 {
 }
 
 .quote-form__input:focus {
-  border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+  border-color: var(--forest);
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.15);
   background: rgba(0, 0, 0, 0.4);
 }
 
@@ -822,7 +845,7 @@ h6 {
 }
 
 .quote-form__tcpa label a {
-  color: var(--gold);
+  color: var(--forest-light);
   text-decoration: underline;
 }
 
@@ -898,7 +921,7 @@ h6 {
     text-align: center;
   }
 
-  /* Mobile CTA bar — show padding only on mobile to prevent content overlap */
+  /* Mobile CTA bar - show padding only on mobile to prevent content overlap */
   body {
     padding-bottom: 64px;
   }
@@ -933,7 +956,7 @@ h6 {
 }
 
 .review-carousel__stars-summary {
-  color: var(--gold);
+  color: #F4A93B;
   font-size: var(--text-xl);
   letter-spacing: 2px;
 }
@@ -972,7 +995,7 @@ h6 {
 }
 
 .review-carousel__stars {
-  color: var(--gold);
+  color: #F4A93B;
   font-size: var(--text-2xl);
   letter-spacing: 4px;
   margin-bottom: 20px;
@@ -1021,8 +1044,8 @@ h6 {
 }
 
 .review-carousel__dot.is-active {
-  background: var(--gold);
-  border-color: var(--gold);
+  background: var(--forest);
+  border-color: var(--forest);
   transform: scale(1.2);
 }
 
@@ -1043,8 +1066,8 @@ h6 {
 }
 
 .review-carousel__arrow:hover {
-  background: var(--gold);
-  border-color: var(--gold);
+  background: var(--forest);
+  border-color: var(--forest);
   color: var(--black);
 }
 
@@ -1095,18 +1118,18 @@ h6 {
 }
 
 .mobile-cta-bar__call:hover {
-  border-color: var(--gold);
-  color: var(--gold);
+  border-color: var(--forest-light);
+  color: var(--forest-light);
 }
 
 .mobile-cta-bar__quote {
-  background: var(--gold);
-  color: var(--black);
-  border: 1px solid var(--gold);
+  background: var(--forest);
+  color: white;
+  border: 1px solid var(--forest);
 }
 
 .mobile-cta-bar__quote:hover {
-  background: #e8b44a;
+  background: #0067D6;
 }
 
 /* Cream section review carousel text */
@@ -1182,7 +1205,7 @@ h6 {
 }
 
 .cookie-banner__text a {
-  color: var(--gold);
+  color: var(--forest-light);
   text-decoration: underline;
 }
 
@@ -1325,7 +1348,7 @@ h6 {
 }
 
 a.seasonal-calendar__service-label:hover {
-  color: var(--gold);
+  color: var(--forest-light);
 }
 
 .seasonal-calendar__service-icon {
@@ -1361,7 +1384,7 @@ a.seasonal-calendar__service-label:hover {
 }
 
 .seasonal-calendar__month-header--current {
-  background: rgba(212, 160, 60, 0.08);
+  background: rgba(0, 86, 179, 0.08);
 }
 
 .seasonal-calendar__month-short {
@@ -1372,7 +1395,7 @@ a.seasonal-calendar__service-label:hover {
   font-size: 9px;
   font-weight: 700;
   color: var(--charcoal);
-  background: var(--gold);
+  background: var(--forest);
   padding: 1px 6px;
   border-radius: 4px;
   letter-spacing: 0.1em;
@@ -1389,7 +1412,7 @@ a.seasonal-calendar__service-label:hover {
 }
 
 .seasonal-calendar__cell--current {
-  background: rgba(212, 160, 60, 0.04);
+  background: rgba(0, 86, 179, 0.04);
 }
 
 /* Intensity dots */
@@ -1407,8 +1430,8 @@ a.seasonal-calendar__service-label:hover {
 }
 
 .seasonal-calendar__dot--high {
-  background: var(--gold);
-  box-shadow: 0 0 6px rgba(212, 160, 60, 0.4);
+  background: var(--forest);
+  box-shadow: 0 0 6px rgba(0, 86, 179, 0.5);
 }
 
 .seasonal-calendar__dot--medium {
@@ -1460,7 +1483,7 @@ a.seasonal-calendar__service-label:hover {
   margin-top: 40px;
 }
 
-/* Mobile detail view — hidden on desktop */
+/* Mobile detail view - hidden on desktop */
 .seasonal-calendar__mobile-detail {
   display: none;
 }
@@ -1519,9 +1542,9 @@ a.seasonal-calendar__service-label:hover {
   }
 
   .seasonal-calendar__mobile-month-btn--active {
-    background: var(--gold);
-    color: var(--charcoal);
-    border-color: var(--gold);
+    background: var(--forest);
+    color: white;
+    border-color: var(--forest);
     font-weight: 600;
   }
 
@@ -1540,7 +1563,7 @@ a.seasonal-calendar__service-label:hover {
   }
 
   .seasonal-calendar__mobile-card-header {
-    border-left: 3px solid var(--gold);
+    border-left: 3px solid var(--forest);
     padding-left: 16px;
     margin-bottom: 20px;
     display: flex;
@@ -1601,7 +1624,7 @@ a.seasonal-calendar__service-label:hover {
   }
 
   .seasonal-calendar__mobile-group a:hover {
-    color: var(--gold);
+    color: var(--forest-light);
   }
 
   .seasonal-calendar__mobile-tip {

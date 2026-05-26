@@ -63,7 +63,7 @@
 }
 
 .city-hero h1 .serif {
-    color: var(--gold);
+    color: var(--forest-light);
     display: block;
     margin-top: 4px;
 }
@@ -163,7 +163,7 @@
 }
 
 .service-list a:hover {
-    background: var(--gold);
+    background: var(--forest);
     color: var(--black);
     transform: translateX(4px);
     border-color: rgba(0, 0, 0, 0.1);
