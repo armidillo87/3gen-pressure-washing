@@ -39,45 +39,110 @@ const resolveImage = images[targetPath] ||
                      images[targetPath.replace('.webp', '.png')];
 ---
 
-<section class={`resi-hero resi-hero--${heroClass}`}>
+<section class={`resi-hero resi-hero--${heroClass} ${heroClass !== 'standard' && heroClass !== 'compact' ? 'resi-hero--split' : ''}`}>
   {heroClass === "standard" && (
-    <video autoplay loop muted playsinline class="resi-hero__bg-video" poster="https://images.pexels.com/videos/6160419/pexels-photo-6160419.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200">
-      <source src="https://videos.pexels.com/video-files/6160419/6160419-uhd_3840_2160_24fps.mp4" type="video/mp4" />
-    </video>
+    <>
+      <video autoplay loop muted playsinline class="resi-hero__bg-video" poster="https://images.pexels.com/videos/6160419/pexels-photo-6160419.jpeg?auto=compress&cs=tinysrgb&fit=crop&h=630&w=1200">
+        <source src="https://videos.pexels.com/video-files/6160419/6160419-uhd_3840_2160_24fps.mp4" type="video/mp4" />
+      </video>
+      <div class="resi-hero__overlay"></div>
+      
+      <div class="container">
+        <div class="resi-hero__content">
+          {breadcrumbs && (
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              {breadcrumbs.map((crumb, i) => (
+                <>
+                  <span>&gt;</span>
+                  {i < breadcrumbs.length - 1
+                    ? <a href={crumb.href}>{crumb.label}</a>
+                    : <strong aria-current="page">{crumb.label}</strong>
+                  }
+                </>
+              ))}
+            </nav>
+          )}
+          {label && <span class="resi-hero__label label">{label}</span>}
+          <h1 set:html={h1} />
+          <p class="resi-hero__desc">{desc}</p>
+          <div class="resi-hero__ctas">
+            <a href="#quote" class="btn btn--accent btn--lg">{siteConfig.cta.primary}</a>
+            <a href={`tel:${business.phoneClean}`} class="btn btn--glass btn--lg">{business.phone}</a>
+          </div>
+        </div>
+      </div>
+    </>
   )}
 
-  {heroClass !== "standard" && (
-    resolveImage ? (
-      <Image src={resolveImage()} alt={`${business.name} Services`} class="resi-hero__bg-img" loading="eager" fetchpriority="high" width={1920} height={1080} format="webp" />
-    ) : (
-      <Image src={heroImage} alt={`${business.name} Services`} class="resi-hero__bg-img" loading="eager" fetchpriority="high" width={1920} height={1080} format="webp" />
-    )
-  )}
-  <div class="resi-hero__overlay"></div>
-  
-  <div class="container">
-    <div class="resi-hero__content">
-      {breadcrumbs && (
-        <nav class="breadcrumb" aria-label="Breadcrumb">
-          <a href="/">Home</a>
-          {breadcrumbs.map((crumb, i) => (
-            <>
-              <span>&gt;</span>
-              {i < breadcrumbs.length - 1
-                ? <a href={crumb.href}>{crumb.label}</a>
-                : <strong aria-current="page">{crumb.label}</strong>
-              }
-            </>
-          ))}
-        </nav>
-      )}
-      {label && <span class="resi-hero__label label">{label}</span>}
-      <h1 set:html={h1} />
-      <p class="resi-hero__desc">{desc}</p>
-      <div class="resi-hero__ctas">
-        <a href="#quote" class="btn btn--accent btn--lg">{siteConfig.cta.primary}</a>
-        <a href={`tel:${business.phoneClean}`} class="btn btn--glass btn--lg">{business.phone}</a>
+  {heroClass === "compact" && (
+    <div class="container">
+      <div class="resi-hero__content resi-hero__content--compact">
+        {breadcrumbs && (
+          <nav class="breadcrumb" aria-label="Breadcrumb">
+            <a href="/">Home</a>
+            {breadcrumbs.map((crumb, i) => (
+              <>
+                <span>&gt;</span>
+                {i < breadcrumbs.length - 1
+                  ? <a href={crumb.href}>{crumb.label}</a>
+                  : <strong aria-current="page">{crumb.label}</strong>
+                }
+              </>
+            ))}
+          </nav>
+        )}
+        {label && <span class="resi-hero__label label">{label}</span>}
+        <h1 set:html={h1} />
+        <p class="resi-hero__desc" set:html={desc}></p>
       </div>
     </div>
-  </div>
+  )}
+
+  {heroClass !== "standard" && heroClass !== "compact" && (
+    <div class="container">
+      <div class="resi-hero__grid">
+        <div class="resi-hero__content">
+          {breadcrumbs && (
+            <nav class="breadcrumb" aria-label="Breadcrumb">
+              <a href="/">Home</a>
+              {breadcrumbs.map((crumb, i) => (
+                <>
+                  <span>&gt;</span>
+                  {i < breadcrumbs.length - 1
+                    ? <a href={crumb.href}>{crumb.label}</a>
+                    : <strong aria-current="page">{crumb.label}</strong>
+                  }
+                </>
+              ))}
+            </nav>
+          )}
+          {label && <span class="resi-hero__label label">{label}</span>}
+          <h1 set:html={h1} />
+          <p class="resi-hero__desc" set:html={desc}></p>
+          <div class="resi-hero__ctas">
+            <a href="#quote" class="btn btn--accent btn--lg">{siteConfig.cta.primary}</a>
+            <a href={`tel:${business.phoneClean}`} class="btn btn--glass btn--lg">{business.phone}</a>
+          </div>
+        </div>
+        
+        <div class="resi-hero__image-showcase">
+          {resolveImage ? (
+            // @ts-ignore
+            <Image src={resolveImage()} alt={h1.replace(/<[^>]*>/g, '')} class="resi-hero__showcase-img" loading="eager" fetchpriority="high" width={640} height={480} format="webp" />
+          ) : (
+            <Image src={heroImage} alt="3 Gen Pressure Washing" class="resi-hero__showcase-img" loading="eager" fetchpriority="high" width={640} height={480} format="webp" />
+          )}
+          
+          <div class="resi-hero__badge">
+            <span class="badge-icon">🛡️</span>
+            <div class="badge-text">
+              <strong>$2M Liability</strong>
+              <span>Fully Bonded & Insured</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  )}
 </section>

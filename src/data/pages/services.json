@@ -6,7 +6,8 @@
     {
       "type": "Hero",
       "data": {
-        "heroClass": "dark",
+        "heroClass": "services",
+        "bgImage": "/src/assets/images/adobestock-cleaning.jpg",
         "h1": "Master-Level <em class='serif accent'>Exterior Cleaning</em>",
         "desc": "Whether you are a facility manager battling graffiti or a homeowner needing a roof wash, our certified experts execute flawlessly. Fast turnaround. Zero excuses."
       }

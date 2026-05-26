@@ -6,7 +6,7 @@
     {
       "type": "Hero",
       "data": {
-        "heroClass": "standard",
+        "heroClass": "compact",
         "h1": "Privacy <em class='serif accent'>Policy</em>",
         "desc": "How we protect your data."
       }

@@ -6,7 +6,8 @@
     {
       "type": "Hero",
       "data": {
-        "heroClass": "standard",
+        "heroClass": "siding-safety",
+        "bgImage": "/src/assets/images/services/roof-cleaning.jpg",
         "h1": "DIY Siding Destruction: <em class='serif accent'>The Costly Truth</em>",
         "desc": "Why high-pressure DIY washing causes thousands in hidden structural damage - and the safe, certified alternative."
       }

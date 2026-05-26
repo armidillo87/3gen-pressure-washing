@@ -6,7 +6,8 @@
     {
       "type": "Hero",
       "data": {
-        "heroClass": "standard",
+        "heroClass": "about",
+        "bgImage": "/src/assets/images/adobestock-cleaning.jpg",
         "h1": "About <em class='serif accent'>3 Gen Pressure Washing</em>",
         "desc": "Delivering certified pressure washing and graffiti removal across Spokane and surrounding areas since 2022."
       }

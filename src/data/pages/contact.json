@@ -6,7 +6,8 @@
     {
       "type": "Hero",
       "data": {
-        "heroClass": "standard",
+        "heroClass": "contact",
+        "bgImage": "/src/assets/images/services/hot-cold-pressure-washing.jpg",
         "h1": "Contact <em class='serif accent'>3 Gen Pressure Washing</em>",
         "desc": "Need an expert on-site? Call us directly at (509) 939-8757 or request a free quote below."
       }

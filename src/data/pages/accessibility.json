@@ -6,7 +6,7 @@
     {
       "type": "Hero",
       "data": {
-        "heroClass": "standard",
+        "heroClass": "compact",
         "h1": "Accessibility <em class='serif accent'>Statement</em>",
         "desc": "Our commitment to digital inclusion."
       }

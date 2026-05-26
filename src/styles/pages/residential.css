@@ -1413,3 +1413,119 @@
         font-size: 0.75rem;
     }
 }
+
+/* ---------- SPLIT 2-COLUMN HERO LAYOUT ---------- */
+.resi-hero--split {
+    background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+    padding: 140px 0 80px;
+    min-height: auto;
+}
+
+.resi-hero__grid {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 48px;
+    align-items: center;
+}
+
+.resi-hero__image-showcase {
+    position: relative;
+    border-radius: var(--radius-lg, 12px);
+    overflow: visible; /* To allow floating badge to overflow slightly */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.resi-hero__showcase-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    border-radius: var(--radius-lg, 12px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.resi-hero__image-showcase:hover .resi-hero__showcase-img {
+    transform: translateY(-4px);
+}
+
+/* Floating credibility badge */
+.resi-hero__badge {
+    position: absolute;
+    bottom: -20px;
+    right: 20px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    border: 1px solid var(--cream-warm, #EDF2F7);
+    animation: floatBadge 4s ease-in-out infinite;
+}
+
+.resi-hero__badge .badge-icon {
+    font-size: 1.5rem;
+}
+
+.resi-hero__badge .badge-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.resi-hero__badge .badge-text strong {
+    font-size: 0.85rem;
+    color: var(--text-dark, #0A1929);
+    font-weight: 700;
+}
+
+.resi-hero__badge .badge-text span {
+    font-size: 0.7rem;
+    color: var(--text-mid, #3D5A80);
+}
+
+@keyframes floatBadge {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+
+@media (max-width: 968px) {
+    .resi-hero__grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+    
+    .resi-hero__image-showcase {
+        order: -1; /* Puts image on top on mobile */
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    
+    .resi-hero__showcase-img {
+        height: 280px;
+    }
+}
+
+/* ---------- COMPACT HERO LAYOUT (Legal/Utility) ---------- */
+.resi-hero--compact {
+    background: linear-gradient(135deg, #020617 0%, #0f172a 100%);
+    padding: 120px 0 60px; /* Reduced vertical spacing */
+    min-height: auto;
+    text-align: center;
+}
+
+.resi-hero--compact .resi-hero__content--compact {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.resi-hero--compact .breadcrumb {
+    justify-content: center;
+}
+
+.resi-hero--compact .resi-hero__desc {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+}
