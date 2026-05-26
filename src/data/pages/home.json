@@ -9,7 +9,7 @@
         "heroClass": "standard",
         "label": "Family-Owned & Operated in Spokane",
         "h1": "Spokane's Trusted <em class='serif accent'>Pressure Washing</em> Experts",
-        "desc": "3 Gen Pressure Washing is a family-owned, professional exterior cleaning company proudly serving Spokane and surrounding communities. We deliver safe, effective hot and cold pressure washing - backed by $2M liability insurance and state licensing."
+        "desc": "3 Gen Pressure Washing is a family-owned, professional exterior cleaning company. We operate heavy-duty, trailer-mounted industrial hot-water rigs delivering 200°F thermal grease melting power across Spokane - backed by $2M liability insurance and full state credentials."
       }
     },
     {
@@ -31,7 +31,7 @@
         "services": [
           {
             "title": "Hot & Cold Pressure Washing",
-            "description": "Temperature-controlled hot water washing operating up to 200°F to lift heavy grease, industrial oil, and carbon buildup that cold water can't touch.",
+            "description": "Professional high-temperature washing operating up to 200°F via our trailer-mounted industrial rig to lift heavy grease, industrial oils, and carbon buildup that consumer wands can't touch.",
             "link": "/services/hot-cold-pressure-washing",
             "icon": "water-drop",
             "image": "/src/assets/images/services/hot-cold-pressure-washing.jpg"
@@ -112,8 +112,8 @@
             "icon": "award"
           },
           {
-            "title": "Top-of-the-Line Equipment",
-            "desc": "We use carefully selected cleaning solutions and industrial-grade equipment to ensure your property shines. No shortcuts.",
+            "title": "Trailer-Mounted Hot Rig",
+            "desc": "Our dual-axle trailer carries continuous 200°F hot-water pressure systems and self-contained 500-gallon water tanks. No cheap handheld wands here.",
             "icon": "tool"
           },
           {

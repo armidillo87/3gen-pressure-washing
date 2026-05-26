@@ -1,7 +1,7 @@
 {
     "intro": "Welcome to 3 Gen Pressure Washing, LLC...",
     "general": {
-        "about": "3 Gen Pressure Washing, LLC is a premier certified, family-owned, and minority-owned exterior cleaning service. We deliver high-temperature, temperature-controlled hot and cold pressure washing and soft washing across Spokane County.",
+        "about": "3 Gen Pressure Washing, LLC is a premier certified, family-owned, and minority-owned exterior cleaning service. Operating a commercial-grade, dual-axle trailer-mounted industrial hot water rig with a self-contained 500-gallon water tank, we deliver continuous 200°F high-temperature washes and soft washing that completely outclasses typical consumer-grade handheld wands across Spokane County.",
         "process": [
             { "title": "1. First Contact", "desc": "We ask the right questions immediately to understand your scope." },
             { "title": "2. Strategy", "desc": "We formulate a fast-executing battle plan for zero disruption." },
@@ -10,7 +10,7 @@
     },
     "services": {
         "hot-cold-pressure-washing": {
-            "overview": "We provide professional, heavy-duty commercial hot and cold water pressure washing services engineered specifically for the demanding cleaning requirements of industrial assets, shipping bays, and high-traffic commercial concrete. Operating at up to 200°F, our high-temperature hot water extraction melts stubborn industrial oils, grease, and carbon buildup that standard cold water washes can never touch. We protect your property investment while ensuring complete compliance with local environmental regulations.",
+            "overview": "We provide professional, heavy-duty commercial hot and cold water pressure washing services powered by our custom-built, dual-axle trailer-mounted industrial rig. Operating at up to 200°F and carrying a self-contained 500-gallon water supply, our high-temperature rig delivers continuous thermal extraction to melt stubborn industrial oils, grease, and carbon buildup that standard cold-water handheld pressure washers can never touch. We protect your property investment while ensuring complete EPA stormwater compliance.",
             "painPoints": [
                 "Slippery, liability-inducing grease deposits and heavy oil pools at commercial loading docks and equipment pads.",
                 "Frustrating service delays and business interruptions from flaky contractors who operate during your peak business hours.",
@@ -18,14 +18,14 @@
             ],
             "solution": "Our commercial wash team solves these problems by executing precision hot water cleaning scheduled exclusively during your off-hours or overnight shifts. We deploy specialized storm-drain containment seals and water-reclamation systems to ensure 100% compliance with federal Clean Water Act regulations, delivering a spotless wash without any operational downtime or environmental liability.",
             "valueStack": [
-                "200°F High-Temperature Grease Melt & Soil Separation",
+                "200°F High-Temperature Trailer-Mounted Industrial Rig",
+                "Self-Contained 500-Gallon Water Supply (No On-Site Water Needed)",
                 "EPA-Compliant Storm Drain Blockade & Water Recovery",
-                "Overnight & Weekend Off-Hours Flexible Scheduling",
-                "Complete Washington State Registered Contractor Verification"
+                "Overnight & Weekend Off-Hours Flexible Scheduling"
             ],
             "process": [
                 { "title": "1. Site Hazard Assessment", "desc": "We map out drainage paths, note high-grease zones, and deploy EPA-compliant containment barriers to protect all municipal sewers and storm drains." },
-                { "title": "2. High-Temp Hot Extraction", "desc": "Using state-of-the-art truck-mounted systems, we blast away heavy oil, carbon, and grease at up to 200°F with eco-friendly surfactants." },
+                { "title": "2. High-Temp Hot Extraction", "desc": "Using our state-of-the-art dual-axle trailer-mounted system, we blast away heavy oil, carbon, and grease at up to 200°F with eco-friendly surfactants." },
                 { "title": "3. Environmental Reclamation & Review", "desc": "We reclaim wash water as required, sweep surrounding structures clean, and conduct a walk-through to ensure your facility meets strict health codes." }
             ]
         },
@@ -116,7 +116,7 @@
                 "Severe erosion and fracturing of delicate granite or marble monuments caused by high-pressure washing methods.",
                 "Harsh chemical reactions from generic detergents that permanently discolor, pit, or destroy delicate historic stone."
             ],
-            "solution": "We strictly adhere to national cemetery conservation standards. We never use high pressure or harsh acids. Instead, we apply D/2 Biological Solution—the exact formula trusted by the National Park Service—and use soft-bristled hand brushes to gently dissolve organic growth, ensuring a damage-free, long-lasting restoration.",
+            "solution": "We strictly adhere to national cemetery conservation standards. We never use high pressure or harsh acids. Instead, we apply D/2 Biological Solution - the exact formula trusted by the National Park Service - and use soft-bristled hand brushes to gently dissolve organic growth, ensuring a damage-free, long-lasting restoration.",
             "valueStack": [
                 "Museum-Grade Cemetery & Headstone Conservation Standards",
                 "Exclusive Use of D/2 Biological Solution & Eco-Safe Detergents",
