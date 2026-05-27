@@ -87,3 +87,11 @@
   - `free exterior wash quote Spokane` (Action Focused)
   - `schedule pressure washing Spokane WA` (Direct Call)
   - `Inland Northwest wash estimation` (Geo-Direct)
+
+### 12. Our Equipment
+- **Target URL:** `/equipment/`
+- **Keyword Variations:**
+  - `commercial trailer-mounted hot rig` (Feature Focused)
+  - `industrial-grade pressure washing equipment` (Search Focused)
+  - `professional power washing setup` (Trust Focused)
+  - `trailer-mounted hot water rig` (Niche Specific)

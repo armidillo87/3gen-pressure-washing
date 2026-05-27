@@ -1,0 +1,195 @@
+---
+import { Image } from 'astro:assets';
+import rigImage from '@/assets/images/3gen_Equipment.webp';
+---
+
+<section class="equipment-trust section section--cream">
+  <div class="container">
+    <div class="equipment-trust__grid">
+      <div class="equipment-trust__image-side">
+        <Image src={rigImage} alt="3 Gen Pressure Washing Trailer-Mounted Hot Water Rig" class="equipment-trust__img" format="webp" width={600} height={450} />
+        <div class="equipment-trust__badge">
+          <span class="badge-icon">🔥</span>
+          <div class="badge-text">
+            <strong>200°F Thermal Heat</strong>
+            <span>Melts Grease & Oil</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="equipment-trust__content-side">
+        <span class="label">Our Setup & Differentiator</span>
+        <h2>Worried About the Gear Used on Your Property?</h2>
+        <p class="lead">Don't settle for cheap, pulsing consumer wands that leave permanent "tiger stripe" scars on concrete and splinter siding panels.</p>
+        <p>3 Gen Pressure Washing operates a heavy-duty, trailer-mounted industrial rig carrying continuous 200°F temperature-controlled hot water systems and a self-contained 500-gallon water tank. We are fully independent of your home's water pressure and deliver perfectly uniform, professional-grade results safely.</p>
+        
+        <div class="equipment-trust__features">
+          <div class="equipment-trust__feature">
+            <span class="feature-icon">🚚</span>
+            <div>
+              <strong>Trailer-Mounted Independence</strong>
+              <span>500-Gallon self-contained water capacity means we bring our own high-flow water.</span>
+            </div>
+          </div>
+          <div class="equipment-trust__feature">
+            <span class="feature-icon">🌀</span>
+            <div>
+              <strong>Streak-Free Rotary Surface Cleaners</strong>
+              <span>Cleans flatwork completely uniformly without handheld pressure wand scars.</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="equipment-trust__cta">
+          <a href="/equipment/" class="btn btn--accent">See Our Equipment Setup &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .equipment-trust {
+    position: relative;
+    padding: 6rem 0;
+    overflow: hidden;
+  }
+  
+  .equipment-trust__grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 4.5rem;
+    align-items: center;
+  }
+  
+  .equipment-trust__image-side {
+    position: relative;
+    border-radius: var(--radius-lg, 12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+  }
+  
+  .equipment-trust__img {
+    width: 100%;
+    height: auto;
+    border-radius: var(--radius-lg, 12px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    display: block;
+    object-fit: cover;
+  }
+  
+  .equipment-trust__badge {
+    position: absolute;
+    bottom: -15px;
+    right: 20px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 12px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+    border: 1px solid var(--cream-warm, #EDF2F7);
+    animation: floatBadge 4s ease-in-out infinite;
+  }
+  
+  .equipment-trust__badge .badge-icon {
+    font-size: 1.5rem;
+  }
+  
+  .equipment-trust__badge .badge-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+  }
+  
+  .equipment-trust__badge .badge-text strong {
+    font-size: 0.85rem;
+    color: var(--text-dark, #0A1929);
+    font-weight: 700;
+  }
+  
+  .equipment-trust__badge .badge-text span {
+    font-size: 0.7rem;
+    color: var(--text-mid, #3D5A80);
+  }
+  
+  .equipment-trust__content-side h2 {
+    font-size: clamp(2.1rem, 3.5vw, 2.75rem);
+    margin-top: 8px;
+    margin-bottom: 1.5rem;
+    line-height: 1.15;
+  }
+  
+  .equipment-trust__content-side .lead {
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 1.7;
+    color: var(--text-dark);
+    margin-bottom: 1.25rem;
+  }
+  
+  .equipment-trust__content-side p {
+    font-size: 0.98rem;
+    line-height: 1.8;
+    color: var(--text-mid);
+    margin-bottom: 2rem;
+  }
+  
+  .equipment-trust__features {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+  
+  .equipment-trust__feature {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  
+  .equipment-trust__feature .feature-icon {
+    font-size: 1.5rem;
+    background: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    border: 1px solid #edf2f7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+  }
+  
+  .equipment-trust__feature strong {
+    font-size: 0.95rem;
+    color: var(--text-dark);
+    display: block;
+    margin-bottom: 2px;
+  }
+  
+  .equipment-trust__feature span {
+    font-size: 0.88rem;
+    color: var(--text-mid);
+    line-height: 1.5;
+  }
+  
+  @media (max-width: 992px) {
+    .equipment-trust__grid {
+      grid-template-columns: 1fr;
+      gap: 3.5rem;
+    }
+    
+    .equipment-trust__image-side {
+      max-width: 600px;
+      margin: 0 auto;
+      width: 100%;
+    }
+  }
+  
+  @keyframes floatBadge {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+  }
+</style>

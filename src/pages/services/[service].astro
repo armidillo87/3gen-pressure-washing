@@ -8,6 +8,7 @@ import SeoBlock from '@/components/SeoBlock.astro';
 import TrustBar from '@/components/TrustBar.astro';
 import WhyChooseUs from '@/components/WhyChooseUs.astro';
 import ProcessWalkthrough from '@/components/ProcessWalkthrough.astro';
+import EquipmentTrust from '@/components/EquipmentTrust.astro';
 
 import servicesData from '@/data/services.json';
 import citiesData from '@/data/cities.json';
@@ -129,6 +130,8 @@ const faqSchema = service.faq?.length ? {
     title={`Our ${service.shortName} Process`} 
     steps={resolvedCopy.process.map((s: any) => ({ title: s.title, description: s.desc || s.description }))}
   />
+
+  <EquipmentTrust />
 
   <!-- FAQ -->
   {service.faq?.length > 0 && (

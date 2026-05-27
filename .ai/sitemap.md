@@ -2,11 +2,12 @@
 
 > **Last Verified:** 2026-05-26
 > **Architecture:** Hand-coded (Astro v5)
-> **Active Routes:** 18
+> **Active Routes:** 19
 
 ## 1. Core Pages
 - **Homepage:** [/](file:///c:/Users/El%20Hombre%20de%20Burrito/.gemini/antigravity/playground/static-satellite/3gen-pressure-washing/src/pages/index.astro) -> Main landing page.
 - **About:** [/about/](file:///c:/Users/El%20Hombre%20de%20Burrito/.gemini/antigravity/playground/static-satellite/3gen-pressure-washing/src/data/pages/about.json) -> Certifications, team history, OMWBE state seal showcase.
+- **Our Equipment:** [/equipment/](file:///c:/Users/El%20Hombre%20de%20Burrito/.gemini/antigravity/playground/static-satellite/3gen-pressure-washing/src/data/pages/equipment.json) -> Trailer-mounted industrial rig, thermal specs, and specs comparison.
 - **Contact:** [/contact/](file:///c:/Users/El%20Hombre%20de%20Burrito/.gemini/antigravity/playground/static-satellite/3gen-pressure-washing/src/data/pages/contact.json) -> Lead capture form.
 - **Review Funnel:** [/review/](file:///c:/Users/El%20Hombre%20de%20Burrito/.gemini/antigravity/playground/static-satellite/3gen-pressure-washing/src/pages/review.astro) -> Star-gated feedback loop.
 - **Services Hub:** [/services/](file:///c:/Users/El%20Hombre%20de%20Burrito/.gemini/antigravity/playground/static-satellite/3gen-pressure-washing/src/pages/services/index.astro) -> Services catalog list grid.
