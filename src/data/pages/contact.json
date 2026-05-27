@@ -9,7 +9,7 @@
         "heroClass": "contact",
         "bgImage": "/src/assets/images/services/hot-cold-pressure-washing.jpg",
         "h1": "Contact <em class='serif accent'>3 Gen Pressure Washing</em>",
-        "desc": "Get in touch with Spokane's family-operated, state-certified OMWBE minority & women-owned pressure washing specialists today."
+        "desc": "Get in touch with Spokane's family-operated, state-certified hot-water pressure washing and exterior restoration specialists today."
       }
     },
     {
@@ -17,7 +17,7 @@
       "data": {
         "signals": [
           { "icon": "shield", "text": "Licensed & Insured", "subtext": "Complete Protection" },
-          { "icon": "star", "text": "State-Certified OMWBE", "subtext": "Minority & Women Owned", "image": "/images/omwbe-certified-badge.png", "link": "https://omwbe.wa.gov/" },
+          { "icon": "star", "text": "$2M Liability", "subtext": "Full Commercial Limits" },
           { "icon": "family", "text": "Spokane Locals", "subtext": "Family Owned & Operated" }
         ]
       }

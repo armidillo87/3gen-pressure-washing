@@ -102,9 +102,9 @@
         "subtitle": "At the heart of our company is a deep commitment to delivering top-notch outdoor cleaning services backed by years of hands-on experience.",
         "reasons": [
           {
-            "title": "Women & Minority Owned",
-            "desc": "3 Gen Pressure Washing LLC is an OMWBE-certified, women and minority-owned business. We're proud to represent diversity in the trades.",
-            "icon": "heart"
+            "title": "Fully Vetted & Insured",
+            "desc": "Active Washington Contractor Registration (#3GENPGP773M4) carrying comprehensive $2M liability limits for absolute property protection.",
+            "icon": "shield"
           },
           {
             "title": "State-Certified Graffiti Removal",
@@ -119,7 +119,7 @@
           {
             "title": "Family Values, Professional Results",
             "desc": "As a family-owned and operated business, we take great pride in helping maintain Spokane's infrastructure, one clean surface at a time.",
-            "icon": "shield"
+            "icon": "heart"
           }
         ]
       }
