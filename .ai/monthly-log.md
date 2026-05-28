@@ -1,18 +1,36 @@
-# 3GEN-PRESSURE-WASHING Monthly Log
-
-_Auto-generated from Postgres events table._
+# Monthly Operations Log — 3Gen Pressure Washing
+> **Source of Truth:** Gnomie PostgreSQL database (`events` table)
+> **Last Synchronized:** 5/27/2026, 10:22:07 PM
 
 ## 2026-05
 
-- **🏗️ Build**: Executed a comprehensive layout and DOM pass on the homepage video hero, removing the rigid 2-column grid that squeezed hero copy. Replaced it with a premium, absolute-positioned GSI Partner Badge on desktop that transitions to a centered layout on mobile. Populated default signals in `TrustBar.astro` to ensure dynamic service pages show a fully-hydrated trust bar instead of an empty box. (2026-05-26)
-- **🏗️ Build**: Refactored the global `Hero.astro` and page configurations (`home.json`, `about.json`) to cleanly align with the legacy site layout: showcasing *only* the **Greater Spokane Inc. Proud Partner** badge prominently inside standard and split heroes (at a readable 80px height), while positioning the **OMWBE State minority-owned certification** seal exclusively in a logical place in the footer (within `.footer__badges`) and on the About page's beautiful badges showcase. (2026-05-26)
-- **🏗️ Build**: Scaled OMWBE and Greater Spokane Inc. partner badges to 160px for high legibility on the About page. Created .ai/sitemap.md and .ai/anchor-map.md Spokane keyword map. Injected 9 highly performant local B2B SEO blocks with continuous sibling cross-linking and Clean Water Act compliance copy across services, verified by postbuild sentinel sweep. (2026-05-26)
-- **🏗️ Build**: Overhauled the global `Hero.astro` component and all inner page configurations to incorporate beautiful showcase photos (`about.json`, `contact.json`, `services.json`, `siding-safety.json`) or centered compact layouts (`accessibility.json`, `privacy.json`, `terms.json`), completely eliminating bland homepage video duplicates. Resolved dead city pill links by routing to primary quote anchors, and re-architected the `WhyChooseUs` cards to use flexbox centering, resolving off-center layout grids. (2026-05-26)
-- **🏗️ Build**: Ported all missing service assets and original high-res Zyro CDN image files. Populated copy.json with premium, high-converting B2B SEO copy (covering EPA Clean Water Act water reclamation, off-hours scheduling, $2M commercial liability, and 200°F hot grease extraction) for all 9 service subpages. 19 static routes compiled perfectly and verified by the PFD Build QA Sentinel.
-- **🏗️ Build**: Fixed critical visual bugs on `/services` catalog page and dynamic `/services/[service]` routes. Mapped all 9 high-res service images to Vite-optimized assets. Resolved recursive globs in `Hero.astro` and `ServiceList.astro`. Fully hydrated all 9 services with their corresponding high-resolution assets and premium commercial B2B copywriting on index and catalog grid. Static Astro v5 build successfully compiled in 5.2s (0 sentinel errors).
-- **sprint**: Moved 3GP-003 to active sprint: Author the SEO-optimized siding destruction educational guide. `task_transition`
-- **✍️ Content**: Created 3GP-003: The Hidden Cost of DIY Pressure Washing: How You're Destroying Your Siding → backlog [3GP-003] `work_item.created`
-- **🧠 Decision**: 3GP-001: 3Gen Status Decision - Active or Dormant Client? — sprint → killed. Status confirmed active by owner. Replaced with actual migration work item. [3GP-001] `work_item.transitioned`
-- **🏗️ Build**: Created 3GP-002: Full Site Migration - 3genpressurewashing.com → sprint [3GP-002] `work_item.created`
-- **🧠 Decision**: Created 3GP-001: 3Gen Status Decision - Active or Dormant Client? → sprint [3GP-001] `work_item.created`
+### [AUTOMATION] — 5/27/2026, 9:06:11 AM
+Auto-synchronized website copywriting from Twenty CRM into src/data/copy.json and pushed changes to remote origin.
+
+### [?? DESIGN] — 5/26/2026, 12:41:19 PM
+Removed video background in Hero per client clarification, transforming homepage hero background into a custom, elite, high-contrast black-to-brand-red linear/radial gradient fade. Maintained conditional background image logic for subpages.
+
+### [?? DESIGN] — 5/26/2026, 12:38:19 PM
+Replaced heavy 1998 135deg mesh gradient overlay in Hero with a sleek, high-contrast, modern left-to-right fade gradient overlay to optimize readability and media details. Integrated a dynamic autoplay, muted background video slot with local and Mixkit CDN streams and fallback image support.
+
+### [?? DESIGN] — 5/26/2026, 12:31:12 PM
+Adjusted 3GP visual system: switched CTA buttons to brand-accurate logo red (#C00000) and slimmed down padding, nav height (80px), and border-radii (10px) to completely eliminate visual bulk, matching Medium article design credibility standards. Verified Astro build completed cleanly.
+
+### [🏗️ BUILD] — 5/26/2026, 12:21:24 PM
+3GP Overhaul COMPLETE: Decoupled 3Gen from default templates by overhauling the visual DNA to Liquid / Clean theme (Sora/Jakarta fonts, rounded water pill borders, pool cyan/blue gradients, and spray orange highlights). Swept and corrected service copy referencing incorrect templates. 19 pages compiled cleanly in 2.14s passing PFD Build QA Sentinel.
+
+### [SPRINT] — 5/22/2026, 5:56:58 PM
+Moved 3GP-003 to active sprint: Author the SEO-optimized siding destruction educational guide.
+
+### [CONTENT] — 5/8/2026, 4:47:54 PM
+Created 3GP-003: The Hidden Cost of DIY Pressure Washing: How You're Destroying Your Siding → backlog
+
+### [DECISION] — 5/8/2026, 2:13:04 PM
+3GP-001: 3Gen Status Decision - Active or Dormant Client? — sprint → killed. Status confirmed active by owner. Replaced with actual migration work item.
+
+### [BUILD] — 5/8/2026, 2:13:04 PM
+Created 3GP-002: Full Site Migration - 3genpressurewashing.com → sprint
+
+### [DECISION] — 5/8/2026, 1:53:24 PM
+Created 3GP-001: 3Gen Status Decision - Active or Dormant Client? → sprint
 
