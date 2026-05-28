@@ -1,6 +1,6 @@
 # Sprint Tasks — 3Gen Pressure Washing
 > **Source of Truth:** Gnomie PostgreSQL database (`work_items` table)
-> **Last Synchronized:** 5/27/2026, 10:22:07 PM
+> **Last Synchronized:** 5/28/2026, 4:09:51 PM
 
 - `[x]` **3GP-003**: The Hidden Cost of DIY Pressure Washing: How You're Destroying Your Siding
   - **Category:** content

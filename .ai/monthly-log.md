@@ -1,6 +1,6 @@
 # Monthly Operations Log — 3Gen Pressure Washing
 > **Source of Truth:** Gnomie PostgreSQL database (`events` table)
-> **Last Synchronized:** 5/27/2026, 10:22:07 PM
+> **Last Synchronized:** 5/28/2026, 4:09:51 PM
 
 ## 2026-05
 
@@ -21,6 +21,15 @@ Adjusted 3GP visual system: switched CTA buttons to brand-accurate logo red (#C0
 
 ### [SPRINT] — 5/22/2026, 5:56:58 PM
 Moved 3GP-003 to active sprint: Author the SEO-optimized siding destruction educational guide.
+
+### [SPRINT] — 5/22/2026, 6:16:37 PM
+Transitioned task 3GP-003 to done: Authored a high-converting, SEO-optimized informational guide page /siding-safety on 3genpressurewashing.com exposing the damage risk of amateur pressure washing, complete with CTA blocks and compliance passes.
+
+### [SPRINT] — 5/22/2026, 1:29:42 PM
+Completed 3GP-004: Migrate 3Gen Pressure Washing static Astro website to retrieve dynamic page-level copy assets via robust GraphQL queries directly from Twenty CRM postgres workspace schema, with sequential static local JSON fallbacks and caching.
+
+### [SPRINT] — 5/22/2026, 12:32:00 PM
+Completed 3GP-004: Successfully migrated 3Gen Pressure Washing page templates and dynamic fallback utility to the new static GraphQL architecture. Verified build cleanly compiled 17 static routes.
 
 ### [CONTENT] — 5/8/2026, 4:47:54 PM
 Created 3GP-003: The Hidden Cost of DIY Pressure Washing: How You're Destroying Your Siding → backlog
