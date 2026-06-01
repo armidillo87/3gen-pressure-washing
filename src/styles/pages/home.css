@@ -69,7 +69,7 @@
     position: absolute;
     width: 12px;
     height: 12px;
-    background: var(--forest);
+    background: var(--brand-primary);
     border-radius: 50%;
     top: 0;
     left: 50%;
@@ -147,7 +147,7 @@
     font-family: var(--font-display);
     font-weight: 700;
     font-style: italic;
-    background: linear-gradient(135deg, var(--forest), #0067D6, #E3F2FD);
+    background: linear-gradient(135deg, var(--brand-primary), #0067D6, #E3F2FD);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -205,7 +205,7 @@
     font-family: var(--font-heading);
     font-size: var(--text-3xl);
     font-weight: 800;
-    color: var(--forest-light);
+    color: var(--brand-secondary);
     letter-spacing: -0.02em;
     line-height: 1;
 }
@@ -222,7 +222,7 @@
 
 /* ===== MARQUEE / TICKER ===== */
 .marquee {
-    background: var(--forest-deep);
+    background: var(--brand-primary-dark);
     padding: 18px 0;
     overflow: hidden;
     border-top: 1px solid rgba(255, 255, 255, 0.03);
@@ -252,7 +252,7 @@
 .marquee__dot {
     width: 6px;
     height: 6px;
-    background: var(--forest);
+    background: var(--brand-primary);
     border-radius: 50%;
     opacity: 0.5;
 }
@@ -358,7 +358,7 @@
     right: -20px;
     width: 120px;
     height: 120px;
-    border: 2px solid var(--forest);
+    border: 2px solid var(--brand-primary);
     border-radius: var(--radius-lg);
     z-index: 1;
     opacity: 0.3;
@@ -414,7 +414,7 @@
     left: 0;
     width: 100%;
     height: 3px;
-    background: linear-gradient(90deg, var(--forest), transparent);
+    background: linear-gradient(90deg, var(--brand-primary), transparent);
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.5s ease;
@@ -451,7 +451,7 @@
 .svc__icon {
     width: 56px;
     height: 56px;
-    background: linear-gradient(135deg, var(--forest), var(--forest-light));
+    background: linear-gradient(135deg, var(--brand-primary), var(--brand-secondary));
     border-radius: var(--radius-md);
     display: flex;
     align-items: center;
@@ -462,7 +462,7 @@
 }
 
 .svc:hover .svc__icon {
-    background: linear-gradient(135deg, var(--forest), #0067D6);
+    background: linear-gradient(135deg, var(--brand-primary), #0067D6);
     transform: scale(1.1) rotate(-3deg);
 }
 
@@ -483,7 +483,7 @@
 .svc__link {
     font-size: 13px;
     font-weight: 600;
-    color: var(--forest-light);
+    color: var(--brand-secondary);
     display: inline-flex;
     align-items: center;
     gap: 8px;
@@ -600,7 +600,7 @@
     font-family: var(--font-heading);
     font-size: 13px;
     font-weight: 600;
-    color: var(--forest-light);
+    color: var(--brand-secondary);
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.5s ease 0.2s;
@@ -665,17 +665,17 @@
 }
 
 .areas__city:hover {
-    background: var(--forest);
+    background: var(--brand-primary);
     color: white;
-    border-color: var(--forest);
+    border-color: var(--brand-primary);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(10, 61, 47, 0.2);
 }
 
 .areas__city--main {
-    background: var(--forest);
+    background: var(--brand-primary);
     color: white;
-    border-color: var(--forest);
+    border-color: var(--brand-primary);
     font-weight: 600;
 }
 
@@ -810,7 +810,7 @@
 }
 
 .testimonials__dot.is-active {
-    background: var(--forest-light);
+    background: var(--brand-secondary);
     width: 28px;
     border-radius: 4px;
 }
@@ -819,7 +819,7 @@
 /* ===== CTA ===== */
 .cta {
     padding: 160px 0;
-    background: var(--forest-deep);
+    background: var(--brand-primary-dark);
     position: relative;
     overflow: hidden;
     text-align: center;
@@ -884,7 +884,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    color: var(--forest-light) !important;
+    color: var(--brand-secondary) !important;
     font-weight: 600 !important;
 }
 
@@ -983,7 +983,7 @@
 
 .pillar__badge {
     display: inline-block;
-    background: var(--forest);
+    background: var(--brand-primary);
     color: var(--black);
     font-family: var(--font-heading);
     font-size: 11px;
@@ -1033,7 +1033,7 @@
     content: '→';
     position: absolute;
     left: 0;
-    color: var(--forest-light);
+    color: var(--brand-secondary);
     font-size: 12px;
 }
 
@@ -1044,7 +1044,7 @@
     font-family: var(--font-heading);
     font-size: 14px;
     font-weight: 700;
-    color: var(--forest-light);
+    color: var(--brand-secondary);
     opacity: 0;
     transform: translateY(10px);
     transition: all 0.5s ease 0.2s;
@@ -1149,17 +1149,17 @@
 }
 
 .areas-quick__city:hover {
-    background: var(--forest);
+    background: var(--brand-primary);
     color: white;
-    border-color: var(--forest);
+    border-color: var(--brand-primary);
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(10, 61, 47, 0.2);
 }
 
 .areas-quick__city--main {
-    background: var(--forest);
+    background: var(--brand-primary);
     color: white;
-    border-color: var(--forest);
+    border-color: var(--brand-primary);
     font-weight: 600;
 }
 
@@ -1233,7 +1233,7 @@
 
 .faq__item[open] {
     background: white;
-    border-color: var(--forest);
+    border-color: var(--brand-primary);
     box-shadow: 0 4px 20px rgba(0, 86, 179, 0.08);
 }
 
@@ -1263,7 +1263,7 @@
 .faq__q::after {
     content: '+';
     font-size: var(--text-xl);
-    color: var(--forest);
+    color: var(--brand-primary);
     transition: transform 0.3s;
     flex-shrink: 0;
     margin-left: 16px;
@@ -1275,7 +1275,7 @@
 }
 
 .faq__q:hover {
-    color: var(--forest);
+    color: var(--brand-primary);
 }
 
 .faq__a {

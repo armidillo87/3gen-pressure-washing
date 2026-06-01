@@ -75,7 +75,7 @@
 }
 
 .breadcrumb a:hover {
-    color: var(--forest-light);
+    color: var(--brand-secondary);
 }
 
 .breadcrumb span {
@@ -170,7 +170,7 @@
     position: absolute;
     top: 0; left: 0; right: 0;
     height: 4px;
-    background: linear-gradient(90deg, var(--forest), #0067D6);
+    background: linear-gradient(90deg, var(--brand-primary), #0067D6);
     opacity: 0;
     transition: opacity 0.4s ease;
 }
@@ -194,14 +194,14 @@
     align-items: center;
     justify-content: center;
     background: var(--cream);
-    color: var(--forest);
+    color: var(--brand-primary);
     border-radius: 14px;
     transition: all 0.4s ease;
 }
 
 .service-card:hover .service-card__icon {
-    background: var(--forest);
-    color: var(--forest-light);
+    background: var(--brand-primary);
+    color: var(--brand-secondary);
     transform: scale(1.05);
 }
 
@@ -215,7 +215,7 @@
 }
 
 .service-card:hover .service-card__title {
-    color: var(--forest);
+    color: var(--brand-primary);
 }
 
 .service-card__desc {
@@ -239,7 +239,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--forest);
+    color: var(--brand-primary);
     background: rgba(10, 61, 47, 0.08);
     padding: 4px 10px;
     border-radius: 100px;
@@ -247,7 +247,7 @@
 
 .service-card__arrow {
     font-size: var(--text-xl);
-    color: var(--forest);
+    color: var(--brand-primary);
     transition: transform 0.3s;
 }
 
@@ -285,7 +285,7 @@
     font-family: var(--font-display);
     font-size: var(--text-4xl);
     font-weight: 800;
-    color: var(--forest-light);
+    color: var(--brand-secondary);
     opacity: 0.3;
     line-height: 1;
     margin-bottom: 16px;
@@ -328,7 +328,7 @@
 }
 
 .why-card--light .why-card__number {
-    color: var(--forest);
+    color: var(--brand-primary);
 }
 
 /* ---------- AREA PILLS ---------- */
@@ -354,9 +354,9 @@
 
 .area-pill:hover,
 .area-pill--active {
-    background: var(--forest);
+    background: var(--brand-primary);
     color: white;
-    border-color: var(--forest);
+    border-color: var(--brand-primary);
     transform: translateY(-2px);
 }
 
@@ -370,9 +370,9 @@
 
 .areas-pills--light .area-pill:hover,
 .areas-pills--light .area-pill--active {
-    background: var(--forest);
+    background: var(--brand-primary);
     color: white;
-    border-color: var(--forest);
+    border-color: var(--brand-primary);
     box-shadow: 0 12px 24px rgba(27, 62, 146, 0.2);
     transform: translateY(-3px);
 }
@@ -415,7 +415,7 @@
     border-radius: var(--radius-md);
     border: 1px solid rgba(0, 0, 0, 0.05);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.03);
-    border-left: 4px solid var(--forest);
+    border-left: 4px solid var(--brand-primary);
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     position: relative;
 }
@@ -423,7 +423,7 @@
 .testimonial-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 24px 48px rgba(0, 0, 0, 0.08), 0 12px 24px rgba(0, 86, 179, 0.1);
-    border-left-color: var(--forest);
+    border-left-color: var(--brand-primary);
 }
 
 .testimonial-card__stars {
@@ -450,7 +450,7 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    background: linear-gradient(135deg, var(--forest), #0067D6);
+    background: linear-gradient(135deg, var(--brand-primary), #0067D6);
     color: var(--black);
     display: flex;
     align-items: center;
@@ -546,7 +546,7 @@
 
 .ba-card__placeholder--after {
     background: #d0e8d4;
-    color: var(--forest);
+    color: var(--brand-primary);
 }
 
 .ba-card__label {
@@ -564,7 +564,7 @@
 }
 
 .ba-card__label--after {
-    background: var(--forest);
+    background: var(--brand-primary);
 }
 
 .ba-card__info {
@@ -602,7 +602,7 @@
 }
 
 .faq-item[open] {
-    border-color: var(--forest);
+    border-color: var(--brand-primary);
     box-shadow: 0 4px 20px rgba(0, 86, 179, 0.08);
 }
 
@@ -622,7 +622,7 @@
 .faq-item__q::after {
     content: '+';
     font-size: 20px;
-    color: var(--forest);
+    color: var(--brand-primary);
     font-weight: 300;
     transition: transform 0.3s;
 }
@@ -812,7 +812,7 @@
     font-family: var(--font-heading);
     font-size: 0.9rem;
     font-weight: 700;
-    color: var(--forest);
+    color: var(--brand-primary);
     margin-bottom: 4px;
 }
 
@@ -842,7 +842,7 @@
     font-family: var(--font-display);
     font-size: 2.5rem;
     font-weight: 800;
-    color: var(--forest-light);
+    color: var(--brand-secondary);
     opacity: 0.4;
     line-height: 1;
     margin-bottom: 12px;
@@ -887,7 +887,7 @@
 .pricing-badge__price strong {
     font-size: 2.5rem;
     font-weight: 800;
-    color: var(--forest);
+    color: var(--brand-primary);
 }
 
 .pricing-badge__unit {
@@ -1017,7 +1017,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--forest-light);
+    color: var(--brand-secondary);
     transition: letter-spacing 0.3s;
 }
 
@@ -1176,7 +1176,7 @@
 }
 
 .ba-pair__badge--after {
-    background: var(--forest);
+    background: var(--brand-primary);
     color: var(--charcoal);
 }
 
@@ -1206,7 +1206,7 @@
     font-family: var(--font-heading);
     font-size: 1rem;
     font-weight: 700;
-    color: var(--forest);
+    color: var(--brand-primary);
     margin-bottom: 12px;
     text-transform: uppercase;
     letter-spacing: 0.04em;
@@ -1230,7 +1230,7 @@
 }
 
 .value-stack__check {
-    color: var(--forest);
+    color: var(--brand-primary);
     font-weight: 700;
     flex-shrink: 0;
     margin-top: 2px;
@@ -1267,7 +1267,7 @@
     font-family: var(--font-heading);
     font-size: 0.9rem;
     font-weight: 700;
-    color: var(--forest);
+    color: var(--brand-primary);
     margin-bottom: 4px;
 }
 
@@ -1305,7 +1305,7 @@
     font-family: var(--font-heading);
     font-size: 1rem;
     font-weight: 700;
-    color: var(--forest-light);
+    color: var(--brand-secondary);
     margin-bottom: 6px;
 }
 
@@ -1345,7 +1345,7 @@
 }
 
 .download-card:hover {
-    border-color: var(--forest);
+    border-color: var(--brand-primary);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
     transform: translateY(-3px);
 }
@@ -1374,7 +1374,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--forest);
+    color: var(--brand-primary);
 }
 
 /* ---------- TRUST BAR (compact, above fold) ---------- */
@@ -1399,7 +1399,7 @@
 }
 
 .trust-bar__icon {
-    color: var(--forest);
+    color: var(--brand-primary);
     font-weight: 700;
 }
 

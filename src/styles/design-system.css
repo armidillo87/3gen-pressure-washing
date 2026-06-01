@@ -18,12 +18,12 @@
   --charcoal: #0F172A; /* Sleek slate */
   --dark-surface: #1E293B;
   --dark-surface-2: #334155;
-  --forest: #006FBF; /* 3Gen Logo Brand Blue */
-  --forest-deep: #004E89; /* 3Gen Logo Deep Blue */
-  --forest-light: #00B7E1; /* 3Gen Logo Bright Cyan */
-  --gold: #C00000; /* 3Gen Logo Brand Red CTA */
-  --gold-bright: #E01E1E; /* Vibrant CTA Hover Red */
-  --gold-pale: #FEF2F2; /* Soft red tint */
+  --brand-primary: #006FBF; /* 3Gen Logo Brand Blue */
+  --brand-primary-dark: #004E89; /* 3Gen Logo Deep Blue */
+  --brand-secondary: #00B7E1; /* 3Gen Logo Bright Cyan */
+  --brand-accent: #C00000; /* 3Gen Logo Brand Red CTA */
+  --brand-accent-hover: #E01E1E; /* Vibrant CTA Hover Red */
+  --brand-accent-light: #FEF2F2; /* Soft red tint */
   --cream: #F8FAFC; /* Soothing cool white */
   --cream-warm: #E2EEFF;
   --sage: #00C853; /* Success Green */
@@ -36,7 +36,7 @@
   --text-on-dark-dim: #CBD5E1;
   /* WCAG AA 5.1:1 on --charcoal */
   --accent-line: rgba(0, 111, 191, 0.12);
-  --gold-wcag: #C00000;
+  --brand-accent-wcag: #C00000;
   --glass-white: rgba(255, 255, 255, 0.06);
   --glass-white-2: rgba(255, 255, 255, 0.10);
   --glass-border: rgba(255, 255, 255, 0.08);
@@ -98,7 +98,7 @@
   top: -100%;
   left: 50%;
   transform: translateX(-50%);
-  background: var(--forest);
+  background: var(--brand-primary);
   color: var(--black);
   padding: 12px 24px;
   font-family: var(--font-heading);
@@ -178,13 +178,13 @@ button {
 }
 
 .accent {
-  color: var(--forest);
+  color: var(--brand-primary);
 }
 
-/* Forest accent on light backgrounds */
+/* Primary accent on light backgrounds */
 .section--white .accent,
 .section--cream .accent {
-  color: var(--forest);
+  color: var(--brand-primary);
 }
 
 .serif {
@@ -215,20 +215,20 @@ h6 {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--forest);
+  color: var(--brand-primary);
 }
 
-/* Forest label on light backgrounds */
+/* Primary label on light backgrounds */
 .section--white .label,
 .section--cream .label {
-  color: var(--forest);
+  color: var(--brand-primary);
 }
 
 .label::before {
   content: '';
   width: 30px;
   height: 1px;
-  background: var(--forest);
+  background: var(--brand-primary);
 }
 
 /* ---------- BUTTONS ---------- */
@@ -250,21 +250,21 @@ h6 {
   overflow: hidden;
 }
 
-.btn--gold {
-  background: linear-gradient(135deg, var(--forest-light), var(--forest));
+.btn--primary {
+  background: linear-gradient(135deg, var(--brand-secondary), var(--brand-primary));
   color: #FFFFFF;
   box-shadow: 0 4px 16px rgba(0, 111, 191, 0.15), inset 0 1px 1px rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.btn--gold:hover {
+.btn--brand-accent:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0, 111, 191, 0.25), inset 0 1px 1px rgba(255, 255, 255, 0.3);
 }
 
 /* 3Gen Logo Brand Red CTA Button */
 .btn--accent {
-  background: linear-gradient(135deg, var(--gold-bright), var(--gold));
+  background: linear-gradient(135deg, var(--brand-accent-hover), var(--brand-accent));
   color: #FFFFFF;
   box-shadow: 0 4px 16px rgba(192, 0, 0, 0.2), inset 0 1px 1px rgba(255, 255, 255, 0.2);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -287,8 +287,8 @@ h6 {
 
 .btn--glass:hover {
   background: rgba(255, 255, 255, 0.1);
-  border-color: var(--forest-light);
-  color: var(--forest-light);
+  border-color: var(--brand-secondary);
+  color: var(--brand-secondary);
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(0, 183, 225, 0.25);
 }
@@ -301,8 +301,8 @@ h6 {
 
 .btn--dark:hover {
   background: var(--dark-surface);
-  border-color: var(--forest);
-  color: var(--forest-light);
+  border-color: var(--brand-primary);
+  color: var(--brand-secondary);
   transform: translateY(-2px);
 }
 
@@ -646,7 +646,7 @@ h6 {
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--forest-light);
+  color: var(--brand-secondary);
   margin-bottom: 24px;
 }
 
@@ -665,7 +665,7 @@ h6 {
 }
 
 .footer__link:hover {
-  color: var(--forest-light);
+  color: var(--brand-secondary);
 }
 
 .footer__social {
@@ -689,9 +689,9 @@ h6 {
 }
 
 .footer__social-icon:hover {
-  background: var(--forest);
+  background: var(--brand-primary);
   color: var(--black);
-  border-color: var(--forest);
+  border-color: var(--brand-primary);
   transform: translateY(-2px);
 }
 
@@ -727,7 +727,7 @@ h6 {
 }
 
 .quote-section__text p a {
-  color: var(--forest-light);
+  color: var(--brand-secondary);
   text-decoration: underline;
   text-underline-offset: 2px;
 }
@@ -759,8 +759,8 @@ h6 {
   flex-direction: column;
   gap: 16px;
   padding: 48px 40px;
-  background: var(--forest-deep);
-  border-top: 4px solid var(--forest);
+  background: var(--brand-primary-dark);
+  border-top: 4px solid var(--brand-primary);
   border-radius: var(--radius-md);
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
   position: relative;
@@ -799,7 +799,7 @@ h6 {
 }
 
 .quote-form__input:focus {
-  border-color: var(--forest);
+  border-color: var(--brand-primary);
   box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.15);
   background: rgba(0, 0, 0, 0.4);
 }
@@ -834,7 +834,7 @@ h6 {
   width: 16px;
   height: 16px;
   cursor: pointer;
-  accent-color: var(--forest);
+  accent-color: var(--brand-primary);
 }
 
 .quote-form__tcpa label {
@@ -845,7 +845,7 @@ h6 {
 }
 
 .quote-form__tcpa label a {
-  color: var(--forest-light);
+  color: var(--brand-secondary);
   text-decoration: underline;
 }
 
@@ -1044,8 +1044,8 @@ h6 {
 }
 
 .review-carousel__dot.is-active {
-  background: var(--forest);
-  border-color: var(--forest);
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
   transform: scale(1.2);
 }
 
@@ -1066,8 +1066,8 @@ h6 {
 }
 
 .review-carousel__arrow:hover {
-  background: var(--forest);
-  border-color: var(--forest);
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
   color: var(--black);
 }
 
@@ -1118,14 +1118,14 @@ h6 {
 }
 
 .mobile-cta-bar__call:hover {
-  border-color: var(--forest-light);
-  color: var(--forest-light);
+  border-color: var(--brand-secondary);
+  color: var(--brand-secondary);
 }
 
 .mobile-cta-bar__quote {
-  background: var(--forest);
+  background: var(--brand-primary);
   color: white;
-  border: 1px solid var(--forest);
+  border: 1px solid var(--brand-primary);
 }
 
 .mobile-cta-bar__quote:hover {
@@ -1138,8 +1138,8 @@ h6 {
 }
 
 .section--cream .review-carousel__dot.is-active {
-  background: var(--forest);
-  border-color: var(--forest);
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
 }
 
 .section--cream .review-carousel__arrow {
@@ -1149,8 +1149,8 @@ h6 {
 }
 
 .section--cream .review-carousel__arrow:hover {
-  background: var(--forest);
-  border-color: var(--forest);
+  background: var(--brand-primary);
+  border-color: var(--brand-primary);
   color: white;
 }
 
@@ -1205,7 +1205,7 @@ h6 {
 }
 
 .cookie-banner__text a {
-  color: var(--forest-light);
+  color: var(--brand-secondary);
   text-decoration: underline;
 }
 
@@ -1348,7 +1348,7 @@ h6 {
 }
 
 a.seasonal-calendar__service-label:hover {
-  color: var(--forest-light);
+  color: var(--brand-secondary);
 }
 
 .seasonal-calendar__service-icon {
@@ -1395,7 +1395,7 @@ a.seasonal-calendar__service-label:hover {
   font-size: 9px;
   font-weight: 700;
   color: var(--charcoal);
-  background: var(--forest);
+  background: var(--brand-primary);
   padding: 1px 6px;
   border-radius: 4px;
   letter-spacing: 0.1em;
@@ -1430,7 +1430,7 @@ a.seasonal-calendar__service-label:hover {
 }
 
 .seasonal-calendar__dot--high {
-  background: var(--forest);
+  background: var(--brand-primary);
   box-shadow: 0 0 6px rgba(0, 86, 179, 0.5);
 }
 
@@ -1542,9 +1542,9 @@ a.seasonal-calendar__service-label:hover {
   }
 
   .seasonal-calendar__mobile-month-btn--active {
-    background: var(--forest);
+    background: var(--brand-primary);
     color: white;
-    border-color: var(--forest);
+    border-color: var(--brand-primary);
     font-weight: 600;
   }
 
@@ -1563,7 +1563,7 @@ a.seasonal-calendar__service-label:hover {
   }
 
   .seasonal-calendar__mobile-card-header {
-    border-left: 3px solid var(--forest);
+    border-left: 3px solid var(--brand-primary);
     padding-left: 16px;
     margin-bottom: 20px;
     display: flex;
@@ -1624,7 +1624,7 @@ a.seasonal-calendar__service-label:hover {
   }
 
   .seasonal-calendar__mobile-group a:hover {
-    color: var(--forest-light);
+    color: var(--brand-secondary);
   }
 
   .seasonal-calendar__mobile-tip {

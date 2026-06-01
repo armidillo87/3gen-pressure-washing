@@ -89,7 +89,7 @@ const breadcrumbSchema = {
             href="#"
             id="google-review-link"
             data-gbp-url=""
-            class="btn btn--gold btn--lg review-google-btn"
+            class="btn btn--primary btn--lg review-google-btn"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -112,7 +112,7 @@ const breadcrumbSchema = {
             we'll reach out to make things right.
           </p>
 
-          <form id="feedback-form" class="feedback-form">
+          <form id="feedback-form" class="feedback-form" action="https://form-handler.brandon-c29.workers.dev" method="POST">
             <input type="hidden" name="form_tag" value="review-negative" />
             <input type="hidden" name="page_url" id="feedback_page_url" value="" />
             <input type="hidden" name="star_rating" id="feedback_star_rating" value="" />
@@ -169,9 +169,10 @@ const breadcrumbSchema = {
               ></textarea>
             </div>
 
-            <button type="submit" class="btn btn--gold btn--lg feedback-form__submit">
+            <button type="submit" id="feedback-form-submit" class="btn btn--primary btn--lg feedback-form__submit">
               Send Private Feedback
             </button>
+
             <p class="feedback-form__note">
               This goes directly to our team - not posted publicly. We'll follow up within 24 hours.
             </p>
@@ -194,7 +195,7 @@ const breadcrumbSchema = {
           <p class="review-subtitle" style="margin-top: 0.5rem;">
             If you need immediate assistance, please call us:
           </p>
-          <a href={`tel:${business.phoneClean}`} class="btn btn--gold btn--lg">
+          <a href={`tel:${business.phoneClean}`} class="btn btn--primary btn--lg">
             📞 Call {business.phone}
           </a>
           <a href="/" class="review-home-link">← Back to Home</a>
@@ -380,13 +381,13 @@ const breadcrumbSchema = {
   }
 
   .review-breadcrumbs a {
-    color: var(--forest-light);
+    color: var(--brand-secondary);
     text-decoration: none;
     transition: color 0.2s;
   }
 
   .review-breadcrumbs a:hover {
-    color: var(--forest-light);
+    color: var(--brand-secondary);
     text-decoration: underline;
   }
 
@@ -408,7 +409,7 @@ const breadcrumbSchema = {
     margin: 0 auto;
     background: var(--dark-surface);
     border: 1px solid rgba(255, 255, 255, 0.06);
-    border-top: 4px solid var(--forest);
+    border-top: 4px solid var(--brand-primary);
     border-radius: var(--radius-md);
     padding: 56px 48px;
     box-shadow: 0 24px 64px rgba(0, 0, 0, 0.4);
@@ -488,7 +489,7 @@ const breadcrumbSchema = {
   }
 
   .star-btn:focus-visible {
-    outline: 2px solid var(--forest);
+    outline: 2px solid var(--brand-primary);
     outline-offset: 4px;
   }
 
@@ -533,7 +534,7 @@ const breadcrumbSchema = {
   }
 
   .review-alt-action a {
-    color: var(--forest-light);
+    color: var(--brand-secondary);
     text-decoration: underline;
     text-underline-offset: 2px;
   }
@@ -565,7 +566,7 @@ const breadcrumbSchema = {
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--forest-light);
+    color: var(--brand-secondary);
   }
 
   .feedback-form__input {
@@ -586,7 +587,7 @@ const breadcrumbSchema = {
   }
 
   .feedback-form__input:focus {
-    border-color: var(--forest);
+    border-color: var(--brand-primary);
     box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.15);
     background: rgba(0, 0, 0, 0.45);
   }
@@ -635,7 +636,7 @@ const breadcrumbSchema = {
   }
 
   .review-home-link:hover {
-    color: var(--forest-light);
+    color: var(--brand-secondary);
   }
 
   /* ─── Responsive ─────────────────────────────────────── */
