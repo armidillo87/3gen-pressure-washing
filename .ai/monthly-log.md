@@ -1,6 +1,6 @@
 # Monthly Operations Log — 3Gen Pressure Washing
 > **Source of Truth:** Gnomie PostgreSQL database (`events` table)
-> **Last Synchronized:** 5/28/2026, 4:09:51 PM
+> **Last Synchronized:** 6/1/2026, 1:44:24 PM
 
 ## 2026-05
 
