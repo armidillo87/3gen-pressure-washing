@@ -1,5 +1,3 @@
-# Backlog Tasks — 3Gen Pressure Washing
-> **Source of Truth:** Gnomie PostgreSQL database (`work_items` table)
-> **Last Synchronized:** 6/2/2026, 12:46:39 PM
+# Backlog (3gen-pressure-washing)
 
-*No parked backlog tasks found for this project in the database.*
+_Auto-generated from Postgres. No active backlog items._
