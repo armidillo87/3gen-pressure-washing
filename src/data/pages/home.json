@@ -96,6 +96,17 @@
       }
     },
     {
+      "type": "BeforeAfter",
+      "data": {
+        "title": "See the Difference: Before & After",
+        "subtitle": "Drag the slider to see the dramatic difference our industrial-grade hot water cleaning makes on local Spokane surfaces.",
+        "beforeImage": "/images/before-after/driveway-before.png",
+        "afterImage": "/images/before-after/driveway-after.png",
+        "beforeLabel": "Before",
+        "afterLabel": "After"
+      }
+    },
+    {
       "type": "WhyChooseUs",
       "data": {
         "title": "Why Spokane Trusts 3 Gen",

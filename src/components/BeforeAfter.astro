@@ -1,0 +1,369 @@
+---
+interface Props {
+  title?: string;
+  subtitle?: string;
+  beforeImage?: string;
+  beforeAlt?: string;
+  beforeLabel?: string;
+  afterImage?: string;
+  afterAlt?: string;
+  afterLabel?: string;
+}
+
+const {
+  title = "Draggable Before & After Comparison",
+  subtitle = "Drag the slider to see the dramatic difference our high-temperature hot-water pressure wash makes.",
+  beforeImage = "/images/before-after/driveway-before.png",
+  beforeAlt = "Dirty concrete driveway surface covered in stains, mold, and algae before pressure washing",
+  beforeLabel = "Before",
+  afterImage = "/images/before-after/driveway-after.png",
+  afterAlt = "Clean, pristine, freshly washed concrete driveway surface after hot-water pressure washing",
+  afterLabel = "After"
+} = Astro.props;
+---
+
+<section class="section section--white before-after-section" id="comparison">
+  <div class="container">
+    <div class="before-after-header text-center">
+      <span class="label">VISUAL PROOF</span>
+      <h2>{title}</h2>
+      <p>{subtitle}</p>
+    </div>
+
+    <div class="before-after-wrapper">
+      <div class="before-after-slider-container" data-before-after-slider>
+        <!-- After image (background) -->
+        <img src={afterImage} alt={afterAlt} class="image-after" loading="lazy" />
+        <span class="badge badge--after">{afterLabel}</span>
+
+        <!-- Before image (overlay, starts clipped at 50%) -->
+        <img src={beforeImage} alt={beforeAlt} class="image-before" loading="lazy" />
+        <span class="badge badge--before">{beforeLabel}</span>
+
+        <!-- Draggable Handle Bar -->
+        <div class="slider-handle" data-handle>
+          <div class="handle-line"></div>
+          <div class="handle-button" role="slider" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" aria-label="Drag to compare before and after photos">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+              <polyline points="15 18 9 12 15 6"/>
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+              <polyline points="9 18 15 12 9 6"/>
+            </svg>
+          </div>
+          <div class="handle-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .before-after-section {
+    padding: 100px 0;
+    background-color: #FFFFFF;
+    position: relative;
+  }
+
+  .before-after-header {
+    max-width: 700px;
+    margin: 0 auto 3.5rem;
+    text-align: center;
+  }
+
+  .before-after-header h2 {
+    font-size: clamp(2rem, 3.5vw, 2.75rem);
+    color: var(--black);
+    margin-top: 12px;
+    line-height: 1.1;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  .before-after-header p {
+    font-size: var(--text-base);
+    color: var(--text-mid);
+    line-height: 1.6;
+    margin-top: 16px;
+  }
+
+  .before-after-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    position: relative;
+    padding: 10px;
+    background: rgba(0, 111, 191, 0.03);
+    border: 1px solid rgba(0, 111, 191, 0.08);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 10px 30px rgba(0, 111, 191, 0.02);
+  }
+
+  .before-after-slider-container {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    user-select: none;
+    cursor: ew-resize;
+    border-radius: var(--radius-lg);
+    box-shadow: 0 20px 45px rgba(8, 14, 30, 0.15);
+  }
+
+  .image-after,
+  .image-before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+  }
+
+  .image-after {
+    z-index: 1;
+  }
+
+  .image-before {
+    z-index: 2;
+    clip-path: inset(0 50% 0 0); /* Start clipped at 50% */
+  }
+
+  /* Badges overlay */
+  .badge {
+    position: absolute;
+    bottom: 20px;
+    padding: 8px 18px;
+    font-family: var(--font-heading);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    border-radius: var(--radius-sm);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 4;
+    pointer-events: none;
+  }
+
+  .badge--before {
+    left: 20px;
+    background: var(--brand-accent);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .badge--after {
+    right: 20px;
+    background: var(--brand-primary);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Draggable handle bar styling */
+  .slider-handle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* JS will control this */
+    width: 4px;
+    background: #FFFFFF;
+    z-index: 5;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    pointer-events: none;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.35);
+  }
+
+  .handle-line {
+    flex: 1;
+    width: 2px;
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+  }
+
+  .handle-button {
+    width: 46px;
+    height: 46px;
+    background: var(--brand-primary);
+    border: 3px solid #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0, 111, 191, 0.4);
+    color: #FFFFFF;
+    cursor: pointer;
+    pointer-events: auto; /* Handled mouse and touch targeting */
+    transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.2s ease, box-shadow 0.2s ease;
+    padding: 0;
+  }
+
+  .handle-button:hover {
+    background-color: var(--brand-primary-dark);
+    transform: scale(1.08);
+    box-shadow: 0 6px 20px rgba(0, 111, 191, 0.6);
+  }
+
+  .handle-button:active {
+    transform: scale(0.95);
+  }
+
+  .arrow-icon {
+    width: 12px;
+    height: 12px;
+  }
+
+  .arrow-icon:first-of-type {
+    margin-right: -1px;
+  }
+
+  .arrow-icon:last-of-type {
+    margin-left: -1px;
+  }
+
+  @media (max-width: 768px) {
+    .before-after-section {
+      padding: 60px 0;
+    }
+
+    .before-after-wrapper {
+      padding: 6px;
+    }
+
+    .before-after-slider-container {
+      aspect-ratio: 4 / 3;
+    }
+
+    .badge {
+      bottom: 12px;
+      padding: 6px 12px;
+      font-size: 10px;
+    }
+
+    .badge--before {
+      left: 12px;
+    }
+
+    .badge--after {
+      right: 12px;
+    }
+
+    .handle-button {
+      width: 38px;
+      height: 38px;
+      border-width: 2px;
+    }
+
+    .arrow-icon {
+      width: 10px;
+      height: 10px;
+    }
+  }
+</style>
+
+<script>
+  class BeforeAfterSlider {
+    private container: HTMLElement;
+    private beforeImage: HTMLElement;
+    private handle: HTMLElement;
+    private isDragging: boolean = false;
+
+    constructor(container: HTMLElement) {
+      this.container = container;
+      this.beforeImage = container.querySelector('.image-before') as HTMLElement;
+      this.handle = container.querySelector('[data-handle]') as HTMLElement;
+
+      this.init();
+    }
+
+    private init() {
+      if (!this.beforeImage || !this.handle) return;
+
+      // Mouse Drag Events
+      this.container.addEventListener('mousedown', (e) => this.startDragging(e));
+      window.addEventListener('mousemove', (e) => this.drag(e));
+      window.addEventListener('mouseup', () => this.stopDragging());
+
+      // Touch Drag Events
+      this.container.addEventListener('touchstart', (e) => this.startDragging(e), { passive: true });
+      window.addEventListener('touchmove', (e) => this.drag(e), { passive: false });
+      window.addEventListener('touchend', () => this.stopDragging());
+
+      // Keyboard Accessibility
+      const button = this.handle.querySelector('.handle-button') as HTMLElement;
+      if (button) {
+        button.addEventListener('keydown', (e) => this.handleKeyboard(e));
+      }
+    }
+
+    private startDragging(e: MouseEvent | TouchEvent) {
+      this.isDragging = true;
+      this.updateSlider(e);
+    }
+
+    private stopDragging() {
+      this.isDragging = false;
+    }
+
+    private drag(e: MouseEvent | TouchEvent) {
+      if (!this.isDragging) return;
+      
+      // Prevent scrolling on mobile while dragging comparison slider
+      if (e.cancelable) {
+        e.preventDefault();
+      }
+      
+      this.updateSlider(e);
+    }
+
+    private updateSlider(e: MouseEvent | TouchEvent) {
+      const rect = this.container.getBoundingClientRect();
+      const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX;
+      let x = clientX - rect.left;
+
+      if (x < 0) x = 0;
+      if (x > rect.width) x = rect.width;
+
+      const percentage = (x / rect.width) * 100;
+      this.setSliderPosition(percentage);
+    }
+
+    private setSliderPosition(percentage: number) {
+      this.beforeImage.style.clipPath = `inset(0 ${100 - percentage}% 0 0)`;
+      this.handle.style.left = `${percentage}%`;
+
+      const button = this.handle.querySelector('.handle-button') as HTMLElement;
+      if (button) {
+        button.setAttribute('aria-valuenow', Math.round(percentage).toString());
+      }
+    }
+
+    private handleKeyboard(e: KeyboardEvent) {
+      const currentLeft = parseFloat(this.handle.style.left || '50');
+      let newLeft = currentLeft;
+
+      if (e.key === 'ArrowLeft') {
+        newLeft = Math.max(0, currentLeft - 5);
+      } else if (e.key === 'ArrowRight') {
+        newLeft = Math.min(100, currentLeft + 5);
+      } else if (e.key === 'Home') {
+        newLeft = 0;
+      } else if (e.key === 'End') {
+        newLeft = 100;
+      } else {
+        return; // ignore other keys
+      }
+
+      e.preventDefault();
+      this.setSliderPosition(newLeft);
+    }
+  }
+
+  // Auto-init all sliders on the page
+  document.querySelectorAll<HTMLElement>('[data-before-after-slider]').forEach(container => {
+    new BeforeAfterSlider(container);
+  });
+</script>
