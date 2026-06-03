@@ -2,8 +2,9 @@
 import BaseLayout from '@/layouts/BaseLayout.astro';
 import Header from '@/components/Header.astro';
 import Footer from '@/components/Footer.astro';
-import siteConfig from '@/data/site-config.json';
+import { getProjectConfig } from '@/utils/twenty';
 
+const siteConfig = await getProjectConfig('3gen-pressure-washing');
 const { business } = siteConfig;
 ---
 
