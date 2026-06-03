@@ -1,6 +1,44 @@
 # Monthly Operations Log — 3Gen Pressure Washing
 > **Source of Truth:** Gnomie PostgreSQL database (`events` table)
-> **Last Synchronized:** 6/2/2026, 8:29:23 PM
+> **Last Synchronized:** 6/2/2026, 9:39:35 PM
+
+## 2026-06
+
+### [BUILD] — 6/2/2026, 9:39:05 PM
+Automated production build completed successfully.
+
+### [BUILD] — 6/2/2026, 9:33:37 PM
+Automated production build completed successfully.
+
+### [BUILD] — 6/2/2026, 9:09:47 PM
+Automated production build completed successfully.
+
+### [COMPLIANCE] — 6/2/2026, 9:09:36 PM
+Automated QA Compliance Audit completed. Score: 40/100.
+
+### [BUILD] — 6/2/2026, 9:02:55 PM
+Automated production build completed successfully.
+
+### [COMPLIANCE] — 6/2/2026, 9:02:51 PM
+Automated QA Compliance Audit completed. Score: 40/100.
+
+### [BUILD] — 6/2/2026, 8:40:29 PM
+Automated production build completed successfully.
+
+### [COMPLIANCE] — 6/2/2026, 8:40:25 PM
+Automated QA Compliance Audit completed. Score: 40/100.
+
+### [BUILD] — 6/2/2026, 8:36:02 PM
+Automated production build completed successfully.
+
+### [COMPLIANCE] — 6/2/2026, 8:35:57 PM
+Automated QA Compliance Audit completed. Score: 40/100.
+
+### [COMPLIANCE] — 6/2/2026, 8:32:59 PM
+Automated QA Compliance Audit completed. Score: 40/100.
+
+### [COMPLIANCE] — 6/2/2026, 8:31:16 PM
+Automated QA Compliance Audit completed. Score: 25/100.
 
 ## 2026-05
 
