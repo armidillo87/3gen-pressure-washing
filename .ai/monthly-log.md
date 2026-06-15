@@ -4,6 +4,7 @@ _Auto-generated from Postgres events table._
 
 ## 2026-06
 
+- **sprint**: Sanitized OMWBE minority & women-owned copywriting references across About, Contact, Home JSON files, global site config, review page, and cities lists, quarantining them exclusively to the footer. Replaced references with professional B2B risk-reversal and $2M liability limits. Verified build compiles with 0 Sentinel warnings/errors and pushed changes. `Sprint Task Completed`
 - **🏗️ Build**: Automated production build completed successfully.
 - **⚖️ Compliance**: Automated QA Compliance Audit completed. Score: 40/100. (Metrics: {"score": 40, "details": "
 - CF _headers present (PASSED)
