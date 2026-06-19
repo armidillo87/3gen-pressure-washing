@@ -1,8 +1,11 @@
 # Monthly Operations Log — 3Gen Pressure Washing
 > **Source of Truth:** Gnomie PostgreSQL database (`events` table)
-> **Last Synchronized:** 6/15/2026, 3:30:36 PM
+> **Last Synchronized:** 6/18/2026, 6:23:27 PM
 
 ## 2026-06
+
+### [INFRASTRUCTURE] — 6/15/2026, 4:23:12 PM
+Updated company config & synchronized Twenty CRM for 3GP via Central Config Pane
 
 ### [SPRINT] — 6/15/2026, 12:45:51 PM
 Sanitized OMWBE minority & women-owned copywriting references across About, Contact, Home JSON files, global site config, review page, and cities lists, quarantining them exclusively to the footer. Replaced references with professional B2B risk-reversal and $2M liability limits. Verified build compiles with 0 Sentinel warnings/errors and pushed changes.
