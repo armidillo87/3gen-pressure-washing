@@ -6,10 +6,16 @@
     "state": "WA",
     "coordinates": {
       "lat": 47.6588,
-      "lng": -117.4260
+      "lng": -117.426
     },
     "description": "Premium residential and commercial hot-water pressure washing, graffiti removal, and soft washing across Spokane, WA.",
-    "isPrimary": true
+    "isPrimary": true,
+    "county": "Ada County",
+    "tier": "1",
+    "driveTime": "15-25 mins",
+    "zips": [],
+    "tripFee": false,
+    "tripFeeAmount": "$0"
   },
   {
     "id": "spokane-valley",
@@ -21,7 +27,13 @@
       "lng": -117.2394
     },
     "description": "Full-service exterior cleaning, commercial building washing, and surface restoration in Spokane Valley, WA.",
-    "isPrimary": false
+    "isPrimary": false,
+    "county": "Ada County",
+    "tier": "1",
+    "driveTime": "15-25 mins",
+    "zips": [],
+    "tripFee": false,
+    "tripFeeAmount": "$0"
   },
   {
     "id": "liberty-lake",
@@ -30,10 +42,16 @@
     "state": "WA",
     "coordinates": {
       "lat": 47.6696,
-      "lng": -117.0980
+      "lng": -117.098
     },
     "description": "Eco-friendly soft washing, window washing, and residential siding restoration in Liberty Lake, WA.",
-    "isPrimary": false
+    "isPrimary": false,
+    "county": "Ada County",
+    "tier": "1",
+    "driveTime": "15-25 mins",
+    "zips": [],
+    "tripFee": false,
+    "tripFeeAmount": "$0"
   },
   {
     "id": "cheney",
@@ -45,7 +63,13 @@
       "lng": -117.5758
     },
     "description": "High-powered surface cleaning, concrete driveway washing, and commercial storefront washing in Cheney, WA.",
-    "isPrimary": false
+    "isPrimary": false,
+    "county": "Ada County",
+    "tier": "1",
+    "driveTime": "15-25 mins",
+    "zips": [],
+    "tripFee": false,
+    "tripFeeAmount": "$0"
   },
   {
     "id": "airway-heights",
@@ -57,7 +81,13 @@
       "lng": -117.5872
     },
     "description": "Commercial drive-thru and fuel station hot-water degreasing and concrete washing in Airway Heights, WA.",
-    "isPrimary": false
+    "isPrimary": false,
+    "county": "Ada County",
+    "tier": "1",
+    "driveTime": "15-25 mins",
+    "zips": [],
+    "tripFee": false,
+    "tripFeeAmount": "$0"
   },
   {
     "id": "medical-lake",
@@ -69,7 +99,13 @@
       "lng": -117.6833
     },
     "description": "Professional residential deck, siding, and roof soft-wash cleaning treatments in Medical Lake, WA.",
-    "isPrimary": false
+    "isPrimary": false,
+    "county": "Ada County",
+    "tier": "1",
+    "driveTime": "15-25 mins",
+    "zips": [],
+    "tripFee": false,
+    "tripFeeAmount": "$0"
   },
   {
     "id": "millwood",
@@ -81,7 +117,13 @@
       "lng": -117.2885
     },
     "description": "Family-owned, professional hot-water pressure washing and certified graffiti removal services in Millwood, WA.",
-    "isPrimary": false
+    "isPrimary": false,
+    "county": "Ada County",
+    "tier": "1",
+    "driveTime": "15-25 mins",
+    "zips": [],
+    "tripFee": false,
+    "tripFeeAmount": "$0"
   },
   {
     "id": "south-hill",
@@ -89,12 +131,18 @@
     "slug": "south-hill",
     "state": "WA",
     "coordinates": {
-      "lat": 47.6250,
+      "lat": 47.625,
       "lng": -117.4013
     },
     "description": "Empathetic residential soft washing, deck restoration, and driveway cleaning in Spokane's South Hill neighborhood.",
     "isPrimary": false,
-    "isNeighborhood": true
+    "isNeighborhood": true,
+    "county": "Ada County",
+    "tier": "1",
+    "driveTime": "15-25 mins",
+    "zips": [],
+    "tripFee": false,
+    "tripFeeAmount": "$0"
   },
   {
     "id": "five-mile-prairie",
@@ -107,7 +155,13 @@
     },
     "description": "Residential vinyl siding wash, window cleaning, and gutter wash services in the Five Mile Prairie neighborhood.",
     "isPrimary": false,
-    "isNeighborhood": true
+    "isNeighborhood": true,
+    "county": "Ada County",
+    "tier": "1",
+    "driveTime": "15-25 mins",
+    "zips": [],
+    "tripFee": false,
+    "tripFeeAmount": "$0"
   },
   {
     "id": "indian-trail",
@@ -115,11 +169,17 @@
     "slug": "indian-trail",
     "state": "WA",
     "coordinates": {
-      "lat": 47.7410,
+      "lat": 47.741,
       "lng": -117.4721
     },
     "description": "Professional walkway pressure washing, roof treatment, and soft wash cleaning in the Indian Trail neighborhood.",
     "isPrimary": false,
-    "isNeighborhood": true
+    "isNeighborhood": true,
+    "county": "Ada County",
+    "tier": "1",
+    "driveTime": "15-25 mins",
+    "zips": [],
+    "tripFee": false,
+    "tripFeeAmount": "$0"
   }
 ]

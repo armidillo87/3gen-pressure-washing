@@ -8,7 +8,7 @@
     "preview": "astro preview",
     "astro": "astro",
     "generate": "node scripts/generate-site.mjs",
-    "postbuild": "node ../Pandaface-Digital-Hub/scripts/qa-runner.mjs"
+    "postbuild": "node scripts/pfd-qa-sentinel.mjs"
   },
   "dependencies": {
     "@astrojs/check": "^0.9.6",
@@ -20,3 +20,4 @@
     "typescript": "^5.9.3"
   }
 }
+

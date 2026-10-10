@@ -14,9 +14,20 @@
       "Restores original appearance",
       "Safe for a variety of hard surfaces"
     ],
-    "targetAudience": ["Commercial", "Industrial", "Residential"],
+    "targetAudience": [
+      "Commercial",
+      "Industrial",
+      "Residential"
+    ],
     "basePrice": null,
-    "isPopular": true
+    "isPopular": true,
+    "title": "Hot & Cold Pressure Washing",
+    "shortDesc": "",
+    "startingPrice": "",
+    "typicalRange": "",
+    "turnaround": "1-2 Days",
+    "guarantee": "100% Satisfaction Guarantee",
+    "pricing_table": []
   },
   {
     "id": "graffiti-removal",
@@ -33,9 +44,20 @@
       "State-certified process",
       "Complete removal without shadows or ghosting"
     ],
-    "targetAudience": ["Commercial", "Municipal", "Retail"],
+    "targetAudience": [
+      "Commercial",
+      "Municipal",
+      "Retail"
+    ],
     "basePrice": null,
-    "isPopular": true
+    "isPopular": true,
+    "title": "Graffiti Removal",
+    "shortDesc": "",
+    "startingPrice": "",
+    "typicalRange": "",
+    "turnaround": "1-2 Days",
+    "guarantee": "100% Satisfaction Guarantee",
+    "pricing_table": []
   },
   {
     "id": "commercial-building-washing",
@@ -52,9 +74,19 @@
       "Maintains property value",
       "Creates a welcoming environment"
     ],
-    "targetAudience": ["Commercial", "Retail"],
+    "targetAudience": [
+      "Commercial",
+      "Retail"
+    ],
     "basePrice": null,
-    "isPopular": true
+    "isPopular": true,
+    "title": "Commercial Building & Storefront Washing",
+    "shortDesc": "",
+    "startingPrice": "",
+    "typicalRange": "",
+    "turnaround": "1-2 Days",
+    "guarantee": "100% Satisfaction Guarantee",
+    "pricing_table": []
   },
   {
     "id": "fuel-station-cleaning",
@@ -71,9 +103,19 @@
       "Complies with environmental and safety standards",
       "Hot water extraction for maximum clean"
     ],
-    "targetAudience": ["Commercial", "Industrial"],
+    "targetAudience": [
+      "Commercial",
+      "Industrial"
+    ],
     "basePrice": null,
-    "isPopular": false
+    "isPopular": false,
+    "title": "Fuel Station Cleaning",
+    "shortDesc": "",
+    "startingPrice": "",
+    "typicalRange": "",
+    "turnaround": "1-2 Days",
+    "guarantee": "100% Satisfaction Guarantee",
+    "pricing_table": []
   },
   {
     "id": "driveway-cleaning",
@@ -90,9 +132,19 @@
       "Brightens concrete instantly",
       "Prolongs the life of the surface"
     ],
-    "targetAudience": ["Residential", "Commercial"],
+    "targetAudience": [
+      "Residential",
+      "Commercial"
+    ],
     "basePrice": null,
-    "isPopular": false
+    "isPopular": false,
+    "title": "Driveway & Walkway Cleaning",
+    "shortDesc": "",
+    "startingPrice": "",
+    "typicalRange": "",
+    "turnaround": "1-2 Days",
+    "guarantee": "100% Satisfaction Guarantee",
+    "pricing_table": []
   },
   {
     "id": "headstone-cleaning",
@@ -109,9 +161,20 @@
       "Removes lichen, mold, and environmental staining",
       "Respectful and careful process"
     ],
-    "targetAudience": ["Residential", "Municipal", "Cemeteries"],
+    "targetAudience": [
+      "Residential",
+      "Municipal",
+      "Cemeteries"
+    ],
     "basePrice": null,
-    "isPopular": false
+    "isPopular": false,
+    "title": "Headstone Cleaning",
+    "shortDesc": "",
+    "startingPrice": "",
+    "typicalRange": "",
+    "turnaround": "1-2 Days",
+    "guarantee": "100% Satisfaction Guarantee",
+    "pricing_table": []
   },
   {
     "id": "roof-cleaning",
@@ -128,9 +191,19 @@
       "Safe soft-wash method won't void warranties",
       "Instant curb appeal boost"
     ],
-    "targetAudience": ["Residential", "Commercial"],
+    "targetAudience": [
+      "Residential",
+      "Commercial"
+    ],
     "basePrice": null,
-    "isPopular": false
+    "isPopular": false,
+    "title": "Roof Treatments & Soft Washing",
+    "shortDesc": "",
+    "startingPrice": "",
+    "typicalRange": "",
+    "turnaround": "1-2 Days",
+    "guarantee": "100% Satisfaction Guarantee",
+    "pricing_table": []
   },
   {
     "id": "drive-thru-cleaning",
@@ -147,9 +220,19 @@
       "Reduces slip hazards",
       "Flexible scheduling to avoid business disruption"
     ],
-    "targetAudience": ["Commercial", "Restaurants"],
+    "targetAudience": [
+      "Commercial",
+      "Restaurants"
+    ],
     "basePrice": null,
-    "isPopular": false
+    "isPopular": false,
+    "title": "Drive-Through Cleaning",
+    "shortDesc": "",
+    "startingPrice": "",
+    "typicalRange": "",
+    "turnaround": "1-2 Days",
+    "guarantee": "100% Satisfaction Guarantee",
+    "pricing_table": []
   },
   {
     "id": "patio-cleaning",
@@ -166,8 +249,19 @@
       "Prepares surfaces for sealing or painting",
       "Safe for delicate surfaces"
     ],
-    "targetAudience": ["Residential", "Commercial", "Municipal"],
+    "targetAudience": [
+      "Residential",
+      "Commercial",
+      "Municipal"
+    ],
     "basePrice": null,
-    "isPopular": false
+    "isPopular": false,
+    "title": "Outdoor Courts & Patios",
+    "shortDesc": "",
+    "startingPrice": "",
+    "typicalRange": "",
+    "turnaround": "1-2 Days",
+    "guarantee": "100% Satisfaction Guarantee",
+    "pricing_table": []
   }
 ]
