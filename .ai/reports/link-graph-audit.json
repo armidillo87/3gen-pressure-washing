@@ -1,0 +1,266 @@
+{
+  "site": "3gen-pressure-washing",
+  "root": "/home/francis/antigravity-workspace/3gen-pressure-washing",
+  "scanned": true,
+  "duration_ms": 5,
+  "summary": {
+    "total_routes": 4,
+    "total_internal_edges": 3,
+    "max_click_depth": 1,
+    "p0_critical": 9,
+    "p1_high": 1,
+    "p2_medium": 1,
+    "total_findings": 11,
+    "link_health_score": 0,
+    "status": "FAIL_BROKEN_LINKS"
+  },
+  "routes": [
+    {
+      "route": "/",
+      "source_file": "src/pages/index.astro",
+      "click_depth": 0,
+      "contextual_out_links": [],
+      "contextual_in_count": 3,
+      "global_nav_reachable": true
+    },
+    {
+      "route": "/404",
+      "source_file": "src/pages/404.astro",
+      "click_depth": null,
+      "contextual_out_links": [
+        "/"
+      ],
+      "contextual_in_count": 0,
+      "global_nav_reachable": false
+    },
+    {
+      "route": "/review",
+      "source_file": "src/pages/review.astro",
+      "click_depth": 1,
+      "contextual_out_links": [
+        "/"
+      ],
+      "contextual_in_count": 0,
+      "global_nav_reachable": true
+    },
+    {
+      "route": "/services",
+      "source_file": "src/pages/services/index.astro",
+      "click_depth": 1,
+      "contextual_out_links": [],
+      "contextual_in_count": 0,
+      "global_nav_reachable": true
+    }
+  ],
+  "findings": [
+    {
+      "severity": "P0",
+      "suite": "1. Target Page Resolution",
+      "code": "BROKEN_INTERNAL_LINK",
+      "file": "src/components/EquipmentTrust.astro",
+      "line": 44,
+      "source_route": "GLOBAL_COMPONENT",
+      "current_href": "/equipment/",
+      "current_anchor": "See Our Equipment Setup &rarr;",
+      "message": "Broken internal link in shared component src/components/EquipmentTrust.astro:44 -> '/equipment/' resolves to 404",
+      "recommended_fix": {
+        "target_href": "/review",
+        "suggested_anchors": [
+          "review details",
+          "explore our review",
+          "local review information"
+        ]
+      }
+    },
+    {
+      "severity": "P0",
+      "suite": "1. Target Page Resolution",
+      "code": "BROKEN_INTERNAL_LINK",
+      "file": "src/components/Footer.astro",
+      "line": 55,
+      "source_route": "GLOBAL_COMPONENT",
+      "current_href": "/about/",
+      "current_anchor": "About Us",
+      "message": "Broken internal link in shared component src/components/Footer.astro:55 -> '/about/' resolves to 404",
+      "recommended_fix": {
+        "target_href": "/",
+        "suggested_anchors": [
+          "24/7 Boise towing dispatch",
+          "local Treasure Valley towing service",
+          "emergency roadside & towing headquarters"
+        ]
+      }
+    },
+    {
+      "severity": "P0",
+      "suite": "1. Target Page Resolution",
+      "code": "BROKEN_INTERNAL_LINK",
+      "file": "src/components/Footer.astro",
+      "line": 56,
+      "source_route": "GLOBAL_COMPONENT",
+      "current_href": "/equipment/",
+      "current_anchor": "Our Equipment",
+      "message": "Broken internal link in shared component src/components/Footer.astro:56 -> '/equipment/' resolves to 404",
+      "recommended_fix": {
+        "target_href": "/review",
+        "suggested_anchors": [
+          "review details",
+          "explore our review",
+          "local review information"
+        ]
+      }
+    },
+    {
+      "severity": "P0",
+      "suite": "1. Target Page Resolution",
+      "code": "BROKEN_INTERNAL_LINK",
+      "file": "src/components/Footer.astro",
+      "line": 57,
+      "source_route": "GLOBAL_COMPONENT",
+      "current_href": "/contact/",
+      "current_anchor": "Contact",
+      "message": "Broken internal link in shared component src/components/Footer.astro:57 -> '/contact/' resolves to 404",
+      "recommended_fix": {
+        "target_href": "/",
+        "suggested_anchors": [
+          "24/7 Boise towing dispatch",
+          "local Treasure Valley towing service",
+          "emergency roadside & towing headquarters"
+        ]
+      }
+    },
+    {
+      "severity": "P0",
+      "suite": "1. Target Page Resolution",
+      "code": "BROKEN_INTERNAL_LINK",
+      "file": "src/components/Footer.astro",
+      "line": 59,
+      "source_route": "GLOBAL_COMPONENT",
+      "current_href": "/service-areas/",
+      "current_anchor": "Service Areas",
+      "message": "Broken internal link in shared component src/components/Footer.astro:59 -> '/service-areas/' resolves to 404",
+      "recommended_fix": {
+        "target_href": "/services",
+        "suggested_anchors": [
+          "services details",
+          "explore our services",
+          "local services information"
+        ]
+      }
+    },
+    {
+      "severity": "P0",
+      "suite": "1. Target Page Resolution",
+      "code": "BROKEN_INTERNAL_LINK",
+      "file": "src/components/Footer.astro",
+      "line": 74,
+      "source_route": "GLOBAL_COMPONENT",
+      "current_href": "/privacy/",
+      "current_anchor": "Privacy Policy",
+      "message": "Broken internal link in shared component src/components/Footer.astro:74 -> '/privacy/' resolves to 404",
+      "recommended_fix": {
+        "target_href": "/review",
+        "suggested_anchors": [
+          "review details",
+          "explore our review",
+          "local review information"
+        ]
+      }
+    },
+    {
+      "severity": "P0",
+      "suite": "1. Target Page Resolution",
+      "code": "BROKEN_INTERNAL_LINK",
+      "file": "src/components/Footer.astro",
+      "line": 75,
+      "source_route": "GLOBAL_COMPONENT",
+      "current_href": "/terms/",
+      "current_anchor": "Terms of Service",
+      "message": "Broken internal link in shared component src/components/Footer.astro:75 -> '/terms/' resolves to 404",
+      "recommended_fix": {
+        "target_href": "/",
+        "suggested_anchors": [
+          "24/7 Boise towing dispatch",
+          "local Treasure Valley towing service",
+          "emergency roadside & towing headquarters"
+        ]
+      }
+    },
+    {
+      "severity": "P0",
+      "suite": "1. Target Page Resolution",
+      "code": "BROKEN_INTERNAL_LINK",
+      "file": "src/components/Footer.astro",
+      "line": 76,
+      "source_route": "GLOBAL_COMPONENT",
+      "current_href": "/accessibility/",
+      "current_anchor": "Accessibility",
+      "message": "Broken internal link in shared component src/components/Footer.astro:76 -> '/accessibility/' resolves to 404",
+      "recommended_fix": {
+        "target_href": "/review",
+        "suggested_anchors": [
+          "review details",
+          "explore our review",
+          "local review information"
+        ]
+      }
+    },
+    {
+      "severity": "P0",
+      "suite": "1. Target Page Resolution",
+      "code": "BROKEN_INTERNAL_LINK",
+      "file": "src/components/QuoteForm.astro",
+      "line": 95,
+      "source_route": "GLOBAL_COMPONENT",
+      "current_href": "/privacy/",
+      "current_anchor": "Privacy Policy",
+      "message": "Broken internal link in shared component src/components/QuoteForm.astro:95 -> '/privacy/' resolves to 404",
+      "recommended_fix": {
+        "target_href": "/review",
+        "suggested_anchors": [
+          "review details",
+          "explore our review",
+          "local review information"
+        ]
+      }
+    },
+    {
+      "severity": "P1",
+      "suite": "3. Dead Pseudo-Links",
+      "code": "DEAD_PSEUDO_LINK",
+      "file": "src/pages/review.astro",
+      "line": 88,
+      "source_route": "/review",
+      "current_href": "#",
+      "current_anchor": "⭐ Leave a Google Review",
+      "message": "Dead pseudo-link href=\"#\" on /review",
+      "recommended_fix": {
+        "target_href": "/contact",
+        "suggested_anchors": [
+          "contact details",
+          "explore our contact",
+          "local contact information"
+        ]
+      }
+    },
+    {
+      "severity": "P2",
+      "suite": "12. Contextual Cross-Linking (Rule 3b)",
+      "code": "UNDER_LINKED_PAGE",
+      "file": "src/pages/services/index.astro",
+      "line": 1,
+      "source_route": "/services",
+      "current_href": "/services",
+      "current_anchor": "",
+      "message": "Page /services has only 0 contextual outbound internal link(s) in its body (Rule 3b requires 2-3 contextual links)",
+      "recommended_fix": {
+        "target_href": "/",
+        "suggested_anchors": [
+          "24/7 Boise towing dispatch",
+          "local Treasure Valley towing service",
+          "emergency roadside & towing headquarters"
+        ]
+      }
+    }
+  ]
+}

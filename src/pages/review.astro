@@ -112,7 +112,7 @@ const breadcrumbSchema = {
             we'll reach out to make things right.
           </p>
 
-          <form id="feedback-form" class="feedback-form" action="https://form-handler.brandon-c29.workers.dev" method="POST">
+          <form id="feedback-form" class="feedback-form" action="/api/lead" method="POST">
             <input type="hidden" name="form_tag" value="review-negative" />
             <input type="hidden" name="page_url" id="feedback_page_url" value="" />
             <input type="hidden" name="star_rating" id="feedback_star_rating" value="" />
@@ -322,7 +322,7 @@ const breadcrumbSchema = {
         submitBtn.disabled = true;
 
         try {
-          const res = await fetch('https://form-handler.brandon-c29.workers.dev', {
+          const res = await fetch('/api/lead', {
             method: 'POST',
             body: new FormData(feedbackForm),
           });

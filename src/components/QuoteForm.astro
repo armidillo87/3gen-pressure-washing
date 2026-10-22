@@ -32,7 +32,7 @@ const activeServices = servicesData.filter((s: any) => s.status !== 'coming-soon
         </div>
       </div>
 
-      <form class="quote-form" id="quote-form" action="https://form-handler.brandon-c29.workers.dev" method="POST">
+      <form class="quote-form" id="quote-form" action="/api/lead" method="POST">
         <!-- Spam Protection + Tracking -->
         <input type="hidden" name="form_tag" value={formTag} />
         <input type="hidden" name="page_url" id="page_url" value="" />
@@ -129,7 +129,7 @@ const activeServices = servicesData.filter((s: any) => s.status !== 'coming-soon
       submitBtn.disabled = true;
 
       try {
-        const res = await fetch('https://form-handler.brandon-c29.workers.dev', {
+        const res = await fetch('/api/lead', {
           method: 'POST',
           body: new FormData(form),
         });
